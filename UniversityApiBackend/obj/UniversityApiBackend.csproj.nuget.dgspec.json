@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\UniversityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj": {}
+    "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\UniversityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj": {
+    "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\UniversityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
+        "projectUniqueName": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
         "projectName": "UniversityApiBackend",
-        "projectPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\UniversityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
+        "projectPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
         "packagesPath": "C:\\Users\\ramc2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\UniversityApiBackend\\UniversityApiBackend\\obj\\",
+        "outputPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -60,7 +60,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.3.0, )"
             }
           },
           "imports": [

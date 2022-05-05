@@ -4,7 +4,8 @@
     {
         Basic,
         Intermidia,
-        Advance
+        Advanced,
+        Expert
 
     }
 }
