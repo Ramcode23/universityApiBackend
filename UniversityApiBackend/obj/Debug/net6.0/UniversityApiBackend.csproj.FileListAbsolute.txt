@@ -524,3 +524,4 @@ C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiB
 C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\UniversityApiBackend\obj\Debug\net6.0\UniversityApiBackend.pdb
 C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\UniversityApiBackend\obj\Debug\net6.0\UniversityApiBackend.genruntimeconfig.cache
 C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\UniversityApiBackend\obj\Debug\net6.0\ref\UniversityApiBackend.dll
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\UniversityApiBackend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
