@@ -21,6 +21,15 @@ namespace UniversityApiBackend.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+
+            _logger.LogTrace($"{nameof(WeatherForecastController)}-{nameof(Get)}-Trace Level Log");
+            _logger.LogDebug($"{nameof(WeatherForecastController)}-{nameof(Get)}-Debug Level Log");
+            _logger.LogInformation($"{nameof(WeatherForecastController)}-{nameof(Get)}-Information Level Log");
+            _logger.LogWarning($"{nameof(WeatherForecastController)}-{nameof(Get)}-Warning Level Log");
+            _logger.LogError($"{nameof(WeatherForecastController)}-{nameof(Get)}-Error Level Log");
+            _logger.LogCritical($"{nameof(WeatherForecastController)}-{nameof(Get)}-Critical Level Log");
+
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

@@ -3,8 +3,19 @@ using Microsoft.OpenApi.Models;
 using UniversityApiBackend;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Services;
-
+using Serilog;
+//10. use Serilog to log events
 var builder = WebApplication.CreateBuilder(args);
+
+//11 config Serilog
+builder.Host.UseSerilog((hostBuilderCtx, loggerCof) =>
+{
+    loggerCof.
+    WriteTo.Console()
+    .WriteTo.Debug()
+    .ReadFrom.Configuration(hostBuilderCtx.Configuration);
+
+});
 
 // Add services to the container.
 //1. Localization 
@@ -84,7 +95,7 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 //2. supported culture
-var supportedCultures = new[] { "en-US", "es-ES", "fr-FR" };
+var supportedCultures = new[] { "en-US", "es-ES", "fr-FR","de-DE" };
 var locaozationOptiona = new RequestLocalizationOptions()
     .SetDefaultCulture(supportedCultures[0])
     .AddSupportedCultures(supportedCultures)
@@ -97,6 +108,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+//12.Tell app to use  Serilog 
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 

@@ -1,0 +1,29 @@
+2022-05-18 16:14:44.616 -07:00 [INF] Now listening on: https://localhost:7108
+2022-05-18 16:14:44.632 -07:00 [INF] Now listening on: http://localhost:5108
+2022-05-18 16:14:44.636 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-18 16:14:44.637 -07:00 [INF] Hosting environment: Development
+2022-05-18 16:14:44.639 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\UniversityApiBackend\
+2022-05-18 16:14:55.974 -07:00 [VRB] WeatherForecastController-Get-Trace Level Log
+2022-05-18 16:14:55.978 -07:00 [DBG] WeatherForecastController-Get-Debug Level Log
+2022-05-18 16:14:55.980 -07:00 [INF] WeatherForecastController-Get-Information Level Log
+2022-05-18 16:14:55.982 -07:00 [WRN] WeatherForecastController-Get-Warning Level Log
+2022-05-18 16:14:55.984 -07:00 [ERR] WeatherForecastController-Get-Error Level Log
+2022-05-18 16:14:55.986 -07:00 [FTL] WeatherForecastController-Get-Critical Level Log
+2022-05-18 16:14:55.996 -07:00 [INF] HTTP GET /WeatherForecast responded 200 in 29.0885 ms
+2022-05-18 16:19:22.534 -07:00 [INF] Now listening on: https://localhost:7108
+2022-05-18 16:19:22.551 -07:00 [INF] Now listening on: http://localhost:5108
+2022-05-18 16:19:22.556 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-18 16:19:22.557 -07:00 [INF] Hosting environment: Development
+2022-05-18 16:19:22.559 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\UniversityApiBackend\
+2022-05-18 16:20:38.761 -07:00 [INF] Now listening on: https://localhost:7108
+2022-05-18 16:20:38.778 -07:00 [INF] Now listening on: http://localhost:5108
+2022-05-18 16:20:38.784 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-18 16:20:38.785 -07:00 [INF] Hosting environment: Development
+2022-05-18 16:20:38.787 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\UniversityApiBackend\
+2022-05-18 16:20:48.878 -07:00 [VRB] WeatherForecastController-Get-Trace Level Log
+2022-05-18 16:20:48.882 -07:00 [DBG] WeatherForecastController-Get-Debug Level Log
+2022-05-18 16:20:48.884 -07:00 [INF] WeatherForecastController-Get-Information Level Log
+2022-05-18 16:20:48.885 -07:00 [WRN] WeatherForecastController-Get-Warning Level Log
+2022-05-18 16:20:48.887 -07:00 [ERR] WeatherForecastController-Get-Error Level Log
+2022-05-18 16:20:48.889 -07:00 [FTL] WeatherForecastController-Get-Critical Level Log
+2022-05-18 16:20:48.899 -07:00 [INF] HTTP GET /WeatherForecast responded 200 in 28.3710 ms
