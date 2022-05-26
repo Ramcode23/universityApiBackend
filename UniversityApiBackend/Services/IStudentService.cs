@@ -2,9 +2,12 @@
 
 namespace UniversityApiBackend.Services
 {
-    public interface IStudentService
+    public interface IStudentService:IBaseService<Student>
     {
-        IEnumerable<Student> GetStudentsWithCourses();
-        IEnumerable<Student> GetStudentsWithNoCourses();
+        IQueryable<Student> GetStudentsWithCoursesAsync(int pageNumber, int resultsPage);
+
+        IQueryable<Student> GetStudentsWithNoCoursesAsync(int pageNumber, int resultsPage);
+
+        
     }
 }

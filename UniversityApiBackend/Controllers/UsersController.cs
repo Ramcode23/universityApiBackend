@@ -48,7 +48,7 @@ namespace UniversityApiBackend.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (id != user.Id)
+            if ( user.UserName==null)
             {
                 return BadRequest();
             }
@@ -103,7 +103,7 @@ namespace UniversityApiBackend.Controllers
 
         private bool UserExists(int id)
         {
-            return _context.Users.Any(e => e.Id == id);
+            return _context.Users.Any(e => e.Email =="");
         }
     }
 }

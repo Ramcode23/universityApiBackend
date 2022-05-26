@@ -1,10 +1,11 @@
 ﻿
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.DataAccess
 {
-    public class UniversityDbContext:DbContext
+    public class UniversityDbContext: IdentityDbContext
     {
 
         public UniversityDbContext(DbContextOptions<UniversityDbContext> options):base(options)
@@ -18,7 +19,7 @@ namespace UniversityApiBackend.DataAccess
         public DbSet<Course>? Courses { get; set; }
         public DbSet<Category>? Categories { get; set; }
         public DbSet<Chapter>? Chapters { get; set; }
-        public DbSet<UniversityApiBackend.Models.DataModels.Student>? Student { get; set; }
+        public DbSet<Student>? Students { get; set; }
 
     }
 }

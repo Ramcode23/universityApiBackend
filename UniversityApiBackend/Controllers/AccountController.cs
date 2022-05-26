@@ -16,53 +16,45 @@ namespace UniversityApiBackend.Controllers
     public class AccountController : ControllerBase
     {
         private readonly JwtSettings _jwtSettings;
-        private readonly UniversityDbContext _context;
+   
         private readonly IStringLocalizer<AccountController> _stringLocalizer;
         private readonly IStringLocalizer<SharedResource> _sharedResourceLocalizer;
+        private readonly IUserHelper _userHelper;
+
         public AccountController(JwtSettings jwtSettings,
             IStringLocalizer<AccountController> stringLocalizer,
-            IStringLocalizer<SharedResource> sharedResourceLocalizer)
+            IStringLocalizer<SharedResource> sharedResourceLocalizer,
+            IUserHelper userHelper
+            
+            )
         {
             _jwtSettings = jwtSettings;
             _stringLocalizer = stringLocalizer;
             _sharedResourceLocalizer = sharedResourceLocalizer;
+            _userHelper = userHelper;
         }
 
-        private IEnumerable<User> Logins = new List<User>()
-         {
-              new User()
-              {
-                  Id = 1,
-                  Email="matin@imaginagroup.com",
-                  Name="Admin",
-                  Password="Admin"
-              },
-               new User()
-              {
-                  Id = 2,
-                  Email="pepe@imaginagroup.com",
-                  Name="User2",
-                  Password="pepe"
-              },
-
-         };
+     
 
 
-        [HttpPost]
-        public IActionResult GetToken(UserLogins userLogins)
+        [HttpPost("login")]
+        public async Task<ActionResult<UserLogins>> Login([FromBody] UserLogins userLogins)
         {
             try
             {
                 var Token = new UserTokens();
-                var valid = Logins.Any(user => user.Name.Equals(userLogins.Password, StringComparison.OrdinalIgnoreCase));
-                if (valid)
+                //var valid = Logins.Any(user => user.Name.Equals(userLogins.Password, StringComparison.OrdinalIgnoreCase));
+                var valid = await _userHelper.PasswordSignInAsync(userLogins);
+            
+                if (valid.Succeeded)
                 {
-                    var user = Logins.FirstOrDefault(user => user.Name.Equals(userLogins.UserName, StringComparison.OrdinalIgnoreCase));
+             
+              
                     Token = JwtHelpers.GenTokenKey(new UserTokens()
                     {
-                        UserName = user.Name,
-                        EmailId = user.Email,
-                        Id = user.Id,
+                        UserName = userLogins.UserName,
+                        EmailId = userLogins.UserName,
+    
                         GuiId = Guid.NewGuid(),
 
                     },
@@ -75,6 +67,8 @@ namespace UniversityApiBackend.Controllers
                 }
 
                 var msj = _stringLocalizer.GetString("Welcome").Value ?? String.Empty;
+                
+                
                 return Ok( new { 
                 
                 Token=Token,
@@ -89,12 +83,95 @@ namespace UniversityApiBackend.Controllers
 
         }
 
+        [HttpPost("register")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
+        public async Task<ActionResult<UserLogins>> Register([FromBody] RegisterUser registeruser)
+        {
+            var Token = new UserTokens();
+            var isExits = await _userHelper.GetUserByEmailAsync(registeruser.Email);
+            if (isExits == null)
+            {
+                var rest = await _userHelper.RegisterUserAsync(registeruser);
+                var credencials = new UserLogins { Password = registeruser.Password };
+                if (rest.Succeeded)
+                {
+                    Token = JwtHelpers.GenTokenKey(new UserTokens()
+                    {
+                        UserName = registeruser.Email,
+                        EmailId = registeruser.Email,
+                        GuiId = Guid.NewGuid(),
+
+                    },
+                 _jwtSettings);
+
+
+                    var msj = _stringLocalizer.GetString("Welcome").Value ?? String.Empty;
+
+
+                    return Ok(new
+                    {
+
+                        Token = Token,
+                        Msj = msj
+                    });
+                }
+                else
+                {
+                    return BadRequest(rest.Errors);
+                }
+            }
+            return BadRequest("Email aready exist");
+
+
+        }
+
+        [HttpPost("createmanager")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+        public async Task<ActionResult<UserLogins>> createAdmin([FromBody] RegisterUser registeruser)
+        {
+            var Token = new UserTokens();
+            var isExits = await _userHelper.GetUserByEmailAsync(registeruser.Email);
+            if (isExits == null)
+            {
+                var rest = await _userHelper.CreateAdminAsync(registeruser);
+                var credencials = new UserLogins { Password = registeruser.Password };
+                if (rest.Succeeded)
+                {
+                    Token = JwtHelpers.GenTokenKey(new UserTokens()
+                    {
+                        UserName = registeruser.Email,
+                        EmailId = registeruser.Email,
+                        GuiId = Guid.NewGuid(),
+
+                    },
+                 _jwtSettings);
+
+
+                    var msj = _stringLocalizer.GetString("Welcome").Value ?? String.Empty;
+
+
+                    return Ok(new
+                    {
+
+                        Token = Token,
+                        Msj = msj
+                    });
+                }
+                else
+                {
+                    return BadRequest(rest.Errors);
+                }
+            }
+            return BadRequest("Email aready exist");
+
+
+        }
 
         [HttpGet]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public IActionResult GetUserList()
         {
-            return Ok(Logins);
+            return Ok();
         }
     }
 

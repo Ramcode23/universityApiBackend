@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Models.DataModels;
+using UniversityApiBackend.Services;
 
 namespace UniversityApiBackend.Controllers
 {
@@ -15,25 +16,25 @@ namespace UniversityApiBackend.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly UniversityDbContext _context;
+        private readonly ICategoriesService _service;
 
-        public CategoriesController(UniversityDbContext context)
+        public CategoriesController(ICategoriesService service)
         {
-            _context = context;
+            _service = service;
         }
 
         // GET: api/Categories
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
+        public async Task<ActionResult<IEnumerable<Category>>> GetCategories([FromQuery] int pageNumber, int resultsPage)
         {
-            return await _context.Categories.ToListAsync();
+            return await _service.GetAll(pageNumber,resultsPage ).ToListAsync();
         }
 
         // GET: api/Categories/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Category>> GetCategory(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
+            var category = await _service.GetById(id);
 
             if (category == null)
             {
@@ -53,15 +54,14 @@ namespace UniversityApiBackend.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(category).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _service.Update(category);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CategoryExists(id))
+                if (!_service.Exists(id))
                 {
                     return NotFound();
                 }
@@ -79,8 +79,7 @@ namespace UniversityApiBackend.Controllers
         [HttpPost]
         public async Task<ActionResult<Category>> PostCategory(Category category)
         {
-            _context.Categories.Add(category);
-            await _context.SaveChangesAsync();
+            await _service.Add(category);
 
             return CreatedAtAction("GetCategory", new { id = category.Id }, category);
         }
@@ -89,21 +88,18 @@ namespace UniversityApiBackend.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
+            var category = _service.Exists(id);
+            if (!category)
             {
                 return NotFound();
             }
 
-            _context.Categories.Remove(category);
-            await _context.SaveChangesAsync();
+            ;
+            await _service.Delete(id);
 
             return NoContent();
         }
 
-        private bool CategoryExists(int id)
-        {
-            return _context.Categories.Any(e => e.Id == id);
-        }
+      
     }
 }

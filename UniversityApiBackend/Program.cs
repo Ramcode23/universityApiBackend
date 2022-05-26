@@ -4,6 +4,9 @@ using UniversityApiBackend;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.Services;
 using Serilog;
+using UniversityApiBackend.Helpers;
+using UniversityApiBackend.Models.DataModels;
+using Microsoft.AspNetCore.Identity;
 //10. use Serilog to log events
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +23,7 @@ builder.Host.UseSerilog((hostBuilderCtx, loggerCof) =>
 // Add services to the container.
 //1. Localization 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resoources");
-
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 //2. Connection with SQL Server Express
 const string CONNECTIONNAME= "UniversityDB";
 var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME);
@@ -33,14 +36,15 @@ builder.Services.AddJwtTokenServices(builder.Configuration);
 builder.Services.AddControllers();
 //Add services
 builder.Services.AddScoped<IStudentService,StudentService>();
+builder.Services.AddScoped<IUserHelper, UserHelper>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
 //8. Add Authorization
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("UserOnlyPolicy", policy => policy.RequireClaim("UserOnly", "User1"));
-
+    options.AddPolicy("UserOnlyPolicy", policy => policy.RequireClaim("role", "user"));
+    options.AddPolicy("Administrator", policy => policy.RequireClaim("role", "admin"));
 });
 
 //9 TODO: Config to take care of  Autorization of  JWT
@@ -91,6 +95,13 @@ builder.Services.AddCors(options =>
     });
 
 });
+
+builder.Services.AddIdentity<User, IdentityRole>()
+                             .AddEntityFrameworkStores<UniversityDbContext>()
+                             .AddRoles<IdentityRole>()
+                             .AddDefaultTokenProviders();
+
+
 
 var app = builder.Build();
 

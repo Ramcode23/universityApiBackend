@@ -1,8 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UniversityApiBackend.Models.DataModels
 {
-    public class User:BaseEntity
+   
+    public class User:IdentityUser
     {
         [Required, StringLength(50)]
         public string  Name { get; set; }= string.Empty;
