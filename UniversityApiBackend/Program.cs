@@ -7,8 +7,11 @@ using Serilog;
 using UniversityApiBackend.Helpers;
 using UniversityApiBackend.Models.DataModels;
 using Microsoft.AspNetCore.Identity;
+using UniversityApiBackend.Utilities;
 //10. use Serilog to log events
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 //11 config Serilog
 builder.Host.UseSerilog((hostBuilderCtx, loggerCof) =>
@@ -23,28 +26,38 @@ builder.Host.UseSerilog((hostBuilderCtx, loggerCof) =>
 // Add services to the container.
 //1. Localization 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resoources");
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 //2. Connection with SQL Server Express
 const string CONNECTIONNAME= "UniversityDB";
 var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME);
+builder.Services.AddTransient<DataSeed>();
 
 //3. Add Context
 builder.Services.AddDbContext<UniversityDbContext>(options=>options.UseSqlServer(connectionString));
+
 //7. Add Service of Jwt Autorization
 builder.Services.AddJwtTokenServices(builder.Configuration);
+
+builder.Services.AddScoped<IStudentService,StudentService>();
+builder.Services.AddScoped<ICategoriesService, CategoriesService>();
+builder.Services.AddScoped<ICoursesService, CoursesService>();
+builder.Services.AddScoped<IChaptersService, ChaptersService>();
+builder.Services.AddScoped<IUserHelper, UserHelper>();
+
+
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 // Add services to the container.
 builder.Services.AddControllers();
 //Add services
-builder.Services.AddScoped<IStudentService,StudentService>();
-builder.Services.AddScoped<IUserHelper, UserHelper>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
 //8. Add Authorization
 builder.Services.AddAuthorization(options =>
 {
+   // options.AddPolicy("Administrator", policy => policy.RequireClaim("role", "admin"));
+    //options.AddPolicy("IsAdmin", policy => policy.RequireClaim("role", "admin"));
     options.AddPolicy("UserOnlyPolicy", policy => policy.RequireClaim("role", "user"));
-    options.AddPolicy("Administrator", policy => policy.RequireClaim("role", "admin"));
 });
 
 //9 TODO: Config to take care of  Autorization of  JWT
@@ -112,6 +125,21 @@ var locaozationOptiona = new RequestLocalizationOptions()
     .AddSupportedCultures(supportedCultures)
     .AddSupportedUICultures(supportedCultures);
 
+
+
+    SeedData(app);
+
+//Seed Data
+void SeedData(IHost app)
+{
+    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+
+    using (var scope = scopedFactory.CreateScope())
+    {
+        var service = scope.ServiceProvider.GetService<DataSeed>();
+        service.SeedAsync().Wait();
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

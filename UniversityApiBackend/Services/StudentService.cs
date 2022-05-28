@@ -15,6 +15,7 @@ namespace UniversityApiBackend.Services
 
         public Task Add(Student entity)
         {
+            entity.CreatedAt = DateTime.Now;
             _context.Students.Add(entity);
             return _context.SaveChangesAsync();
         }
@@ -22,6 +23,7 @@ namespace UniversityApiBackend.Services
         public Task Delete(int id)
         {
             var student = _context.Students.Find(id);
+            student.DeleteteAt = DateTime.Now;
             student.IsDeleted = true;
             _context.Students.Update(student);
             return _context.SaveChangesAsync();
@@ -77,6 +79,7 @@ namespace UniversityApiBackend.Services
 
         public Task Update(Student entity)
         {
+            entity.UpdatedAt = DateTime.Now;
             _context.Students.Update(entity);
             return _context.SaveChangesAsync();
         }

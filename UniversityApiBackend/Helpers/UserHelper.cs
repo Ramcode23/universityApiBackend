@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using UniversityApiBackend.DataAccess;
-using UniversityApiBackend.DTOs;
+using UniversityApiBackend.DTOs.Account;
 using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.Helpers
@@ -11,6 +11,7 @@ namespace UniversityApiBackend.Helpers
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly ClaimsIdentity _claimsIdentity;
         private readonly UniversityDbContext _context;
         private readonly IConfiguration _configuration;
         public UserHelper(
@@ -88,7 +89,8 @@ namespace UniversityApiBackend.Helpers
 
         public async Task<User> GetUserByEmailAsync(string email)
         {
-            return await _userManager.FindByEmailAsync(email);
+            var user= await _userManager.FindByNameAsync(email);
+            return user;
         }
 
         public async Task<SignInResult> PasswordSignInAsync(UserLogins credentials)
@@ -100,7 +102,28 @@ namespace UniversityApiBackend.Helpers
         {
             return await _userManager.ResetPasswordAsync(user, token, password);
         }
+        public async Task AddUserToRoleAsync(User user, string roleName)
+        {
+            await _userManager.AddToRoleAsync(user, roleName);
+        }
 
-      
+        public async Task CheckRoleAsync(string roleName)
+        {
+            var roleExists = await _roleManager.RoleExistsAsync(roleName);
+            if (!roleExists)
+            {
+                await _roleManager.CreateAsync(new IdentityRole
+                {
+                    Name = roleName
+                });
+            }
+        }
+
+        public async Task<IList<Claim>> GetRoleAsync(User user)
+        {
+            return await _userManager.GetClaimsAsync(user);
+        }
+
+
     }
 }

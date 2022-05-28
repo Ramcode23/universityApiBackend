@@ -5,44 +5,43 @@ using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend
 {
-    public  static class AddJwtTokenServicesExtensions
-    {
-
-      public static void AddJwtTokenServices(this IServiceCollection services ,IConfiguration configuration)
+  
+        public static class AddJwtTokenServicesExtensions
         {
-            ///Add  jwt Settings 
-            var bindJwtSettings = new JwtSettings();
-            configuration.Bind("JsonWebTokenKeys", bindJwtSettings);
 
-            //Add Singleton fo JWT settings
-            services.AddSingleton(bindJwtSettings);
-
-
-            services.AddAuthentication(options =>
+            public static void AddJwtTokenServices(this IServiceCollection Services, IConfiguration Configuration)
             {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            })
-              .AddJwtBearer(options =>
-              {
+                // Add JWT Settings 
+                var bindJwtSettings = new JwtSettings();
+                Configuration.Bind("JsonWebTokenKeys", bindJwtSettings);
 
-                  options.RequireHttpsMetadata = false;
-                  options.SaveToken = true;
-                  options.TokenValidationParameters = new TokenValidationParameters()
-                  {
+                // Add Singleton of JWT Settings
+                Services.AddSingleton(bindJwtSettings);
 
-                      ValidateIssuerSigningKey = bindJwtSettings.validateIsUsersSigningKey,
-                      IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(bindJwtSettings.IssuerSigningKey)),
-                      ValidateIssuer = bindJwtSettings.ValidateIssuer,
-                      ValidateAudience = bindJwtSettings.ValidateAudience,
-                      ValidAudience = bindJwtSettings.ValidAudience,
-                      RequireExpirationTime = bindJwtSettings.RequireExpirationTime,
-                      ValidateLifetime = bindJwtSettings.ValidateLifeTime,
-                      ClockSkew = TimeSpan.FromDays(1),
-                  };
-              });
-            
+                Services
+                    .AddAuthentication(options =>
+                    {
+                        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                    })
+                    .AddJwtBearer(options =>
+                    {
+                        options.RequireHttpsMetadata = false;
+                        options.SaveToken = true;
+                        options.TokenValidationParameters = new TokenValidationParameters()
+                        {
+                            ValidateIssuerSigningKey = bindJwtSettings.ValidateIssuerSigningKey,
+                            IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(bindJwtSettings.IssuerSigningKey)),
+                            ValidateIssuer = bindJwtSettings.ValidateIssuer,
+                            ValidIssuer = bindJwtSettings.ValidIssuer,
+                            ValidateAudience = bindJwtSettings.ValidateAudience,
+                            ValidAudience = bindJwtSettings.ValidAudience,
+                            RequireExpirationTime = bindJwtSettings.RequireExpirationTime,
+                            ValidateLifetime = bindJwtSettings.ValidateLifetime,
+                            ClockSkew = TimeSpan.FromDays(1)
+                        };
+                    });
+            }
         }
     }
-}

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using UniversityApiBackend.DataAccess;
-using UniversityApiBackend.DTOs;
+using UniversityApiBackend.DTOs.Account;
 using UniversityApiBackend.Entities;
 using UniversityApiBackend.Helpers;
 using UniversityApiBackend.Models.DataModels;
@@ -45,20 +45,22 @@ namespace UniversityApiBackend.Controllers
                 var Token = new UserTokens();
                 //var valid = Logins.Any(user => user.Name.Equals(userLogins.Password, StringComparison.OrdinalIgnoreCase));
                 var valid = await _userHelper.PasswordSignInAsync(userLogins);
+               
             
                 if (valid.Succeeded)
                 {
-             
-              
+                    var user = await _userHelper.GetUserByEmailAsync(userLogins.UserName);
+                    var rol =await _userHelper.GetRoleAsync(user);
+
                     Token = JwtHelpers.GenTokenKey(new UserTokens()
                     {
                         UserName = userLogins.UserName,
                         EmailId = userLogins.UserName,
-    
-                        GuiId = Guid.NewGuid(),
+                        Rol = rol[0].Value,
+                        GuidId = Guid.NewGuid(),
 
                     },
-                    _jwtSettings);
+                    _jwtSettings) ;
                 }
                 else
                 {
@@ -84,7 +86,7 @@ namespace UniversityApiBackend.Controllers
         }
 
         [HttpPost("register")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
+       
         public async Task<ActionResult<UserLogins>> Register([FromBody] RegisterUser registeruser)
         {
             var Token = new UserTokens();
@@ -99,8 +101,8 @@ namespace UniversityApiBackend.Controllers
                     {
                         UserName = registeruser.Email,
                         EmailId = registeruser.Email,
-                        GuiId = Guid.NewGuid(),
-
+                        GuidId = Guid.NewGuid(),
+                        Rol="user"
                     },
                  _jwtSettings);
 
@@ -131,6 +133,7 @@ namespace UniversityApiBackend.Controllers
         {
             var Token = new UserTokens();
             var isExits = await _userHelper.GetUserByEmailAsync(registeruser.Email);
+            
             if (isExits == null)
             {
                 var rest = await _userHelper.CreateAdminAsync(registeruser);
@@ -141,7 +144,8 @@ namespace UniversityApiBackend.Controllers
                     {
                         UserName = registeruser.Email,
                         EmailId = registeruser.Email,
-                        GuiId = Guid.NewGuid(),
+                        GuidId = Guid.NewGuid(),
+                        Rol= "Admin"
 
                     },
                  _jwtSettings);

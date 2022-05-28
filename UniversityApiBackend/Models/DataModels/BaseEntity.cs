@@ -3,6 +3,7 @@ namespace UniversityApiBackend.Models.DataModels
 {
     public class BaseEntity
     {
+        //TODO:Modify model
         [Required]
         [Key]
         public int Id { get; set; }

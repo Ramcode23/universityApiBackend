@@ -19,6 +19,7 @@ namespace UniversityApiBackend.Services
 
         public Task Add(Category entity)
         {
+             entity.CreatedAt = DateTime.Now;
             _context.Categories.Add(entity);
             return _context.SaveChangesAsync();
         }
@@ -27,6 +28,7 @@ namespace UniversityApiBackend.Services
         {
             var category = _context.Categories.Find(id);
             category.IsDeleted = true;
+            category.DeleteteAt = DateTime.Now;
             _context.Categories.Update(category);
             return _context.SaveChangesAsync();
         }
@@ -51,7 +53,9 @@ namespace UniversityApiBackend.Services
 
         public Task Update(Category entity)
         {
+            entity.UpdatedAt = DateTime.Now;
             _context.Categories.Update(entity);
+            
             return _context.SaveChangesAsync();
         }
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj": {}
+    "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj": {
+    "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj",
+        "projectUniqueName": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj",
         "projectName": "LinqSnippets",
-        "projectPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj",
+        "projectPath": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj",
         "packagesPath": "C:\\Users\\ramc2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\obj\\",
+        "outputPath": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj": {
+    "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
+        "projectUniqueName": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
         "projectName": "UniversityApiBackend",
-        "projectPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
+        "projectPath": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
         "packagesPath": "C:\\Users\\ramc2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\obj\\",
+        "outputPath": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj": {
-                "projectPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj"
+              "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj": {
+                "projectPath": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj"
               }
             }
           }
@@ -106,6 +106,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
