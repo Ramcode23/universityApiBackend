@@ -10,3 +10,15 @@ C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiB
 C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\LinqSnippets\obj\Debug\net6.0\refint\LinqSnippets.dll
 C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\LinqSnippets\obj\Debug\net6.0\LinqSnippets.pdb
 C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy\universityApiBackend\LinqSnippets\obj\Debug\net6.0\ref\LinqSnippets.dll
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\bin\Debug\net6.0\LinqSnippets.deps.json
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\bin\Debug\net6.0\LinqSnippets.dll
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\bin\Debug\net6.0\LinqSnippets.pdb
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\obj\Debug\net6.0\LinqSnippets.csproj.AssemblyReference.cache
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\obj\Debug\net6.0\LinqSnippets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\obj\Debug\net6.0\LinqSnippets.AssemblyInfoInputs.cache
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\obj\Debug\net6.0\LinqSnippets.AssemblyInfo.cs
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\obj\Debug\net6.0\LinqSnippets.csproj.CoreCompileInputs.cache
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\obj\Debug\net6.0\LinqSnippets.dll
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\obj\Debug\net6.0\refint\LinqSnippets.dll
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\obj\Debug\net6.0\LinqSnippets.pdb
+C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\LinqSnippets\obj\Debug\net6.0\ref\LinqSnippets.dll

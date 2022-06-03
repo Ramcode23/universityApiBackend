@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.DTOs.Students;
+using UniversityApiBackend.Helpers;
 using UniversityApiBackend.Models.DataModels;
 using UniversityApiBackend.Services;
 
@@ -21,47 +22,90 @@ namespace UniversityApiBackend.Controllers
     {
 
         private readonly IStudentService _service;
+          private readonly ICoursesService _courseService;
         private readonly IMapper _mapper;
+        private readonly IUserHelper _userHelper;
         public StudentsController(
             IStudentService service,
-            Mapper mapper)
+            ICoursesService courseService,
+            IMapper mapper,
+            IUserHelper userHelper)
         {
-           _mapper=mapper;
+            _mapper = mapper;
             _service = service;
+            _courseService = courseService;
+            _userHelper = userHelper;
         }
 
         // GET: api/Students
         [HttpGet]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<IEnumerable<StudentDTO>>> GetStudent([FromQuery] int pageNumber, int resultsPage)
+        public async Task<ActionResult<IEnumerable<StundentListDTO>>> GetStudent([FromQuery] int pageNumber, int resultsPage)
         {
-              var students=  await _service.GetAll(pageNumber,resultsPage).ToListAsync();
-            if(students.Any())
-                return _mapper.Map<List<StudentDTO>>(students);
 
-            return new List<StudentDTO>();
+
+            return  await Task.FromResult(_service.GetStudentsWithCoursesAsync(pageNumber, resultsPage).ToList());
+           
+
         }
+
+
+        // GET: api/Students
+        [HttpGet("Search")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<IEnumerable<StundentListDTO>>> FindStudent([FromQuery] StudentFindDTO studentFindDTO)
+        {
+            var students = await Task.FromResult(_service.FindStudentsAsync(studentFindDTO).ToList());
+            return students;
+        }
+
+
 
         // GET: api/Students/5
         [HttpGet("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
-         
+
             var student = await _service.GetById(id);
             if (student == null)
                 return NotFound();
-            
+
             return student;
+        }
+
+
+        // Enroll students in courses
+        [HttpPost("Enroll")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult> EnrollStudent([FromBody] StudentEnrollDTO studentEnrollDTO)
+        {
+             
+            var student = await _service.GetById(studentEnrollDTO.StudentId);
+            if (student == null)
+                return NotFound( new { message = "Student not found" });    
+
+            var course= await _courseService.GetById(studentEnrollDTO.CourseId);
+            if (course == null)
+                return NotFound( new { message = "Course not found" });
+          
+            if (student.Courses.Any(c => c.Id == course.Id))
+                return BadRequest(new { message = "Student already enrolled in this course" });
+
+ 
+            student.Courses.Add(course);
+            await _service.EnrollAsysnc(student);
+
+            return Ok(new { message = "Student enrolled" });
         }
 
         // PUT: api/Students/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> PutStudent(int id, Student student)
+        public async Task<IActionResult> PutStudent(int id, StudentDTO studentDTO)
         {
-            if (id != student.Id)
+            if (id != studentDTO.Id)
             {
                 return BadRequest();
             }
@@ -69,7 +113,9 @@ namespace UniversityApiBackend.Controllers
 
             try
             {
-                await _service.Update(student);
+                var student = _mapper.Map<Student>(studentDTO);
+                student.UpdatedBy = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
+                student.UpdatedAt = DateTime.Now;
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -90,15 +136,22 @@ namespace UniversityApiBackend.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<ActionResult<Student>> PostStudent(Student student)
+        public async Task<ActionResult<Student>> PostStudent(StudentDTO studentDTO)
         {
-          if (student == null)
-          {
-              return Problem("Entity set 'UniversityDbContext.Student'  is null.");
-          }  
+            if (studentDTO == null)
+            {
+                return Problem("Entity set 'UniversityDbContext.Student'  is null.");
+            }
+            var student = _mapper.Map<Student>(studentDTO);
+            student.CreatedBy = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
+
+
             await _service.Add(student);
 
-            return CreatedAtAction("GetStudent", new { id = student.Id }, student);
+            return Ok(new
+            {
+                Student = studentDTO,
+            });
         }
 
         // DELETE: api/Students/5
@@ -106,7 +159,7 @@ namespace UniversityApiBackend.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> DeleteStudent(int id)
         {
-           
+
             var student = await _service.GetById(id);
             if (student == null)
             {
@@ -117,6 +170,6 @@ namespace UniversityApiBackend.Controllers
             return NoContent();
         }
 
-        
+
     }
 }

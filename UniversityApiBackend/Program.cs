@@ -8,6 +8,7 @@ using UniversityApiBackend.Helpers;
 using UniversityApiBackend.Models.DataModels;
 using Microsoft.AspNetCore.Identity;
 using UniversityApiBackend.Utilities;
+using System.Text.Json.Serialization;
 //10. use Serilog to log events
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,7 +47,9 @@ builder.Services.AddScoped<IUserHelper, UserHelper>();
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 //Add services
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -39,17 +39,28 @@ namespace UniversityApiBackend.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<CategoryDTO>>> GetCategories([FromQuery] int pageNumber, int resultsPage)
         {
-            var categories=  await Task.FromResult(_service.GetAll(pageNumber, resultsPage).ToList());
+            var categories=  await Task.FromResult(_service.GetAllCategories(pageNumber, resultsPage).ToList());
       
             if (categories.Any())
-                return _mapper.Map<List<CategoryDTO>>(categories);
+                return categories;
             return new List<CategoryDTO>();
         }
 
+  // GET: api/Categories
+        [HttpGet("Search")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<IEnumerable<CategoryDTO>>> SearchCategory([FromQuery] string Name, [FromQuery] int[] rangeCourse)
+        {
+            var categories = await Task.FromResult(_service.SearchCategory(Name, rangeCourse).ToList());
+            if (categories.Any())
+                return categories;
+            return new List<CategoryDTO>();
+        }
+       
         // GET: api/Categories/5
         [HttpGet("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<Category>> GetCategory(int id)
+        public async Task<ActionResult<CategoryDTO>> GetCategory(int id)
         {
             var category = await _service.GetById(id);
 
@@ -65,9 +76,9 @@ namespace UniversityApiBackend.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> PutCategory(int id, Category category)
+        public async Task<IActionResult> PutCategory(int id, CategoryCreateDTO categoryDTO)
         {
-            if (id != category.Id)
+            if (id != categoryDTO.Id)
             {
                 return BadRequest();
             }
@@ -75,6 +86,7 @@ namespace UniversityApiBackend.Controllers
 
             try
             {
+              var category=_mapper.Map<Category>(categoryDTO);
                 await _service.Update(category);
             }
             catch (DbUpdateConcurrencyException)
@@ -96,7 +108,7 @@ namespace UniversityApiBackend.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles  = "Administrator")]
-        public async Task<ActionResult<CategoryDTO>> PostCategory(CategoryDTO categoryDTO)
+        public async Task<ActionResult<CategoryDTO>> PostCategory(CategoryCreateDTO categoryDTO)
         {
             
             if (categoryDTO == null)
@@ -104,9 +116,14 @@ namespace UniversityApiBackend.Controllers
                 return BadRequest();
             }
             var category = _mapper.Map<Category>(categoryDTO);
-            category.CreatedBy = User.Identity.Name;    
+            category.CreatedBy = await _userHelper.GetUserByEmailAsync( User.Identity.Name);    
             await _service.Add(category);
-            return CreatedAtAction("GetCategory", new { id = category.Id }, category);
+            return Ok(
+                new{
+                    Message = "Category created successfully",
+                   
+                }
+            );
         }
 
         // DELETE: api/Categories/5

@@ -16,17 +16,16 @@ namespace UniversityApiBackend.Controllers
     public class AccountController : ControllerBase
     {
         private readonly JwtSettings _jwtSettings;
-   
+
         private readonly IStringLocalizer<AccountController> _stringLocalizer;
         private readonly IStringLocalizer<SharedResource> _sharedResourceLocalizer;
         private readonly IUserHelper _userHelper;
 
-        public AccountController(JwtSettings jwtSettings,
+        public AccountController(
+            JwtSettings jwtSettings,
             IStringLocalizer<AccountController> stringLocalizer,
             IStringLocalizer<SharedResource> sharedResourceLocalizer,
-            IUserHelper userHelper
-            
-            )
+            IUserHelper userHelper)
         {
             _jwtSettings = jwtSettings;
             _stringLocalizer = stringLocalizer;
@@ -34,7 +33,7 @@ namespace UniversityApiBackend.Controllers
             _userHelper = userHelper;
         }
 
-     
+
 
 
         [HttpPost("login")]
@@ -45,12 +44,12 @@ namespace UniversityApiBackend.Controllers
                 var Token = new UserTokens();
                 //var valid = Logins.Any(user => user.Name.Equals(userLogins.Password, StringComparison.OrdinalIgnoreCase));
                 var valid = await _userHelper.PasswordSignInAsync(userLogins);
-               
-            
+
+
                 if (valid.Succeeded)
                 {
                     var user = await _userHelper.GetUserByEmailAsync(userLogins.UserName);
-                    var rol =await _userHelper.GetRoleAsync(user);
+                    var rol = await _userHelper.GetRoleAsync(user);
 
                     Token = JwtHelpers.GenTokenKey(new UserTokens()
                     {
@@ -60,7 +59,7 @@ namespace UniversityApiBackend.Controllers
                         GuidId = Guid.NewGuid(),
 
                     },
-                    _jwtSettings) ;
+                    _jwtSettings);
                 }
                 else
                 {
@@ -69,12 +68,13 @@ namespace UniversityApiBackend.Controllers
                 }
 
                 var msj = _stringLocalizer.GetString("Welcome").Value ?? String.Empty;
-                
-                
-                return Ok( new { 
-                
-                Token=Token,
-                Msj= msj
+
+
+                return Ok(new
+                {
+
+                    Token = Token,
+                    Msj = msj
                 });
             }
             catch (Exception ex)
@@ -86,8 +86,8 @@ namespace UniversityApiBackend.Controllers
         }
 
         [HttpPost("register")]
-       
-        public async Task<ActionResult<UserLogins>> Register([FromBody] RegisterUser registeruser)
+
+        public async Task<ActionResult<UserLogins>> Register([FromBody] RegisterStudent registeruser)
         {
             var Token = new UserTokens();
             var isExits = await _userHelper.GetUserByEmailAsync(registeruser.Email);
@@ -102,7 +102,7 @@ namespace UniversityApiBackend.Controllers
                         UserName = registeruser.Email,
                         EmailId = registeruser.Email,
                         GuidId = Guid.NewGuid(),
-                        Rol="user"
+                        Rol = "user"
                     },
                  _jwtSettings);
 
@@ -133,7 +133,7 @@ namespace UniversityApiBackend.Controllers
         {
             var Token = new UserTokens();
             var isExits = await _userHelper.GetUserByEmailAsync(registeruser.Email);
-            
+
             if (isExits == null)
             {
                 var rest = await _userHelper.CreateAdminAsync(registeruser);
@@ -145,7 +145,7 @@ namespace UniversityApiBackend.Controllers
                         UserName = registeruser.Email,
                         EmailId = registeruser.Email,
                         GuidId = Guid.NewGuid(),
-                        Rol= "Admin"
+                        Rol = "Admin"
 
                     },
                  _jwtSettings);
@@ -172,10 +172,22 @@ namespace UniversityApiBackend.Controllers
         }
 
         [HttpGet]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public IActionResult GetUserList()
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> GetUseProlife()
         {
-            return Ok();
+
+            var user = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
+            if(user==null)
+            return BadRequest("User does not exist");
+            
+            return Ok( new
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                FistName= user.Name,
+                LastName = user.LastName,
+ 
+            });
         }
     }
 

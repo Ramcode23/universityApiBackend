@@ -13,6 +13,7 @@ namespace UniversityApiBackend.Helpers
         Task<User> GetUserByEmailAsync(string email);
         Task<IdentityResult> RegisterUserAsync(RegisterUser registeruser);
         Task<IdentityResult> CreateAdminAsync(RegisterUser registeruser);
+        Task<IdentityResult> RegisterUserAsync(RegisterStudent registerStudent);
    
         Task<SignInResult> PasswordSignInAsync(UserLogins credentials);
         Task<UserTokens> BuildTokenAsync(UserLogins credentials);

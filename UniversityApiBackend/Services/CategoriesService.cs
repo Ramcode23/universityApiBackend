@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using LinqSnippets;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBackend.DataAccess;
+using UniversityApiBackend.DTOs.Categories;
 using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.Services
 {
-    public class CategoriesService:ICategoriesService
+    public class CategoriesService : ICategoriesService
     {
         private readonly UniversityDbContext _context;
         public CategoriesService(UniversityDbContext context)
@@ -19,7 +20,7 @@ namespace UniversityApiBackend.Services
 
         public Task Add(Category entity)
         {
-             entity.CreatedAt = DateTime.Now;
+            entity.CreatedAt = DateTime.Now;
             _context.Categories.Add(entity);
             return _context.SaveChangesAsync();
         }
@@ -38,6 +39,7 @@ namespace UniversityApiBackend.Services
             return _context.Categories.Any(c => c.Id == Id);
         }
 
+
         public IQueryable<Category> GetAll(int pageNumber, int resultsPage)
         {
             var categories = _context.Categories
@@ -46,18 +48,67 @@ namespace UniversityApiBackend.Services
             return Paginator.GetPage(categories, pageNumber, resultsPage);
         }
 
-        public Task<Category?> GetById(int id)
+        
+        public IQueryable<CategoryDTO> GetAllCategories(int pageNumber, int resultsPage)
         {
-           return _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
+            var categories = _context.Categories
+             .OrderBy(c => c.Name)
+             .Select(c => new CategoryDTO
+             {
+                 Id = c.Id,
+                 Name = c.Name,
+                 Courses=c.Courses.Count()
+             })
+
+             .AsQueryable();
+            return Paginator.GetPage(categories, pageNumber, resultsPage);
+        }
+
+        public IQueryable<CategoryDTO> SearchCategory(string Name, int[] rangeCourse)
+        {
+            var categories = _context.Categories.AsQueryable();
+            if (!string.IsNullOrEmpty(Name))
+            {
+                categories = categories.Where(c => c.Name.ToLower().Contains(Name.ToLower()));
+            }
+            if (rangeCourse.Length > 0)
+            {
+                categories = categories.Where(c => c.Courses.Count() > rangeCourse[0] && c.Courses.Count() < rangeCourse[1]);
+            }
+            return categories.Select(c => new CategoryDTO
+            {
+               Id= c.Id,
+               Name= c.Name,
+                Courses = c.Courses.Count()
+            }
+
+
+            ).AsQueryable();
+        }
+
+        public Task<CategoryDTO?> GetById(int id)
+        {
+            return _context.Categories.Select(c => new CategoryDTO
+            {
+               Id= c.Id,
+               Name= c.Name,
+                Courses = c.Courses.Count()
+            } )
+            .FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public Task Update(Category entity)
         {
             entity.UpdatedAt = DateTime.Now;
             _context.Categories.Update(entity);
-            
+
             return _context.SaveChangesAsync();
         }
+
+        Task<Category?> IBaseService<Category>.GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
-        
-    }
+
+}

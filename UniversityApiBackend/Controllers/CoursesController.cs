@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBackend.DataAccess;
 using UniversityApiBackend.DTOs.Courses;
+using UniversityApiBackend.Helpers;
 using UniversityApiBackend.Models.DataModels;
 using UniversityApiBackend.Services;
 
@@ -23,12 +24,15 @@ namespace UniversityApiBackend.Controllers
     {
         private readonly ICoursesService _service;
         private readonly IMapper _mapper;
+        private readonly IUserHelper _userHelper;
         public CoursesController(
             ICoursesService service,
-            Mapper mapper)
+            IMapper mapper,
+            IUserHelper userHelper)
         {
             _service = service;
             _mapper = mapper;
+            _userHelper = userHelper;
         }
 
         // GET: api/Courses
@@ -36,17 +40,24 @@ namespace UniversityApiBackend.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<CourseDTO>>> GetCourses([FromQuery] int pageNumber, int resultsPage)
         {
-            var courses = await _service.GetAll(pageNumber, resultsPage).ToListAsync();
-            if (courses.Any())
-                return _mapper.Map<List<CourseDTO>>(courses);
+            var courses = await Task.FromResult(_service.GetAll(pageNumber, resultsPage).ToList());
+            return _mapper.Map<List<CourseDTO>>(courses);
 
-            return new List<CourseDTO>();
+        }
+        // GET: api/Courses
+        [HttpGet("Seracrh")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<IEnumerable<CourseDTO>>> FindCourses([FromQuery] CourseFindDTO courseFindDTO)
+        {
+            var courses = await Task.FromResult(_service.SearchCourses(courseFindDTO).ToList());
+            return _mapper.Map<List<CourseDTO>>(courses);
+
         }
 
         // GET: api/Courses/5
         [HttpGet("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<Course>> GetCourse(int id)
+        public async Task<ActionResult<CourseDTO>> GetCourse(int id)
         {
             var course = await _service.GetById(id);
 
@@ -55,16 +66,16 @@ namespace UniversityApiBackend.Controllers
                 return NotFound();
             }
 
-            return course;
+            return _mapper.Map<CourseDTO>(course);
         }
 
         // PUT: api/Courses/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> PutCourse(int id, Course course)
+        public async Task<IActionResult> PutCourse(int id, CourseCreateDTO courseCreate)
         {
-            if (id != course.Id)
+            if (id != courseCreate.Id)
             {
                 return BadRequest();
             }
@@ -73,6 +84,9 @@ namespace UniversityApiBackend.Controllers
 
             try
             {
+                var course = _mapper.Map<Course>(courseCreate);
+                course.UpdatedBy = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
+                course.UpdatedAt = DateTime.Now;
                 await _service.Update(course);
             }
             catch (DbUpdateConcurrencyException)
@@ -94,13 +108,46 @@ namespace UniversityApiBackend.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<ActionResult<Course>> PostCourse(Course course)
+        public async Task<ActionResult<Course>> PostCourse(CourseCreateDTO courseCreate)
         {
+            if (courseCreate == null)
+                return BadRequest();
 
+            var course = _mapper.Map<Course>(courseCreate);
+            course.CreatedBy = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
             await _service.Add(course);
-
-            return CreatedAtAction("GetCourse", new { id = course.Id }, course);
+            return Ok(
+                 new {
+                        message = "Course created successfully",
+                 }
+            );
         }
+
+        
+                [HttpPost("AddCategoryToCourse")]
+                [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+                public async Task<ActionResult<Course>> AddCatetory(int courseId, int[] categoriesId)
+                {
+                    if (categoriesId == null)
+                        return BadRequest();
+
+                    await _service.AddCatetory(courseId, categoriesId);
+                    return Ok();
+
+                } 
+
+        [HttpPost("AddTeacherToCourse")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+        public async Task<ActionResult<Course>> AddChapter(int courseId, string List)
+        {
+            if (List == null)
+                return BadRequest();
+
+            await _service.AddChapter(courseId, List);
+            return Ok();
+
+        }
+
 
         // DELETE: api/Courses/5
         [HttpDelete("{id}")]
@@ -112,12 +159,35 @@ namespace UniversityApiBackend.Controllers
             {
                 return NotFound();
             }
-
-
             await _service.Delete(id);
-
             return NoContent();
         }
+
+        // DELETE: api/Courses/5
+        [HttpDelete("DeleteCategoryFromCourse")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+        public async Task<IActionResult> RemoveCatetories(int[] categoriesId)
+        {
+            if (categoriesId == null)
+                return BadRequest();
+
+            await _service.RemoveCatetory(categoriesId);
+            return Ok();
+        }
+
+
+        // DELETE: api/Courses/5
+        [HttpDelete(" chapter/{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+        public async Task<IActionResult> RemoveChapter(int id)
+        {
+            if (id == null)
+                return BadRequest();
+
+            await _service.RemoveChapter(id);
+            return Ok();
+        }
+
 
         private bool CourseExists(int id)
         {

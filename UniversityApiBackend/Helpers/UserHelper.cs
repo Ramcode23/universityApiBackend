@@ -6,7 +6,7 @@ using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.Helpers
 {
-    public class UserHelper:IUserHelper
+    public class UserHelper : IUserHelper
     {
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -21,7 +21,7 @@ namespace UniversityApiBackend.Helpers
          SignInManager<User> signInManager,
            IConfiguration configuration)
         {
-            _context= dataContext;
+            _context = dataContext;
             _userManager = userManager;
             _roleManager = roleManager;
             _signInManager = signInManager;
@@ -39,14 +39,14 @@ namespace UniversityApiBackend.Helpers
             var user = new User
             {
                 UserName = registeruser.Email,
-                Email = registeruser.Email,   
+                Email = registeruser.Email,
                 Name = registeruser.FirstName,
-                LastName = registeruser.LastName, 
+                LastName = registeruser.LastName,
             };
 
             var rest = await _userManager.CreateAsync(user, registeruser.Password);
             if (rest.Succeeded)
-            await _userManager.AddClaimAsync(user, new Claim("role", "admin"));
+                await _userManager.AddClaimAsync(user, new Claim("role", "admin"));
 
             return rest;
         }
@@ -89,7 +89,7 @@ namespace UniversityApiBackend.Helpers
 
         public async Task<User> GetUserByEmailAsync(string email)
         {
-            var user= await _userManager.FindByNameAsync(email);
+            var user = await _userManager.FindByNameAsync(email);
             return user;
         }
 
@@ -124,6 +124,60 @@ namespace UniversityApiBackend.Helpers
             return await _userManager.GetClaimsAsync(user);
         }
 
+        public async Task<IdentityResult> RegisterUserAsync(RegisterStudent registerStudent)
+        {
 
+
+
+
+            try
+            {
+
+                var user = new User
+                {
+                    UserName = registerStudent.Email,
+                    Email = registerStudent.Email,
+                    Name = registerStudent.FirstName,
+                    LastName = registerStudent.LastName,
+                };
+
+                var address = new Address
+                {
+                    City = registerStudent.City,
+                    Country = registerStudent.Country,
+                    Street = registerStudent.Street,
+                    ZipCode = registerStudent.ZipCode,
+                };
+
+
+                var rest = await _userManager.CreateAsync(user, registerStudent.Password);
+                if (rest.Succeeded)
+                {
+                    _context.Addresses.Add(address);
+
+
+                    await _context.SaveChangesAsync();
+                    await _userManager.AddClaimAsync(user, new Claim("role", "user"));
+
+                    var student = new Student
+                    {
+                        User = user,
+                        Address = address,
+                        Dob = registerStudent.Dob,
+                        CreatedAt=DateTime.Now,
+                    };
+                    _context.Add(student);
+                    await _context.SaveChangesAsync();
+                }
+
+                return rest;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+        }
     }
 }

@@ -1,13 +1,15 @@
-﻿using UniversityApiBackend.Models.DataModels;
+﻿using UniversityApiBackend.DTOs.Students;
+using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.Services
 {
-    public interface IStudentService:IBaseService<Student>
+    public interface IStudentService : IBaseService<Student>
     {
-        IQueryable<Student> GetStudentsWithCoursesAsync(int pageNumber, int resultsPage);
+        IQueryable<StundentListDTO> GetStudentsWithCoursesAsync(int pageNumber, int resultsPage);
 
         IQueryable<Student> GetStudentsWithNoCoursesAsync(int pageNumber, int resultsPage);
+        IQueryable<StundentListDTO> FindStudentsAsync(StudentFindDTO studentFindDTO);
 
-        
+        Task EnrollAsysnc(Student student);
     }
 }

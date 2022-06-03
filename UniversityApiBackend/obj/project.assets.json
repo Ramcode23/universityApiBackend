@@ -2,29 +2,31 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "AutoMapper/11.0.1": {
+      "AutoMapper/10.1.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CSharp": "4.7.0"
+          "Microsoft.CSharp": "4.7.0",
+          "System.Reflection.Emit": "4.7.0"
         },
         "compile": {
-          "lib/netstandard2.1/AutoMapper.dll": {}
+          "lib/netstandard2.0/AutoMapper.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/AutoMapper.dll": {}
+          "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
-      "AutoMapper.Extensions.Microsoft.DependencyInjection/11.0.0": {
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.1": {
         "type": "package",
         "dependencies": {
-          "AutoMapper": "11.0.0",
-          "Microsoft.Extensions.Options": "6.0.0"
+          "AutoMapper": "[10.1.1, 11.0.0)",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0",
+          "Microsoft.Extensions.Options": "3.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -2997,7 +2999,7 @@
           "ref/netstandard1.5/System.Reflection.dll": {}
         }
       },
-      "System.Reflection.Emit/4.6.0": {
+      "System.Reflection.Emit/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -3835,33 +3837,33 @@
     }
   },
   "libraries": {
-    "AutoMapper/11.0.1": {
-      "sha512": "WIadGC1pIwbnyTubvI577p3F++Bsj9q2Q3OaAc1I0QS+JhupN1xkdrPBhI9bPIeg63zM81tZplUNYkqU1HE5jQ==",
+    "AutoMapper/10.1.1": {
+      "sha512": "uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "type": "package",
-      "path": "automapper/11.0.1",
+      "path": "automapper/10.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "automapper.11.0.1.nupkg.sha512",
+        "automapper.10.1.1.nupkg.sha512",
         "automapper.nuspec",
         "icon.png",
-        "lib/netstandard2.1/AutoMapper.dll",
-        "lib/netstandard2.1/AutoMapper.xml"
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.xml"
       ]
     },
-    "AutoMapper.Extensions.Microsoft.DependencyInjection/11.0.0": {
-      "sha512": "0asw5WxdCFh2OTi9Gv+oKyH9SzxwYQSnO8TV5Dd0GggovILzJW4UimP26JAcxc3yB5NnC5urooZ1BBs8ElpiBw==",
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.1": {
+      "sha512": "xSWoVzOipuDU4PeZcUfaZQ+xqXU8QmGv5jrdlxt3MYm9xaOmrefqcfzGQ3SQ+D+8wfBa/ZwSuL0qKOVj080inA==",
       "type": "package",
-      "path": "automapper.extensions.microsoft.dependencyinjection/11.0.0",
+      "path": "automapper.extensions.microsoft.dependencyinjection/8.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "icon.png",
-        "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+        "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -9133,16 +9135,17 @@
         "system.reflection.nuspec"
       ]
     },
-    "System.Reflection.Emit/4.6.0": {
-      "sha512": "qAo4jyXtC9i71iElngX7P2r+zLaiHzxKwf66sc3X91tL5Ks6fnQ1vxL04o7ZSm3sYfLExySL7GN8aTpNYpU1qw==",
+    "System.Reflection.Emit/4.7.0": {
+      "sha512": "VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
       "type": "package",
-      "path": "system.reflection.emit/4.6.0",
+      "path": "system.reflection.emit/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/monoandroid10/_._",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
         "lib/net45/_._",
         "lib/netcore50/System.Reflection.Emit.dll",
         "lib/netcoreapp2.0/_._",
@@ -9152,8 +9155,12 @@
         "lib/netstandard2.0/System.Reflection.Emit.dll",
         "lib/netstandard2.0/System.Reflection.Emit.xml",
         "lib/netstandard2.1/_._",
+        "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
-        "ref/monoandroid10/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
         "ref/net45/_._",
         "ref/netcoreapp2.0/_._",
         "ref/netstandard1.1/System.Reflection.Emit.dll",
@@ -9170,10 +9177,13 @@
         "ref/netstandard2.0/System.Reflection.Emit.dll",
         "ref/netstandard2.0/System.Reflection.Emit.xml",
         "ref/netstandard2.1/_._",
+        "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Reflection.Emit.dll",
         "runtimes/aot/lib/netcore50/System.Reflection.Emit.xml",
-        "system.reflection.emit.4.6.0.nupkg.sha512",
+        "system.reflection.emit.4.7.0.nupkg.sha512",
         "system.reflection.emit.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -11605,8 +11615,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "AutoMapper >= 11.0.1",
-      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "LinqSnippets >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.5",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.5",
@@ -11629,11 +11638,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
+      "projectUniqueName": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy-Project\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
       "projectName": "UniversityApiBackend",
-      "projectPath": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
+      "projectPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy-Project\\universityApiBackend\\UniversityApiBackend\\UniversityApiBackend.csproj",
       "packagesPath": "C:\\Users\\ramc2\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\UniversityApiBackend\\obj\\",
+      "outputPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy-Project\\universityApiBackend\\UniversityApiBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11654,8 +11663,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj": {
-              "projectPath": "c:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj"
+            "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy-Project\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj": {
+              "projectPath": "C:\\Users\\ramc2\\OneDrive\\Escritorio\\Courses\\Bootcamp\\C#\\Universtiy-Project\\universityApiBackend\\LinqSnippets\\LinqSnippets.csproj"
             }
           }
         }
@@ -11670,13 +11679,9 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "AutoMapper": {
-            "target": "Package",
-            "version": "[11.0.1, )"
-          },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "[11.0.0, )"
+            "version": "[8.1.1, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",

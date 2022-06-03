@@ -3,7 +3,7 @@
     public enum Level
     {
         Basic,
-        Intermidia,
+        Medium,
         Advanced,
         Expert
 

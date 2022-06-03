@@ -7,12 +7,12 @@ namespace UniversityApiBackend.Models.DataModels
         [Required]
         [Key]
         public int Id { get; set; }
-        public int UserID { get; set; }
-        public string CreatedBy { get; set; } = string.Empty;
+       
+        public User CreatedBy { get; set; } 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public string UpdatedBy { get; set; } = string.Empty;
+        public User? UpdatedBy { get; set; } 
         public DateTime? UpdatedAt { get; set; }
-        public string DeletedBy { get; set; } = string.Empty;
+        public User? DeletedBy { get; set; } 
         public DateTime? DeleteteAt { get; set; }
 
         public bool IsDeleted { get; set; } = false;
