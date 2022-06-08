@@ -8,7 +8,7 @@ namespace UniversityApiBackend.Services
 {
     public interface IBaseService<T> where T : class
     {
-        IQueryable<T> GetAll(int pageNumber=1, int resultsPage=10);
+        IQueryable<T> GetAll();
         Task<T?> GetById(int id);
         Task Add(T entity);
         Task Update(T entity);

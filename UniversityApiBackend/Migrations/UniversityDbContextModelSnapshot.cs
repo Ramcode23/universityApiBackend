@@ -357,10 +357,6 @@ namespace UniversityApiBackend.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("List")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
@@ -436,6 +432,27 @@ namespace UniversityApiBackend.Migrations
                     b.HasIndex("UpdatedById");
 
                     b.ToTable("Courses");
+                });
+
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Lesson", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("ChapterId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tittle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChapterId");
+
+                    b.ToTable("Lessons");
                 });
 
             modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Student", b =>
@@ -665,6 +682,13 @@ namespace UniversityApiBackend.Migrations
                     b.Navigation("UpdatedBy");
                 });
 
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Lesson", b =>
+                {
+                    b.HasOne("UniversityApiBackend.Models.DataModels.Chapter", null)
+                        .WithMany("Lessons")
+                        .HasForeignKey("ChapterId");
+                });
+
             modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Student", b =>
                 {
                     b.HasOne("UniversityApiBackend.Models.DataModels.Address", "Address")
@@ -705,6 +729,11 @@ namespace UniversityApiBackend.Migrations
             modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Address", b =>
                 {
                     b.Navigation("Students");
+                });
+
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Chapter", b =>
+                {
+                    b.Navigation("Lessons");
                 });
 
             modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Course", b =>

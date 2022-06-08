@@ -11,8 +11,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBackend.DataAccess;
+using UniversityApiBackend.DTOs;
+using UniversityApiBackend.DTOs.Chapters;
 using UniversityApiBackend.DTOs.Courses;
 using UniversityApiBackend.Helpers;
+using UniversityApiBackend.Models;
 using UniversityApiBackend.Models.DataModels;
 using UniversityApiBackend.Services;
 
@@ -40,8 +43,8 @@ namespace UniversityApiBackend.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<CourseDTO>>> GetCourses([FromQuery] int pageNumber, int resultsPage)
         {
-            var courses = await Task.FromResult(_service.GetAll(pageNumber, resultsPage).ToList());
-            return _mapper.Map<List<CourseDTO>>(courses);
+           
+            return await Task.FromResult(_service.GetAllCourseList(pageNumber, resultsPage).ToList());
 
         }
         // GET: api/Courses
@@ -57,7 +60,7 @@ namespace UniversityApiBackend.Controllers
         // GET: api/Courses/5
         [HttpGet("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<CourseDTO>> GetCourse(int id)
+        public async Task<ActionResult<CourseDetailDTO>> GetCourse(int id)
         {
             var course = await _service.GetById(id);
 
@@ -66,7 +69,8 @@ namespace UniversityApiBackend.Controllers
                 return NotFound();
             }
 
-            return _mapper.Map<CourseDTO>(course);
+            return _mapper.Map<CourseDetailDTO>(course);
+           // return course;
         }
 
         // PUT: api/Courses/5
@@ -117,34 +121,37 @@ namespace UniversityApiBackend.Controllers
             course.CreatedBy = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
             await _service.Add(course);
             return Ok(
-                 new {
-                        message = "Course created successfully",
+                 new
+                 {
+                     message = "Course created successfully",
                  }
             );
         }
 
-        
-                [HttpPost("AddCategoryToCourse")]
-                [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-                public async Task<ActionResult<Course>> AddCatetory(int courseId, int[] categoriesId)
-                {
-                    if (categoriesId == null)
-                        return BadRequest();
 
-                    await _service.AddCatetory(courseId, categoriesId);
-                    return Ok();
-
-                } 
-
-        [HttpPost("AddTeacherToCourse")]
+        [HttpPost("AddCategoryToCourse")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<ActionResult<Course>> AddChapter(int courseId, string List)
+        public async Task<ActionResult<Course>> AddCatetory(int courseId, int[] categoriesId)
         {
-            if (List == null)
+            if (categoriesId == null)
                 return BadRequest();
 
-            await _service.AddChapter(courseId, List);
+            await _service.AddCatetory(courseId, categoriesId);
             return Ok();
+
+        }
+
+        [HttpPost("AddChapterToCourse")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+        public async Task<ActionResult<Course>> AddChapter(ChapterDTO chapterDTO)
+        {
+            if (!chapterDTO.Lessons.Any())
+                return BadRequest(new { message = "No lessons added" });
+            if( ! _service.Exists(chapterDTO.CourseId))
+                return BadRequest(new { message = "Course not exist" });
+
+            await _service.AddChapter(chapterDTO);
+            return Ok( new { message = "Lessons added successfully" });
 
         }
 

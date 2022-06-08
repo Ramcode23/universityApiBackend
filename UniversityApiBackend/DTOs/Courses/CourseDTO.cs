@@ -12,14 +12,10 @@ namespace UniversityApiBackend.DTOs.Courses
         public string Name { get; set; } = string.Empty;
 
         [Required, StringLength(280)]
-        public string ShortDescription { get; set; } = string.Empty;
+        public string CategoryName { get; set; } = string.Empty;
         [Required]
-        public string Description { get; set; } = string.Empty;
+        public int Students { get; set; } 
 
-        [Required]
-        public string PublicGoal { get; set; } = string.Empty;
-
-        public Level Level { get; set; } = Level.Basic;
 
        
 

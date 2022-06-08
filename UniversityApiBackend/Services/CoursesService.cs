@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 using LinqSnippets;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBackend.DataAccess;
+using UniversityApiBackend.DTOs;
+using UniversityApiBackend.DTOs.Chapters;
 using UniversityApiBackend.DTOs.Courses;
+using UniversityApiBackend.Models;
 using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.Services
@@ -24,12 +27,36 @@ namespace UniversityApiBackend.Services
             if (entity.Categories.Any())
             {
                 entity.Categories = categories;
-            }else{
+            }
+            else
+            {
                 entity.Categories = new List<Category>();
-            }       
-            
+            }
+
+
+            var lessons = entity.Chapter.Lessons;
+           
+            entity.Chapter.Lessons = new List<Lesson>(); 
+
+                
+
+
+
             entity.CreatedAt = DateTime.Now;
             _context.Courses.Add(entity);
+            _context.SaveChanges();
+
+            foreach (var lesson in lessons)
+            {
+                _context.Lessons.AddAsync(new Lesson()
+                {
+                    Chapter = entity.Chapter,
+                    ChapterId = entity.Chapter.Id,
+                    Tittle = lesson.Tittle
+                });
+            }
+
+
             return _context.SaveChangesAsync();
         }
 
@@ -49,20 +76,31 @@ namespace UniversityApiBackend.Services
             return _context.SaveChangesAsync();
         }
 
-        public Task AddChapter(int courseId, string List)
+        public async Task AddChapter(ChapterDTO chapterDTO)
         {
-            var course = _context.Courses.Find(courseId);
-            if (course == null)
-            {
-                throw new Exception("Course not found");
-            }
-            var chapter = new Chapter()
-            {
-                Course = course,
-                List = List
+            var course = await _context.Courses
+                 .Include(c => c.Chapter)
+                 .FirstOrDefaultAsync(c => c.Id == chapterDTO.CourseId);
 
-            };
-            return _context.SaveChangesAsync();
+            var lessons = new List<Lesson>();
+            foreach (var lesson in chapterDTO.Lessons)
+            {
+                lessons.Add(new Lesson
+                {
+                    //Tittle = lesson.Tittle,
+                    //Chapter = course.Chapter
+                    Tittle = lesson.Tittle,
+                    ChapterId = course.Chapter.CourseId
+                }); ;
+            }
+
+
+            _context.Lessons.AddRange(lessons);
+            await _context.SaveChangesAsync();
+
+            course.Chapter.Lessons.ToList().AddRange(lessons.ToArray());
+            await _context.SaveChangesAsync();
+            return;
         }
 
         public Task Delete(int id)
@@ -80,9 +118,13 @@ namespace UniversityApiBackend.Services
             return _context.Courses.Any(c => c.Id == Id);
         }
 
-        public IQueryable<Course> SearchCourses(CourseFindDTO courseFindDTO)
+        public IQueryable<CourseDTO> SearchCourses(CourseFindDTO courseFindDTO)
         {
-            var courses = _context.Courses.AsQueryable();
+            var courses = _context.Courses
+                 .Include(x => x.Categories)
+                .Include(x => x.Students)
+                .OrderBy(c => c.Name)
+                .AsQueryable();
             if (!string.IsNullOrEmpty(courseFindDTO.Name))
             {
                 courses = courses.Where(c => c.Name.Contains(courseFindDTO.Name));
@@ -95,35 +137,26 @@ namespace UniversityApiBackend.Services
             {
                 courses = courses.Where(c => c.Students.Count() >= courseFindDTO.RangeStudents[0] && c.Students.Count() <= courseFindDTO.RangeStudents[1]);
             }
-            return courses.AsQueryable();
+            return courses.Select(c => new CourseDTO
+            {
+                Id = c.Id,
+                Name = c.Name,
+                CategoryName = c.Categories.FirstOrDefault().Name,
+                Students = c.Students.Count(),
+            });
         }
-        public IQueryable<Course> GetAll(int pageNumber, int resultsPage)
+        public IQueryable<Course> GetAll()
         {
-            var courses = _context.Courses.OrderBy(c => c.Name).AsQueryable();
-            return Paginator.GetPage(courses, pageNumber, resultsPage);
+
+            return _context.Courses.OrderBy(c => c.Name).AsQueryable();
         }
 
-        public Task<CourseDTO?> GetCourseById(int id)
-        {
-            return _context.Courses
-           .Where(c => c.Id == id)
-           .Select(c => new CourseDTO()
-           {
-               Id = c.Id,
-               Name = c.Name,
-               ShortDescription = c.ShortDescription,
-               Description = c.Description,
-               Level = c.Level,
-
-           }
-
-
-           )
-           .FirstOrDefaultAsync();
-        }
         public Task<Course?> GetById(int id)
         {
             return _context.Courses
+              .Include(c => c.Categories)
+                .Include(c => c.Chapter)
+                .ThenInclude(c => c.Lessons)
            .Where(c => c.Id == id)
            .FirstOrDefaultAsync();
         }
@@ -153,6 +186,55 @@ namespace UniversityApiBackend.Services
             entity.UpdatedAt = DateTime.Now;
             _context.Courses.Update(entity);
             return _context.SaveChangesAsync();
+        }
+
+        public Task AddLesson(int ChaperId, List<Lesson> lessons)
+        {
+            var chapter = _context.Chapters.Find(ChaperId);
+            if (chapter == null)
+            {
+                throw new Exception("Chapter not found");
+            }
+
+            return _context.SaveChangesAsync();
+        }
+
+        public Task RemoveLesson(int lessonId)
+        {
+            _context.Lessons.Remove(_context.Lessons.Find(lessonId));
+            return _context.SaveChangesAsync();
+        }
+
+        public Task EditLesson(int ChaperId, List<Lesson> lessons)
+        {
+            var chapter = _context.Chapters.Find(ChaperId);
+            if (chapter == null)
+            {
+                throw new Exception("Chapter not found");
+            }
+            foreach (var lesson in lessons)
+            {
+                //lesson.Chapter = chapter;
+                _context.Lessons.Update(lesson);
+            }
+            return _context.SaveChangesAsync();
+        }
+
+        public IQueryable<CourseDTO> GetAllCourseList(int pageNumber, int resultsPage)
+        {
+           var courses = _context.Courses
+                .Include(x=>x.Categories)
+                .Include(x=>x.Students)
+                .OrderBy(c => c.Name)
+                .Select(c=> new CourseDTO
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    CategoryName=c.Categories.FirstOrDefault().Name,
+                    Students=c.Students.Count(),
+                })
+                .AsQueryable();
+            return Paginator.GetPage(courses, pageNumber, resultsPage);
         }
     }
 }

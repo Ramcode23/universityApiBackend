@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using UniversityApiBackend.Models;
 using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.DataAccess
@@ -21,6 +22,7 @@ namespace UniversityApiBackend.DataAccess
         public DbSet<Chapter>? Chapters { get; set; }
         public DbSet<Student>? Students { get; set; }
         public DbSet<Address>? Addresses { get; set; }
+        public DbSet<Lesson>? Lessons { get; set; }
 
 
     }

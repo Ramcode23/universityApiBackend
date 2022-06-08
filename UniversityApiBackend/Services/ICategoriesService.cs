@@ -11,6 +11,7 @@ namespace UniversityApiBackend.Services
     {
         IQueryable<CategoryDTO> SearchCategory(string Name, int[] rangeCourse);
         IQueryable<CategoryDTO> GetAllCategories(int pageNumber, int resultsPage);
+  
         Task<CategoryDTO?> GetById(int id);
     }
 }

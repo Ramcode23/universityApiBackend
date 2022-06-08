@@ -147,6 +147,7 @@ namespace UniversityApiBackend.Helpers
                     Country = registerStudent.Country,
                     Street = registerStudent.Street,
                     ZipCode = registerStudent.ZipCode,
+                    Comunity = registerStudent.Comunity,
                 };
 
 

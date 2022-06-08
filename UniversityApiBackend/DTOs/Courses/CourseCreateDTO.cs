@@ -22,7 +22,9 @@ namespace UniversityApiBackend.DTOs.Courses
 
         public Level Levels { get; set; } = Level.Basic;
 
-public List<CategoryCourseDTO> Categories { get; set; }             
+         public List<CategoryCourseDTO> Categories { get; set; }   
+        
+       public  ChapterDTO Chapter { get; set; }
 
 
     }

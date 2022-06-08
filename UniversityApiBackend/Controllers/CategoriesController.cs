@@ -46,7 +46,18 @@ namespace UniversityApiBackend.Controllers
             return new List<CategoryDTO>();
         }
 
-  // GET: api/Categories
+        // GET: api/CategoriesList
+        [HttpGet("List")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<IEnumerable<CategoryListDTO>>> GetCategoriesList()
+        {
+            var categories = await Task.FromResult(_service.GetAll());
+            if (categories.Any())
+                return _mapper.Map< List< CategoryListDTO>>(categories);
+            return new List<CategoryListDTO>();
+        }
+
+        // GET: api/Categories
         [HttpGet("Search")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<CategoryDTO>>> SearchCategory([FromQuery] string Name, [FromQuery] int[] rangeCourse)

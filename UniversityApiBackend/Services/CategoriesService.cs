@@ -40,12 +40,12 @@ namespace UniversityApiBackend.Services
         }
 
 
-        public IQueryable<Category> GetAll(int pageNumber, int resultsPage)
+        public IQueryable<Category> GetAll()
         {
-            var categories = _context.Categories
+            return _context.Categories
              .OrderBy(c => c.Name)
              .AsQueryable();
-            return Paginator.GetPage(categories, pageNumber, resultsPage);
+           
         }
 
         
@@ -109,6 +109,8 @@ namespace UniversityApiBackend.Services
         {
             throw new NotImplementedException();
         }
+
+      
     }
 
 }

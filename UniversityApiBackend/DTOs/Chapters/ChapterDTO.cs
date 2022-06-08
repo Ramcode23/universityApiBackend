@@ -8,9 +8,12 @@ namespace UniversityApiBackend.DTOs.Chapters
 {
     public class ChapterDTO
     {
-           public int CourseId { get; set; }
+
+        public int Id { get; set; }
+        [Required]
+        public int CourseId { get; set; }
 
         [Required]
-        public string List { get; set; }=string.Empty;
+        public List<LessonDTO> Lessons { get; set; } = new List<LessonDTO>();
     }
 }

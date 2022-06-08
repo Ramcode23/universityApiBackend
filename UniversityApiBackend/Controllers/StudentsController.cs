@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBackend.DataAccess;
+using UniversityApiBackend.DTOs.Account;
 using UniversityApiBackend.DTOs.Students;
 using UniversityApiBackend.Helpers;
 using UniversityApiBackend.Models.DataModels;
@@ -103,7 +104,7 @@ namespace UniversityApiBackend.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> PutStudent(int id, StudentDTO studentDTO)
+        public async Task<IActionResult> PutStudent(int id, RegisterStudent studentDTO)
         {
             if (id != studentDTO.Id)
             {
@@ -113,9 +114,10 @@ namespace UniversityApiBackend.Controllers
 
             try
             {
-                var student = _mapper.Map<Student>(studentDTO);
-                student.UpdatedBy = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
-                student.UpdatedAt = DateTime.Now;
+
+             var updateBy = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
+              await  _service.Update(studentDTO, updateBy);
+           
             }
             catch (DbUpdateConcurrencyException)
             {

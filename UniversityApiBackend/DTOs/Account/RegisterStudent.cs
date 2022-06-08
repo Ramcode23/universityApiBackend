@@ -8,6 +8,7 @@ namespace UniversityApiBackend.DTOs.Account
 {
     public class RegisterStudent
     {
+        public int Id { get; set; }
         [Required]
         [EmailAddress]
         public string Email { get; set; } = string.Empty;

@@ -4,6 +4,7 @@ using UniversityApiBackend.DTOs.Categories;
 using UniversityApiBackend.DTOs.Chapters;
 using UniversityApiBackend.DTOs.Courses;
 using UniversityApiBackend.DTOs.Students;
+
 using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.Utilities
@@ -18,6 +19,9 @@ namespace UniversityApiBackend.Utilities
             CreateMap<CategoryDTO, Category>();
             CreateMap<CategoryDTO, Category>().ReverseMap();
 
+            CreateMap<CategoryListDTO, Category>();
+            CreateMap<CategoryListDTO, Category>().ReverseMap();
+
             CreateMap<CategoryCreateDTO, Category>();
             CreateMap<CategoryCreateDTO, Category>().ReverseMap();
 
@@ -28,20 +32,16 @@ namespace UniversityApiBackend.Utilities
             // Map CourseCreateDTO to Course
             CreateMap<CourseCreateDTO, Course>().PreserveReferences();
 
+            CreateMap<CourseDetailDTO, Course>().ReverseMap();
+            CreateMap<CourseDetailDTO, Course>();
+            
             CreateMap<Student, StudentDTO>()
-               //.ForMember(
-               //     dest => dest.FirstName,
-               //     opt => opt.MapFrom(src => $"{src.FirstName}")
-               // )
-               // .ForMember(
-               //     dest => dest.LastName,
-               //     opt => opt.MapFrom(src => $"{src.LastName}")
-               // )
+
                 .ForMember(
                     dest => dest.Dob,
                     opt => opt.MapFrom(src => $"{src.Dob}")
                 )
-                //adrerss
+
                 .ForMember(
                     dest => dest.Adress,
                     opt => opt.MapFrom(src => $"{src.Address}")
@@ -49,19 +49,12 @@ namespace UniversityApiBackend.Utilities
 
 
             CreateMap<Student, StudentDTO>()
-                //.ForMember(
-                //    dest => dest.FirstName,
-                //    opt => opt.MapFrom(src => $"{src.FirstName}")
-                //)
-                //.ForMember(
-                //    dest => dest.LastName,
-                //    opt => opt.MapFrom(src => $"{src.LastName}")
-                //)
+
                 .ForMember(
                     dest => dest.Dob,
                     opt => opt.MapFrom(src => $"{src.Dob}")
                 )
-                //adrerss
+
                 .ForMember(
                     dest => dest.Adress,
                     opt => opt.MapFrom(src => $"{src.Address}")
@@ -76,6 +69,13 @@ namespace UniversityApiBackend.Utilities
 
             CreateMap<Chapter, ChapterDTO>().ReverseMap();
             CreateMap<Chapter, ChapterDTO>();
+           
+            CreateMap<Chapter, ChapterDetailDTO>().ReverseMap();
+            CreateMap<Chapter, ChapterDetailDTO>();
+
+
+            CreateMap<Lesson, LessonDTO>().ReverseMap();
+            CreateMap<Lesson, LessonDTO>();
 
 
 

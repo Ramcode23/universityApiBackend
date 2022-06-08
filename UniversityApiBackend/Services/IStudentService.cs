@@ -1,4 +1,5 @@
-﻿using UniversityApiBackend.DTOs.Students;
+﻿using UniversityApiBackend.DTOs.Account;
+using UniversityApiBackend.DTOs.Students;
 using UniversityApiBackend.Models.DataModels;
 
 namespace UniversityApiBackend.Services
@@ -11,5 +12,7 @@ namespace UniversityApiBackend.Services
         IQueryable<StundentListDTO> FindStudentsAsync(StudentFindDTO studentFindDTO);
 
         Task EnrollAsysnc(Student student);
+
+        Task Update(RegisterStudent entity, User user);
     }
 }

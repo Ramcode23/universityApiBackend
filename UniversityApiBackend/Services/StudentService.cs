@@ -2,6 +2,7 @@
 using LinqSnippets;
 using Microsoft.EntityFrameworkCore;
 using UniversityApiBackend.DataAccess;
+using UniversityApiBackend.DTOs.Account;
 using UniversityApiBackend.DTOs.Students;
 using UniversityApiBackend.Models.DataModels;
 namespace UniversityApiBackend.Services
@@ -44,38 +45,40 @@ namespace UniversityApiBackend.Services
         public IQueryable<StundentListDTO> FindStudentsAsync(StudentFindDTO studentFindDTO)
         {
             // select categories courses and students
-            var students = _context.Students
+            var students = _context.Students.Where(x=>x.IsDeleted==false|| x.IsDeleted==null)
             .AsQueryable();
             if (studentFindDTO.FirstName != null)
-               students = students.Where(e => e.User.Name == studentFindDTO.FirstName);
+               students = students.Where(e => e.User.Name.Contains(studentFindDTO.FirstName.ToLower()));
             if (studentFindDTO.LastName != null)
-                students = students.Where(e => e.User.LastName == studentFindDTO.LastName);
-            if (studentFindDTO.course != null)
-                students = students.Where(e => e.Courses.Any(c => c.Name == studentFindDTO.course));
+                students = students.Where(e => e.User.LastName.Contains( studentFindDTO.LastName.ToLower()));
+            if (studentFindDTO.courseName != null)
+                students = students.Where(e => e.Courses.Any(c => c.Name.Contains( studentFindDTO.courseName.ToLower())));
             if (studentFindDTO.CourseCategory != null)
-                students = students.Where(e => e.Courses.Any(c => c.Categories.Where(ct=>ct.Name.Contains( studentFindDTO.CourseCategory)).Any()));
-            if (studentFindDTO.RangeAge != null)
+                students = students.Where(e => e.Courses.Any(c => c.Categories.Where(ct=>ct.Name.ToLower().Contains( studentFindDTO.CourseCategory.ToLower())).Any()));
+            if (studentFindDTO.RangeAge != null && studentFindDTO.RangeAge.Any(x=>x>0))
 
                 students = students.Where(e => (e.Dob.Year-DateTime.Now.Year) >= studentFindDTO.RangeAge[0] && (e.Dob.Year-DateTime.Now.Year) <= studentFindDTO.RangeAge[1]);
             if (studentFindDTO.Street != null)
-                students = students.Where(e => e.Address.Street == studentFindDTO.Street);
+                students = students.Where(e => e.Address.Street.ToLower().Contains(studentFindDTO.Street.ToLower()));
             if (studentFindDTO.City != null)
-                students = students.Where(e => e.Address.City == studentFindDTO.City);
+                students = students.Where(e => e.Address.City.ToLower().Contains(studentFindDTO.City.ToLower()));
             if (studentFindDTO.State != null)
-                students = students.Where(e => e.Address.State == studentFindDTO.State);
+                students = students.Where(e => e.Address.State.ToLower().Contains(studentFindDTO.State.ToLower()));
             if (studentFindDTO.ZipCode != null)
-                students = students.Where(e => e.Address.ZipCode == studentFindDTO.ZipCode);
+                students = students.Where(e => e.Address.ZipCode.ToLower().Contains(studentFindDTO.ZipCode.ToLower()));
             if (studentFindDTO.Country != null)
-                students = students.Where(e => e.Address.Country == studentFindDTO.Country);
+                students = students.Where(e => e.Address.Country.ToLower().Contains(studentFindDTO.Country.ToLower()));
             if (studentFindDTO.Comunity != null)
-                students = students.Where(e => e.Address.Comunity == studentFindDTO.Comunity);
-            
+                students = students.Where(e => e.Address.Comunity.ToLower().Contains(studentFindDTO.Comunity.ToLower()));
+          var use=  students.Count();
             return students.Select(e => new StundentListDTO
             {
-                 Id = e.Id,
+                Id = e.Id,
                 FirstName = e.User.Name,
                 LastName = e.User.LastName,
-                Age = e.Dob.Year - DateTime.Now.Year,
+                Email = e.User.UserName,
+                Age = DateTime.Now.Year - e.Dob.Year,
+                Dob = e.Dob,
                 CourseName = e.Courses.FirstOrDefault().Name,
                 Street = e.Address.Street,
                 City = e.Address.City,
@@ -83,18 +86,16 @@ namespace UniversityApiBackend.Services
                 ZipCode = e.Address.ZipCode,
                 Country = e.Address.Country,
                 Comunity = e.Address.Comunity,
-                Category=e.Courses.FirstOrDefault().Categories.FirstOrDefault().Name
+                Category = e.Courses.FirstOrDefault().Categories.FirstOrDefault().Name
             });
         }
 
-        public IQueryable<Student> GetAll(int pageNumber, int resultsPage)
+        public IQueryable<Student> GetAll()
         {
             var students = _context.Students
            .Include(s => s.Courses)
-           //./*OrderBy(s => s.FirstName)*/
-           ////.ThenBy(s => s.LastName)
           .AsQueryable();
-            return Paginator.GetPage(students, pageNumber, resultsPage);
+            return students;
         }
 
         public Task<Student?> GetById(int id)
@@ -109,9 +110,9 @@ namespace UniversityApiBackend.Services
             throw new NotImplementedException();
         }
 
-        public IQueryable<StundentListDTO> GetStudentsWithCoursesAsync(int pageNumber, int resultsPage)
+        public IQueryable<StundentListDTO> GetStudentsWithCoursesAsync(int pageNumber=1, int resultsPage=10)
         {
-            var students = _context.Students
+            var students = _context.Students.Where(x => x.IsDeleted == false || x.IsDeleted == null)
             .Include(s => s.Courses)
             .Include(s => s.User)
             .OrderBy(s => s.User.Name)
@@ -121,7 +122,9 @@ namespace UniversityApiBackend.Services
                 Id = e.Id,
                 FirstName = e.User.Name,
                 LastName = e.User.LastName,
-                Age = e.Dob.Year - DateTime.Now.Year,
+                Email = e.User.UserName,
+                Age = DateTime.Now.Year - e.Dob.Year,
+                Dob = e.Dob,
                 CourseName = e.Courses.FirstOrDefault().Name,
                 Street = e.Address.Street,
                 City = e.Address.City,
@@ -129,10 +132,11 @@ namespace UniversityApiBackend.Services
                 ZipCode = e.Address.ZipCode,
                 Country = e.Address.Country,
                 Comunity = e.Address.Comunity,
-                Category=e.Courses.FirstOrDefault().Categories.FirstOrDefault().Name
+                Category = e.Courses.FirstOrDefault().Categories.FirstOrDefault().Name
 
             })  
             .AsQueryable();
+            var tes = students.Count();
             return Paginator.GetPage(students, pageNumber, resultsPage);
 
 
@@ -149,6 +153,37 @@ namespace UniversityApiBackend.Services
             return Paginator.GetPage(students, pageNumber, resultsPage);
         }
 
+        public Task Update(RegisterStudent entity,User user)
+        {
+
+
+            try
+            {
+
+                var student = _context.Students.Include(x=>x.UpdatedBy)
+                    .Include(x=>x.Address)
+                    .Include(x=>x.User)
+                    .FirstOrDefault(es => es.Id == entity.Id);
+                student.User.Name = entity.FirstName;
+                student.User.LastName = entity.LastName;
+                student.Address.City = entity.City;
+                student.Address.State = entity.State;
+                student.Address.ZipCode = entity.ZipCode;
+                student.Address.Country = entity.Country;
+                student.Address.Comunity = entity.Comunity;
+                student.UpdatedAt = DateTime.Now;
+                student.UpdatedBy = user;
+                _context.Students.Update(student);
+                return _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+          
+        }
         public Task Update(Student entity)
         {
             entity.UpdatedAt = DateTime.Now;

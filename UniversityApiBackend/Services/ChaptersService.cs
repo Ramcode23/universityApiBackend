@@ -36,10 +36,9 @@ namespace UniversityApiBackend.Services
             return _context.Chapters.Any(c => c.Id == Id);
         }
 
-        public IQueryable<Chapter> GetAll(int pageNumber, int resultsPage)
+        public IQueryable<Chapter> GetAll()
         {
-            var chapters= _context.Chapters.AsQueryable();
-            return Paginator.GetPage(chapters, pageNumber, resultsPage);
+            return _context.Chapters.AsQueryable();
         }
 
         public Task<Chapter?> GetById(int id)
