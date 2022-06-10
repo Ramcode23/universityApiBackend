@@ -127,7 +127,8 @@ namespace UniversityApiBackend.Services
             {
                 courses = courses.Where(c => c.Categories.Where(cat => cat.Name.Contains(courseFindDTO.CategoryName)).Any());
             }
-            if (courseFindDTO.RangeStudents.Length == 2)
+            if(courseFindDTO.RangeStudents != null)
+            if (courseFindDTO.RangeStudents.Length == 2 )
             {
                 courses = courses.Where(c => c.Students.Count() >= courseFindDTO.RangeStudents[0] && c.Students.Count() <= courseFindDTO.RangeStudents[1]);
             }

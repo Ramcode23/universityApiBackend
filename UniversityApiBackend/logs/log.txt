@@ -17549,3 +17549,539 @@ Error Number:10061,State:0,Class:20
 2022-06-09 22:21:57.400 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 8.3840 ms
 2022-06-09 22:23:49.391 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1444 ms
 2022-06-09 22:23:49.431 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 12.0119 ms
+2022-06-10 07:02:49.786 -07:00 [ERR] An error occurred using the connection to database 'UniversityDB2' on server '127.0.0.1,1433'.
+2022-06-10 07:02:49.820 -07:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UniversityApiBackend.DataAccess.UniversityDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2022-06-10 07:03:14.757 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-10 07:03:14.775 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-10 07:03:14.781 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-10 07:03:14.783 -07:00 [INF] Hosting environment: Development
+2022-06-10 07:03:14.784 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-10 07:04:10.866 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 3.4335 ms
+2022-06-10 07:04:11.589 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 703.1513 ms
+2022-06-10 07:04:11.930 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.7826 ms
+2022-06-10 07:04:12.323 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 383.2837 ms
+2022-06-10 07:05:21.341 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1416 ms
+2022-06-10 07:05:21.371 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 16.0263 ms
+2022-06-10 07:08:33.817 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0559 ms
+2022-06-10 07:08:33.837 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 7.7651 ms
+2022-06-10 07:12:19.505 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.5570 ms
+2022-06-10 07:12:19.518 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.6900 ms
+2022-06-10 07:13:08.220 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.2078 ms
+2022-06-10 07:13:08.236 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.3260 ms
+2022-06-10 07:13:47.715 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.4404 ms
+2022-06-10 07:13:47.825 -07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-06-10 07:13:47.979 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 246.6870 ms
+2022-06-10 07:14:02.550 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1709 ms
+2022-06-10 07:23:50.483 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.4779 ms
+2022-06-10 07:23:50.524 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 25.9732 ms
+2022-06-10 07:27:09.304 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0821 ms
+2022-06-10 07:27:09.321 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 6.6740 ms
+2022-06-10 07:27:13.618 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0928 ms
+2022-06-10 07:27:13.636 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 7.4024 ms
+2022-06-10 07:34:17.814 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.2644 ms
+2022-06-10 07:34:17.856 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 26.7510 ms
+2022-06-10 07:51:48.636 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.8718 ms
+2022-06-10 07:51:48.674 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 31.0443 ms
+2022-06-10 07:52:24.392 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.1360 ms
+2022-06-10 07:52:24.441 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 11.8959 ms
+2022-06-10 07:52:33.459 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0805 ms
+2022-06-10 07:52:33.473 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 6.7713 ms
+2022-06-10 07:52:54.258 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 0.0732 ms
+2022-06-10 07:52:54.291 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 25.3704 ms
+2022-06-10 07:52:54.345 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0621 ms
+2022-06-10 07:52:54.355 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.6130 ms
+2022-06-10 07:52:57.697 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0865 ms
+2022-06-10 07:52:57.710 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.2533 ms
+2022-06-10 07:53:20.215 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0367 ms
+2022-06-10 07:53:20.237 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 6.4892 ms
+2022-06-10 07:53:20.307 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0437 ms
+2022-06-10 07:53:20.319 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.9984 ms
+2022-06-10 08:33:27.431 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-10 08:33:27.453 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-10 08:33:27.464 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-10 08:33:27.466 -07:00 [INF] Hosting environment: Development
+2022-06-10 08:33:27.469 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-10 08:34:02.051 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 378.5503 ms
+2022-06-10 08:34:41.666 -07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-06-10 08:34:41.787 -07:00 [INF] HTTP GET /api/Courses/1 responded 200 in 470.7108 ms
+2022-06-10 11:18:01.431 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 5.1093 ms
+2022-06-10 11:18:01.518 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 77.1876 ms
+2022-06-10 11:18:01.568 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.2055 ms
+2022-06-10 11:18:01.682 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 107.0770 ms
+2022-06-10 11:18:05.879 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0919 ms
+2022-06-10 11:18:05.895 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 9.4567 ms
+2022-06-10 11:18:12.115 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0696 ms
+2022-06-10 11:18:12.128 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 6.3832 ms
+2022-06-10 11:18:13.519 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0615 ms
+2022-06-10 11:18:13.531 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.6468 ms
+2022-06-10 11:18:15.647 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0992 ms
+2022-06-10 11:18:15.659 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.2265 ms
+2022-06-10 11:18:17.449 -07:00 [INF] HTTP OPTIONS /api/courses/3 responded 204 in 0.0830 ms
+2022-06-10 11:18:17.461 -07:00 [INF] HTTP GET /api/courses/3 responded 200 in 5.2664 ms
+2022-06-10 11:18:22.636 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0910 ms
+2022-06-10 11:18:22.648 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.2317 ms
+2022-06-10 11:18:28.543 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 0.1148 ms
+2022-06-10 11:18:28.564 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 16.8743 ms
+2022-06-10 11:18:28.581 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0896 ms
+2022-06-10 11:18:28.591 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.0440 ms
+2022-06-10 11:18:32.962 -07:00 [INF] HTTP OPTIONS /api/courses/5 responded 204 in 0.2446 ms
+2022-06-10 11:18:32.977 -07:00 [INF] HTTP GET /api/courses/5 responded 200 in 8.0778 ms
+2022-06-10 11:18:59.718 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0618 ms
+2022-06-10 11:18:59.730 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.4639 ms
+2022-06-10 11:19:08.108 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.2225 ms
+2022-06-10 11:19:08.123 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 6.8514 ms
+2022-06-10 11:19:13.062 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1542 ms
+2022-06-10 11:19:13.072 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.1849 ms
+2022-06-10 11:21:03.426 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1379 ms
+2022-06-10 11:21:03.437 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.4254 ms
+2022-06-10 11:21:09.270 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.1425 ms
+2022-06-10 11:21:09.284 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.9385 ms
+2022-06-10 11:21:11.283 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0682 ms
+2022-06-10 11:21:11.295 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.6998 ms
+2022-06-10 11:21:29.230 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 0.0363 ms
+2022-06-10 11:21:29.258 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 20.6050 ms
+2022-06-10 11:21:29.275 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0412 ms
+2022-06-10 11:21:29.286 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.8410 ms
+2022-06-10 11:22:25.641 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 0.0380 ms
+2022-06-10 11:22:25.662 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 15.8492 ms
+2022-06-10 11:22:25.772 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0332 ms
+2022-06-10 11:22:25.856 -07:00 [INF] HTTP GET /api/Students responded 200 in 77.4827 ms
+2022-06-10 11:22:32.297 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0387 ms
+2022-06-10 11:22:32.308 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.7841 ms
+2022-06-10 11:22:34.991 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0602 ms
+2022-06-10 11:22:35.000 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.8178 ms
+2022-06-10 11:22:38.575 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0554 ms
+2022-06-10 11:22:38.600 -07:00 [INF] HTTP GET /api/Categories responded 200 in 19.4757 ms
+2022-06-10 11:22:55.559 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0362 ms
+2022-06-10 11:22:55.574 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.7635 ms
+2022-06-10 11:22:56.740 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0561 ms
+2022-06-10 11:22:56.754 -07:00 [INF] HTTP GET /api/Categories responded 200 in 5.9946 ms
+2022-06-10 11:23:06.279 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0350 ms
+2022-06-10 11:23:06.291 -07:00 [INF] HTTP GET /api/Categories responded 200 in 5.0586 ms
+2022-06-10 11:23:08.503 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0666 ms
+2022-06-10 11:23:08.517 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 6.5976 ms
+2022-06-10 11:23:09.860 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1605 ms
+2022-06-10 11:23:09.870 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.4488 ms
+2022-06-10 11:23:10.855 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0429 ms
+2022-06-10 11:23:10.867 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.0160 ms
+2022-06-10 11:23:11.766 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0943 ms
+2022-06-10 11:23:11.779 -07:00 [INF] HTTP GET /api/Categories responded 200 in 5.7480 ms
+2022-06-10 11:23:14.061 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 0.1106 ms
+2022-06-10 11:23:14.078 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 12.8496 ms
+2022-06-10 11:23:14.108 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0433 ms
+2022-06-10 11:23:14.120 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.0952 ms
+2022-06-10 11:23:18.223 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0569 ms
+2022-06-10 11:23:18.234 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.8857 ms
+2022-06-10 11:23:28.270 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0395 ms
+2022-06-10 11:23:28.283 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 7.8806 ms
+2022-06-10 11:23:29.879 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.1145 ms
+2022-06-10 11:23:29.885 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 0.9371 ms
+2022-06-10 11:23:30.881 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.1332 ms
+2022-06-10 11:23:30.887 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 0.8317 ms
+2022-06-10 11:23:35.422 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.1134 ms
+2022-06-10 11:23:35.428 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 0.8005 ms
+2022-06-10 11:24:59.230 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1691 ms
+2022-06-10 11:24:59.253 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.3981 ms
+2022-06-10 11:25:58.326 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0433 ms
+2022-06-10 11:25:58.334 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.0273 ms
+2022-06-10 11:27:35.562 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0417 ms
+2022-06-10 11:27:35.571 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.2266 ms
+2022-06-10 11:33:04.079 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0538 ms
+2022-06-10 11:33:04.102 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 16.3548 ms
+2022-06-10 11:44:57.557 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1223 ms
+2022-06-10 11:44:57.583 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 19.8971 ms
+2022-06-10 11:45:51.266 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.2074 ms
+2022-06-10 11:45:51.277 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.9482 ms
+2022-06-10 11:45:52.982 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0313 ms
+2022-06-10 11:45:52.990 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 0.8365 ms
+2022-06-10 11:46:44.814 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0463 ms
+2022-06-10 11:46:44.827 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.9287 ms
+2022-06-10 11:46:55.691 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0320 ms
+2022-06-10 11:46:55.697 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.2436 ms
+2022-06-10 11:48:27.455 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0391 ms
+2022-06-10 11:48:27.465 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 0.9255 ms
+2022-06-10 11:50:45.059 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-10 11:50:45.077 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-10 11:50:45.083 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-10 11:50:45.085 -07:00 [INF] Hosting environment: Development
+2022-06-10 11:50:45.113 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-10 11:51:54.457 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-10 11:51:54.479 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-10 11:51:54.487 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-10 11:51:54.490 -07:00 [INF] Hosting environment: Development
+2022-06-10 11:51:54.492 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-10 11:52:02.966 -07:00 [INF] HTTP GET /api/Courses/Seracrh responded 200 in 3076.0867 ms
+2022-06-10 11:53:36.588 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 1.8694 ms
+2022-06-10 11:53:36.614 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 18.5400 ms
+2022-06-10 11:56:27.121 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.3798 ms
+2022-06-10 11:56:27.184 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 46.3464 ms
+2022-06-10 11:57:06.597 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0693 ms
+2022-06-10 11:57:06.607 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.5350 ms
+2022-06-10 12:02:48.934 -07:00 [INF] HTTP GET /api/courses/Search responded 401 in 10.8734 ms
+2022-06-10 12:03:32.882 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.9292 ms
+2022-06-10 12:03:58.679 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.3669 ms
+2022-06-10 12:04:03.311 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.1702 ms
+2022-06-10 12:04:16.065 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.2915 ms
+2022-06-10 12:07:35.602 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-10 12:07:35.620 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-10 12:07:35.626 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-10 12:07:35.629 -07:00 [INF] Hosting environment: Development
+2022-06-10 12:07:35.631 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-10 12:07:50.321 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 5.2923 ms
+2022-06-10 12:07:50.714 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 380.8046 ms
+2022-06-10 12:08:34.599 -07:00 [INF] HTTP GET /api/Courses/Search responded 401 in 4.1038 ms
+2022-06-10 12:11:40.545 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.3497 ms
+2022-06-10 12:11:40.566 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 11.2430 ms
+2022-06-10 12:13:41.792 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1261 ms
+2022-06-10 12:13:42.003 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 205.8668 ms
+2022-06-10 12:14:20.937 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0789 ms
+2022-06-10 12:14:20.947 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.8935 ms
+2022-06-10 12:16:22.417 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0816 ms
+2022-06-10 12:16:22.448 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 18.4256 ms
+2022-06-10 12:16:42.358 -07:00 [INF] HTTP GET /api/Courses/Seracrh responded 400 in 4.8564 ms
+2022-06-10 12:17:02.322 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0574 ms
+2022-06-10 12:17:02.332 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.4585 ms
+2022-06-10 12:20:19.708 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1039 ms
+2022-06-10 12:20:19.727 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.8481 ms
+2022-06-10 12:21:56.422 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.1754 ms
+2022-06-10 12:21:56.431 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.9878 ms
+2022-06-10 12:22:18.875 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-10 12:22:18.893 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-10 12:22:18.898 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-10 12:22:18.900 -07:00 [INF] Hosting environment: Development
+2022-06-10 12:22:18.902 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-10 12:22:29.221 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 3.8070 ms
+2022-06-10 12:22:29.821 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 589.3334 ms
+2022-06-10 12:22:42.908 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.5115 ms
+2022-06-10 12:22:42.940 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 25.0572 ms
+2022-06-10 12:23:30.797 -07:00 [INF] HTTP GET /api/courses/Search responded 200 in 2019.7650 ms
+2022-06-10 12:24:30.326 -07:00 [INF] HTTP GET /api/courses/Search responded 400 in 1.8189 ms
+2022-06-10 12:25:59.139 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.2825 ms
+2022-06-10 12:25:59.171 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.8769 ms
+2022-06-10 12:26:21.183 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 0.0718 ms
+2022-06-10 12:26:24.204 -07:00 [INF] HTTP GET /api/courses/Search responded 200 in 3012.5058 ms
+2022-06-10 12:27:09.665 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.1526 ms
+2022-06-10 12:27:09.665 -07:00 [INF] HTTP OPTIONS /api/Categories/List responded 204 in 0.0231 ms
+2022-06-10 12:27:09.740 -07:00 [INF] HTTP GET /api/Categories/List responded 200 in 64.4318 ms
+2022-06-10 12:27:09.756 -07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-06-10 12:27:09.844 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 169.5092 ms
+2022-06-10 12:27:27.212 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0793 ms
+2022-06-10 12:27:27.223 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.6303 ms
+2022-06-10 12:27:33.930 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1464 ms
+2022-06-10 12:27:33.944 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 6.3962 ms
+2022-06-10 12:27:35.980 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0825 ms
+2022-06-10 12:27:35.993 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.8822 ms
+2022-06-10 12:31:10.528 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0598 ms
+2022-06-10 12:31:10.542 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.5023 ms
+2022-06-10 12:31:11.640 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1271 ms
+2022-06-10 12:31:11.655 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.7429 ms
+2022-06-10 12:31:12.995 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0760 ms
+2022-06-10 12:31:13.007 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.9740 ms
+2022-06-10 12:40:11.944 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.1385 ms
+2022-06-10 12:40:12.000 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 49.5033 ms
+2022-06-10 12:40:14.071 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 0.0692 ms
+2022-06-10 12:40:14.235 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 158.4274 ms
+2022-06-10 12:40:14.320 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.1367 ms
+2022-06-10 12:40:14.366 -07:00 [INF] HTTP GET /api/Students responded 200 in 40.3447 ms
+2022-06-10 12:40:16.983 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0784 ms
+2022-06-10 12:40:16.995 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.4479 ms
+2022-06-10 12:40:18.415 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0566 ms
+2022-06-10 12:40:18.427 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.5086 ms
+2022-06-10 12:41:41.762 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-10 12:41:41.779 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-10 12:41:41.785 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-10 12:41:41.786 -07:00 [INF] Hosting environment: Development
+2022-06-10 12:41:41.788 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-10 12:45:10.624 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 5.4908 ms
+2022-06-10 12:45:10.668 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.4357 ms
+2022-06-10 12:45:11.303 -07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-06-10 12:45:11.412 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 772.8005 ms
+2022-06-10 12:45:11.412 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 720.7258 ms
+2022-06-10 12:47:41.956 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.3689 ms
+2022-06-10 12:47:41.969 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0777 ms
+2022-06-10 12:47:42.028 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 59.3271 ms
+2022-06-10 12:47:42.028 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 50.8197 ms
+2022-06-10 12:51:29.957 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0832 ms
+2022-06-10 12:51:30.005 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 34.9677 ms
+2022-06-10 12:51:30.021 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0835 ms
+2022-06-10 12:51:30.036 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 6.1575 ms
+2022-06-10 12:52:04.276 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.1193 ms
+2022-06-10 12:52:04.294 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 6.8340 ms
+2022-06-10 12:52:04.340 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0667 ms
+2022-06-10 12:52:04.352 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 4.9841 ms
+2022-06-10 12:53:18.746 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.6442 ms
+2022-06-10 12:53:18.754 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.1417 ms
+2022-06-10 12:53:18.767 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 8.0549 ms
+2022-06-10 12:53:18.772 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.7447 ms
+2022-06-10 12:54:16.453 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0592 ms
+2022-06-10 12:54:16.468 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.7091 ms
+2022-06-10 12:54:16.487 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.3545 ms
+2022-06-10 12:54:16.500 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.9314 ms
+2022-06-10 12:54:57.150 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.1316 ms
+2022-06-10 12:54:57.170 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 8.5356 ms
+2022-06-10 12:54:57.185 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0528 ms
+2022-06-10 12:54:57.198 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 6.0920 ms
+2022-06-10 12:56:07.619 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0786 ms
+2022-06-10 12:56:07.634 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.1583 ms
+2022-06-10 12:56:07.638 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0784 ms
+2022-06-10 12:56:07.650 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.6392 ms
+2022-06-10 12:56:40.354 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1184 ms
+2022-06-10 12:56:40.423 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 57.4033 ms
+2022-06-10 12:56:42.299 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0710 ms
+2022-06-10 12:56:42.311 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.0187 ms
+2022-06-10 12:56:44.783 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1061 ms
+2022-06-10 12:56:44.796 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.6138 ms
+2022-06-10 12:56:46.117 -07:00 [INF] HTTP OPTIONS /api/courses/3 responded 204 in 0.1195 ms
+2022-06-10 12:56:46.129 -07:00 [INF] HTTP GET /api/courses/3 responded 200 in 5.5500 ms
+2022-06-10 12:56:49.390 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0432 ms
+2022-06-10 12:56:49.401 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.1367 ms
+2022-06-10 12:56:54.773 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0461 ms
+2022-06-10 12:56:54.785 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 5.0260 ms
+2022-06-10 12:57:28.020 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0814 ms
+2022-06-10 12:57:28.034 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 5.3804 ms
+2022-06-10 12:57:28.044 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0406 ms
+2022-06-10 12:57:28.054 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.3724 ms
+2022-06-10 12:58:44.557 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0412 ms
+2022-06-10 12:58:44.576 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 9.6269 ms
+2022-06-10 12:58:44.579 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0441 ms
+2022-06-10 12:58:44.595 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.7839 ms
+2022-06-10 12:59:26.512 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0455 ms
+2022-06-10 12:59:26.528 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.1282 ms
+2022-06-10 12:59:26.541 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0403 ms
+2022-06-10 12:59:26.554 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 5.4300 ms
+2022-06-10 12:59:29.595 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0339 ms
+2022-06-10 12:59:29.608 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.7680 ms
+2022-06-10 12:59:29.759 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0332 ms
+2022-06-10 12:59:29.770 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 4.8305 ms
+2022-06-10 12:59:43.556 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0354 ms
+2022-06-10 12:59:43.567 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0452 ms
+2022-06-10 12:59:43.568 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.8283 ms
+2022-06-10 12:59:43.580 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 4.5244 ms
+2022-06-10 13:01:14.896 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0410 ms
+2022-06-10 13:01:14.914 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.6342 ms
+2022-06-10 13:01:14.929 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0437 ms
+2022-06-10 13:01:14.941 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 5.3489 ms
+2022-06-10 13:01:20.479 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.1874 ms
+2022-06-10 13:01:20.491 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.7125 ms
+2022-06-10 13:01:20.634 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.1187 ms
+2022-06-10 13:01:20.649 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 8.4916 ms
+2022-06-10 13:01:24.073 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0377 ms
+2022-06-10 13:01:24.084 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.2977 ms
+2022-06-10 13:01:24.287 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0407 ms
+2022-06-10 13:01:24.296 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 3.6425 ms
+2022-06-10 13:02:14.941 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0372 ms
+2022-06-10 13:02:14.953 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.2652 ms
+2022-06-10 13:02:14.977 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0520 ms
+2022-06-10 13:02:14.997 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 12.6221 ms
+2022-06-10 13:02:23.902 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0480 ms
+2022-06-10 13:02:23.914 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.3986 ms
+2022-06-10 13:02:47.815 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0466 ms
+2022-06-10 13:02:47.828 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.1926 ms
+2022-06-10 13:02:47.995 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.1128 ms
+2022-06-10 13:02:48.006 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 4.9232 ms
+2022-06-10 13:04:49.799 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0367 ms
+2022-06-10 13:04:49.809 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0221 ms
+2022-06-10 13:04:49.816 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 7.9243 ms
+2022-06-10 13:04:49.828 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 10.2913 ms
+2022-06-10 13:05:56.453 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0338 ms
+2022-06-10 13:05:56.468 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 6.8148 ms
+2022-06-10 13:05:56.489 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0397 ms
+2022-06-10 13:05:56.501 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 5.1419 ms
+2022-06-10 13:07:38.521 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0489 ms
+2022-06-10 13:07:38.539 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.0991 ms
+2022-06-10 13:07:38.556 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.1220 ms
+2022-06-10 13:07:38.570 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 6.6670 ms
+2022-06-10 13:08:19.949 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0310 ms
+2022-06-10 13:08:19.956 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0266 ms
+2022-06-10 13:08:19.961 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.0458 ms
+2022-06-10 13:08:19.972 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 7.1880 ms
+2022-06-10 13:10:02.538 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0485 ms
+2022-06-10 13:10:02.552 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.2710 ms
+2022-06-10 13:10:02.574 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0428 ms
+2022-06-10 13:10:02.587 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 5.1237 ms
+2022-06-10 13:10:17.681 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.1815 ms
+2022-06-10 13:10:17.692 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 3.5530 ms
+2022-06-10 13:10:17.696 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0231 ms
+2022-06-10 13:10:17.705 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 3.4723 ms
+2022-06-10 13:10:43.683 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0306 ms
+2022-06-10 13:10:43.697 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.3894 ms
+2022-06-10 13:10:43.709 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.1174 ms
+2022-06-10 13:10:43.723 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 4.7384 ms
+2022-06-10 13:10:49.541 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0358 ms
+2022-06-10 13:10:49.552 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.3344 ms
+2022-06-10 13:10:49.741 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.2730 ms
+2022-06-10 13:10:49.752 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 4.4580 ms
+2022-06-10 13:11:06.966 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0342 ms
+2022-06-10 13:11:06.977 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0273 ms
+2022-06-10 13:11:06.985 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 8.1810 ms
+2022-06-10 13:11:06.993 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 7.3251 ms
+2022-06-10 13:11:34.052 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0380 ms
+2022-06-10 13:11:34.061 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0270 ms
+2022-06-10 13:11:34.066 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 5.4672 ms
+2022-06-10 13:11:34.074 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.8929 ms
+2022-06-10 13:11:37.511 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1180 ms
+2022-06-10 13:11:37.526 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.5480 ms
+2022-06-10 13:11:39.267 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.1086 ms
+2022-06-10 13:11:39.280 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.3089 ms
+2022-06-10 13:11:53.615 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0294 ms
+2022-06-10 13:11:53.627 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 3.5990 ms
+2022-06-10 13:11:53.628 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0312 ms
+2022-06-10 13:11:53.639 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 4.1405 ms
+2022-06-10 13:12:33.597 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0307 ms
+2022-06-10 13:12:33.610 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 5.1916 ms
+2022-06-10 13:12:33.654 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0265 ms
+2022-06-10 13:12:33.664 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 3.8643 ms
+2022-06-10 13:12:52.410 -07:00 [INF] HTTP OPTIONS /api/courses/6 responded 204 in 0.0245 ms
+2022-06-10 13:12:52.420 -07:00 [INF] HTTP GET /api/courses/6 responded 200 in 3.9226 ms
+2022-06-10 13:12:52.428 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0236 ms
+2022-06-10 13:12:52.443 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.6728 ms
+2022-06-10 13:13:09.269 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0438 ms
+2022-06-10 13:13:09.282 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.8889 ms
+2022-06-10 13:13:10.565 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.1106 ms
+2022-06-10 13:13:10.578 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.1437 ms
+2022-06-10 13:13:31.359 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0397 ms
+2022-06-10 13:13:31.372 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.1850 ms
+2022-06-10 13:17:27.947 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.1766 ms
+2022-06-10 13:17:27.964 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 9.0022 ms
+2022-06-10 13:17:28.008 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0548 ms
+2022-06-10 13:17:28.019 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.7648 ms
+2022-06-10 13:17:39.217 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0339 ms
+2022-06-10 13:17:39.217 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0341 ms
+2022-06-10 13:17:39.231 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.0705 ms
+2022-06-10 13:17:39.368 -07:00 [INF] HTTP DELETE /api/courses/1 responded 204 in 144.4522 ms
+2022-06-10 13:19:01.740 -07:00 [INF] HTTP OPTIONS /api/Categories/List responded 204 in 0.0321 ms
+2022-06-10 13:19:01.741 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0253 ms
+2022-06-10 13:19:01.758 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.7982 ms
+2022-06-10 13:19:01.788 -07:00 [INF] HTTP GET /api/Categories/List responded 200 in 33.9715 ms
+2022-06-10 13:19:25.442 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0361 ms
+2022-06-10 13:19:25.456 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.6728 ms
+2022-06-10 13:19:35.162 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0252 ms
+2022-06-10 13:19:35.176 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 5.7257 ms
+2022-06-10 13:19:35.184 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1200 ms
+2022-06-10 13:19:35.196 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.6769 ms
+2022-06-10 13:27:04.365 -07:00 [INF] HTTP OPTIONS /api/Categories/List responded 204 in 0.0532 ms
+2022-06-10 13:27:04.369 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0258 ms
+2022-06-10 13:27:04.399 -07:00 [INF] HTTP GET /api/Categories/List responded 200 in 24.7274 ms
+2022-06-10 13:27:04.417 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 40.8455 ms
+2022-06-10 13:27:35.845 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0474 ms
+2022-06-10 13:27:35.874 -07:00 [INF] HTTP GET /api/Categories responded 200 in 21.5854 ms
+2022-06-10 13:27:41.469 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0447 ms
+2022-06-10 13:27:41.525 -07:00 [INF] HTTP GET /api/Students responded 200 in 50.2725 ms
+2022-06-10 13:28:33.872 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0573 ms
+2022-06-10 13:28:33.885 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.4319 ms
+2022-06-10 13:28:46.733 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.1078 ms
+2022-06-10 13:28:46.749 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 7.9198 ms
+2022-06-10 13:29:01.470 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0372 ms
+2022-06-10 13:29:01.481 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.4154 ms
+2022-06-10 13:29:04.209 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0451 ms
+2022-06-10 13:29:04.223 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.1081 ms
+2022-06-10 13:29:05.428 -07:00 [INF] HTTP OPTIONS /api/Categories/List responded 204 in 0.1007 ms
+2022-06-10 13:29:05.428 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0809 ms
+2022-06-10 13:29:05.442 -07:00 [INF] HTTP GET /api/Categories/List responded 200 in 7.2406 ms
+2022-06-10 13:29:05.448 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 8.9971 ms
+2022-06-10 13:29:18.346 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0411 ms
+2022-06-10 13:29:18.357 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.0428 ms
+2022-06-10 13:29:29.999 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0295 ms
+2022-06-10 13:29:30.011 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.4790 ms
+2022-06-10 15:10:22.463 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-10 15:10:22.489 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-10 15:10:22.496 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-10 15:10:22.499 -07:00 [INF] Hosting environment: Development
+2022-06-10 15:10:22.500 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-10 15:10:42.340 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 4.5875 ms
+2022-06-10 15:10:42.726 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 375.9691 ms
+2022-06-10 15:10:42.800 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.6831 ms
+2022-06-10 15:10:43.177 -07:00 [INF] HTTP GET /api/Students responded 200 in 371.5363 ms
+2022-06-10 15:30:26.552 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 27.6711 ms
+2022-06-10 15:30:26.602 -07:00 [INF] HTTP GET /api/Students responded 200 in 42.0778 ms
+2022-06-10 15:30:37.927 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.2283 ms
+2022-06-10 15:30:37.927 -07:00 [INF] HTTP OPTIONS /api/Students/9 responded 204 in 0.1296 ms
+2022-06-10 15:30:37.942 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.2300 ms
+2022-06-10 15:30:38.085 -07:00 [INF] HTTP DELETE /api/Students/9 responded 204 in 149.0599 ms
+2022-06-10 15:31:14.629 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0833 ms
+2022-06-10 15:31:14.646 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.6859 ms
+2022-06-10 15:39:30.275 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0780 ms
+2022-06-10 15:39:30.300 -07:00 [INF] HTTP GET /api/Students responded 200 in 16.9479 ms
+2022-06-10 15:39:50.192 -07:00 [INF] HTTP OPTIONS /api/Students/5 responded 204 in 0.0882 ms
+2022-06-10 15:39:50.192 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0364 ms
+2022-06-10 15:39:50.225 -07:00 [INF] HTTP DELETE /api/Students/5 responded 204 in 21.8254 ms
+2022-06-10 15:39:50.231 -07:00 [INF] HTTP GET /api/Students responded 200 in 20.2200 ms
+2022-06-10 15:41:07.642 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 2.4475 ms
+2022-06-10 15:41:07.662 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.1673 ms
+2022-06-10 15:42:06.185 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.9859 ms
+2022-06-10 15:42:06.214 -07:00 [INF] HTTP GET /api/Students responded 200 in 13.1529 ms
+2022-06-10 15:42:47.328 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.3460 ms
+2022-06-10 15:42:47.352 -07:00 [INF] HTTP GET /api/Students responded 200 in 10.8494 ms
+2022-06-10 15:44:49.223 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.7151 ms
+2022-06-10 15:44:49.252 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.3972 ms
+2022-06-10 15:46:04.605 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1510 ms
+2022-06-10 15:46:04.660 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 33.3774 ms
+2022-06-10 15:46:06.495 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0724 ms
+2022-06-10 15:46:06.562 -07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-06-10 15:46:06.668 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 164.0675 ms
+2022-06-10 15:46:28.630 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0504 ms
+2022-06-10 15:46:28.651 -07:00 [INF] HTTP GET /api/Students responded 200 in 10.4385 ms
+2022-06-10 15:51:15.378 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 1.7183 ms
+2022-06-10 15:51:15.427 -07:00 [INF] HTTP GET /api/Students responded 200 in 29.9294 ms
+2022-06-10 15:58:52.242 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 1.8816 ms
+2022-06-10 15:58:52.284 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 22.7515 ms
+2022-06-10 15:58:53.129 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0521 ms
+2022-06-10 15:58:53.142 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.9018 ms
+2022-06-10 15:58:54.285 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0541 ms
+2022-06-10 15:58:54.294 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.8989 ms
+2022-06-10 15:58:55.636 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1305 ms
+2022-06-10 15:58:55.647 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.8318 ms
+2022-06-10 15:58:57.006 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0629 ms
+2022-06-10 15:58:57.020 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 6.2269 ms
+2022-06-10 15:59:03.560 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0371 ms
+2022-06-10 15:59:03.573 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.6296 ms
+2022-06-10 15:59:05.985 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.1064 ms
+2022-06-10 15:59:05.996 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.8787 ms
+2022-06-10 15:59:56.025 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0509 ms
+2022-06-10 15:59:56.051 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.1383 ms
+2022-06-10 16:00:08.825 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0335 ms
+2022-06-10 16:00:08.838 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.5721 ms
+2022-06-10 16:02:24.796 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0502 ms
+2022-06-10 16:02:24.824 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 7.3414 ms
+2022-06-10 16:02:29.195 -07:00 [INF] HTTP OPTIONS /api/Categories/List responded 204 in 0.1642 ms
+2022-06-10 16:02:29.195 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0136 ms
+2022-06-10 16:02:29.209 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 5.0775 ms
+2022-06-10 16:02:29.238 -07:00 [INF] HTTP GET /api/Categories/List responded 200 in 34.1531 ms

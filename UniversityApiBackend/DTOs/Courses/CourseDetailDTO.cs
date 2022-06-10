@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using UniversityApiBackend.DTOs.Categories;
 using UniversityApiBackend.DTOs.Chapters;
 using UniversityApiBackend.Models.DataModels;
 
@@ -25,6 +26,7 @@ namespace UniversityApiBackend.DTOs.Courses
         public Level Level { get; set; } = Level.Basic;
 
         public ChapterDetailDTO Chapter { get; set; }
+        public List<CategoryListDTO> Categories { get; set; }
 
 
     }
