@@ -25,5 +25,7 @@ namespace UniversityApiBackend.DTOs.Courses
         public Level Level { get; set; } = Level.Basic;
 
         public ChapterDetailDTO Chapter { get; set; }
+
+
     }
 }

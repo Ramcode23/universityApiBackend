@@ -33,14 +33,8 @@ namespace UniversityApiBackend.Services
                 entity.Categories = new List<Category>();
             }
 
-
-            var lessons = entity.Chapter.Lessons;
-           
-            entity.Chapter.Lessons = new List<Lesson>(); 
-
-                
-
-
+            var lessons = entity.Chapter.Lessons;    
+            entity.Chapter.Lessons = new List<Lesson>();
 
             entity.CreatedAt = DateTime.Now;
             _context.Courses.Add(entity);
@@ -180,12 +174,75 @@ namespace UniversityApiBackend.Services
             _context.Chapters.Remove(_context.Chapters.Find(chaptersId));
             return _context.SaveChangesAsync();
         }
-
+        //TODO:Change Update service
         public Task Update(Course entity)
         {
-            entity.UpdatedAt = DateTime.Now;
-            _context.Courses.Update(entity);
+
+            try
+            {
+
+           
+            var categories = _context.Categories.Where(c => entity.Categories.Select(x => x.Id).Contains(c.Id)).ToList();
+            var oldcategories = _context.Categories.Where(c => c.Courses.Where(x => x.Id == entity.Id).ToList().Count>0);
+            var olLessons=_context.Lessons.Where(x => x.ChapterId == _context.Chapters.Where(c=>c.CourseId==entity.Id).FirstOrDefault().Id).ToList();
+              var course= _context.Courses.
+                    Include(x=>x.Chapter)
+                   . Where(x=>x.Id==entity.Id).FirstOrDefault();
+
+                entity.Categories = new List<Category>();
+                var lessons = entity.Chapter.Lessons;
+            entity.Chapter.Lessons = new List<Lesson>();
+            _context.Lessons.RemoveRange(olLessons);
+            _context.SaveChanges();
+
+           
+
+            if (categories.Any())
+            {
+                course.Categories = categories;
+            }
+
+
+            foreach (var lesson in lessons)
+            {
+                _context.Lessons.AddAsync(new Lesson()
+                {
+                    Chapter = course.Chapter,
+                    ChapterId = course.Chapter.Id,
+                    Tittle = lesson.Tittle
+                });
+            }
+                _context.SaveChanges();
+
+                entity.UpdatedAt = DateTime.Now;
+
+
+                course.UpdatedAt=DateTime.Now;
+                course.Name = entity.Name;
+                course.Description = entity.Description;
+                course.ShortDescription = entity.ShortDescription;
+                course.Level = entity.Level;
+                course.UpdatedBy = entity.UpdatedBy;
+
+
+
+
+
+
+
+
+
+            _context.Courses.Update(course);
+
             return _context.SaveChangesAsync();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
         public Task AddLesson(int ChaperId, List<Lesson> lessons)

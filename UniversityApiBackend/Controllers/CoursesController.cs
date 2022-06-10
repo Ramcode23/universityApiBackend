@@ -60,7 +60,7 @@ namespace UniversityApiBackend.Controllers
         // GET: api/Courses/5
         [HttpGet("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<CourseDetailDTO>> GetCourse(int id)
+        public async Task<ActionResult<CourseCreateDTO>> GetCourse(int id)
         {
             var course = await _service.GetById(id);
 
@@ -69,7 +69,7 @@ namespace UniversityApiBackend.Controllers
                 return NotFound();
             }
 
-            return _mapper.Map<CourseDetailDTO>(course);
+            return _mapper.Map<CourseCreateDTO>(course);
            // return course;
         }
 
