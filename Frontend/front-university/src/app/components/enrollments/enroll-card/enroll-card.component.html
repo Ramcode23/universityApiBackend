@@ -1,0 +1,36 @@
+<mat-card class="enroll-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{course?.name}}</mat-card-title>
+    <mat-card-subtitle>{{course?.shortDescription}}</mat-card-subtitle>
+  </mat-card-header>
+  <p>Description:{{course?.description}}</p>
+  <p>Goals:{{course?.publicGoal}}</p>
+  <mat-chip-list aria-label="Dog selection">
+    <mat-chip *ngFor="let category of course?.categories">
+      <mat-chip-avatar>
+        <mat-icon>stars</mat-icon>
+      </mat-chip-avatar>
+      <span>{{category.name}}</span>
+    </mat-chip>
+  </mat-chip-list>
+
+  <mat-card-content>
+
+    <mat-card class="lesson-card">
+      <mat-card-title>Lessons</mat-card-title>
+      <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let lesson of course?.chapter?.lessons; let i = index">
+          {{i+1}}) {{lesson.tittle}}
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+
+    </mat-card>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary" (click)="navigateBack()">Back</button>
+    <button mat-button color="primary" (click)="navigateBack()">Enroll</button>
+  </mat-card-actions>
+</mat-card>

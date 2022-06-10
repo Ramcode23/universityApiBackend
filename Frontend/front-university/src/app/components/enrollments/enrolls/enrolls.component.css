@@ -1,0 +1,35 @@
+.grid-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+ .dashboard-card {
+  max-width: 400px;
+margin-bottom: 20px;
+margin-top: 50px;
+/*   width: 250px;
+  height: 300px;
+  margin-top: 50px;
+  margin-left: 20px; */
+}
+
+/* .more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+ */
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.enroll-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}

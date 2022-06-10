@@ -1,0 +1,17 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Courses</h1>
+      <mat-card class="dashboard-card"  *ngFor="let course of courses$ | async"   >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{course.name}}</mat-card-title>
+          <mat-card-subtitle>{{course.categoryName}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="../../../assets/graduation-hat.png" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary"class="enroll-button"(click)="getDetail(course)">Enroll</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

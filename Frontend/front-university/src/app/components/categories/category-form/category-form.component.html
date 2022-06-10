@@ -1,0 +1,26 @@
+<form [formGroup]="categoryForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Categoy Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Name" formControlName="name">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <div *ngIf="!isEdit; else edit">
+      </div>
+      <ng-template #edit>
+        <button *ngIf="categoryForm.disable" [disabled]="categoryForm.invalid" mat-raised-button color="primary"(click)="enableForm()" >Edit</button>
+      </ng-template>
+      <button *ngIf="categoryForm.disable"  mat-raised-button color="primary"(click)="navigateBack()" >Back </button>
+      <button *ngIf="categoryForm.enable" [disabled]="categoryForm.invalid && categoryForm.enabled" mat-raised-button color="primary" type="submit">Save</button>
+      <button *ngIf="categoryForm.enable"  mat-raised-button color="warn"  (click)="disableForm()">Cancel</button>
+      </mat-card-actions>
+  </mat-card>
+</form>

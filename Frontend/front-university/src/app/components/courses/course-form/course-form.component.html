@@ -1,0 +1,127 @@
+
+<!-- course Form -->
+<form [formGroup]="courseForm" novalidate (ngSubmit)="onSubmit()">
+
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Course Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Name" formControlName="name">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Short Description" formControlName="shortDescription">
+            <mat-error *ngIf="courseForm.controls['shortDescription'].hasError('required')">
+              Short Description is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Description" formControlName="description">
+            <mat-error *ngIf="courseForm.controls['description'].hasError('required')">
+              Description is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Public Goal" formControlName="publicGoal">
+            <mat-error *ngIf="courseForm.controls['publicGoal'].hasError('required')">
+              Description is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="fill">
+            <mat-label>Categories</mat-label>
+            <mat-select formControlName="categories" multiple>
+              <mat-select-trigger>
+                {{courseForm.controls['categories'].value?.[0] || ''}}
+                <span *ngIf="(courseForm.controls['categories'].value?.length || 0) > 1"
+                  class="example-additional-selection">
+                  (+{{(courseForm.controls['categories'].value.value?.length || 0) - 1}}
+                  {{courseForm.controls['categories'].value.value?.length === 2 ? 'other' : 'others'}})
+                </span>
+              </mat-select-trigger>
+              <mat-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-radio-group formControlName="levels">
+            <mat-radio-button *ngFor="let level of levels; let i=index " [value]="i">{{level}}</mat-radio-button>
+
+          </mat-radio-group>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <div *ngIf="!isEdit; else edit">
+      </div>
+      <ng-template #edit>
+        <button *ngIf="courseForm.disable" [disabled]="courseForm.invalid" mat-raised-button color="primary"
+          (click)="enableForm()">Edit</button>
+      </ng-template>
+      <button *ngIf="courseForm.disable" mat-raised-button color="primary" (click)="navigateBack()">Back </button>
+      <button *ngIf="courseForm.enable" [disabled]="courseForm.invalid && courseForm.enabled" mat-raised-button
+        color="primary" type="submit">Save</button>
+      <button *ngIf="courseForm.enable" mat-raised-button color="warn" (click)="disableForm()">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+<!-- course Form  End-->
+
+  <!--  chapter List -->
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Chapters
+      </mat-panel-title>
+      <mat-panel-description>
+        Index {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-container formArrayName="lessons">
+      <div class="lesson-form-row" >
+   <mat-list role="list"  >
+    <mat-list-item role="listitem"  *ngFor="let lessonForm of lessons.controls; let i = index">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Insert text" [formControlName]="i">
+      </mat-form-field>
+      <button mat-icon-button color="warn" aria-label="delete " (click)="deleteLesson(i)">
+        <mat-icon>delete_outline</mat-icon>
+      </button>
+
+    </mat-list-item>
+  </mat-list>
+  <button mat-mini-fab (click)="addLesson($event)">
+    <mat-icon class="add-course-btn">add</mat-icon>
+</button>
+</div>
+</ng-container>
+  </mat-expansion-panel>
+</mat-accordion>
+<!--  chapter List End -->
+
+
+
+
+</form>
+

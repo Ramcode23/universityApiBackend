@@ -1,0 +1,11 @@
+.full-width-table {
+  width: 100%;
+}
+form>button {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+div>button{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
