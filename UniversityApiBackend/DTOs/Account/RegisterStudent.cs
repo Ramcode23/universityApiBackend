@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using UniversityApiBackend.DTOs.Students;
 
 namespace UniversityApiBackend.DTOs.Account
 {
@@ -35,6 +36,6 @@ namespace UniversityApiBackend.DTOs.Account
         public string Country { get; set; }= string.Empty;
         public string Comunity { get; set; }= string.Empty;
 
-
+        public List<StudentCourseDTO> Courses { get; set; } = new List<StudentCourseDTO>();
     }
 }

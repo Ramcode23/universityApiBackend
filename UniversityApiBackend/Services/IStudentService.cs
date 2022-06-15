@@ -8,11 +8,10 @@ namespace UniversityApiBackend.Services
     {
         IQueryable<StundentListDTO> GetStudentsWithCoursesAsync(int pageNumber, int resultsPage);
 
-        IQueryable<Student> GetStudentsWithNoCoursesAsync(int pageNumber, int resultsPage);
         IQueryable<StundentListDTO> FindStudentsAsync(StudentFindDTO studentFindDTO);
 
         Task EnrollAsysnc(Student student);
 
-        Task Update(RegisterStudent entity, User user);
+  
     }
 }

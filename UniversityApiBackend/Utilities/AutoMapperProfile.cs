@@ -36,31 +36,42 @@ namespace UniversityApiBackend.Utilities
 
             CreateMap<CourseDetailDTO, Course>().PreserveReferences().ReverseMap();
             CreateMap<CourseDetailDTO, Course>().PreserveReferences();
-            
-            CreateMap<Student, StudentDTO>()
 
-                .ForMember(
-                    dest => dest.Dob,
-                    opt => opt.MapFrom(src => $"{src.Dob}")
-                )
-
-                .ForMember(
-                    dest => dest.Adress,
-                    opt => opt.MapFrom(src => $"{src.Address}")
-                ).ReverseMap();
+            CreateMap<StudentDetailDTO, Student>().PreserveReferences().ReverseMap();
+            CreateMap<StudentDetailDTO, Student>().PreserveReferences();
 
 
-            CreateMap<Student, StudentDTO>()
 
-                .ForMember(
-                    dest => dest.Dob,
-                    opt => opt.MapFrom(src => $"{src.Dob}")
-                )
+            CreateMap<StudentCreateDTO, Student>().PreserveReferences().ReverseMap();
+            CreateMap<StudentCreateDTO, Student>().PreserveReferences();
 
-                .ForMember(
-                    dest => dest.Adress,
-                    opt => opt.MapFrom(src => $"{src.Address}")
-                );
+            CreateMap<StudentCourseDTO, Course>().ReverseMap();
+            CreateMap<StudentCourseDTO, Course>();
+
+            //CreateMap<Student, StudentDTO>()
+
+            //    .ForMember(
+            //        dest => dest.Dob,
+            //        opt => opt.MapFrom(src => $"{src.Dob}")
+            //    )
+
+            //    .ForMember(
+            //        dest => dest.Adress,
+            //        opt => opt.MapFrom(src => $"{src.Address}")
+            //    ).ReverseMap();
+
+
+            //CreateMap<Student, StudentDTO>()
+
+            //    .ForMember(
+            //        dest => dest.Dob,
+            //        opt => opt.MapFrom(src => $"{src.Dob}")
+            //    )
+
+            //    .ForMember(
+            //        dest => dest.Adress,
+            //        opt => opt.MapFrom(src => $"{src.Address}")
+            //    );
 
 
             // Map CourseCreateDTO to Course
@@ -79,9 +90,8 @@ namespace UniversityApiBackend.Utilities
             CreateMap<Lesson, LessonDTO>().ReverseMap();
             CreateMap<Lesson, LessonDTO>();
 
-
-
-
+            CreateMap<User,UserDTO>().ReverseMap();
+            CreateMap<User, UserDTO>();
 
         }
     }

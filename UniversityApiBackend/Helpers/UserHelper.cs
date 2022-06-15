@@ -127,9 +127,6 @@ namespace UniversityApiBackend.Helpers
         public async Task<IdentityResult> RegisterUserAsync(RegisterStudent registerStudent)
         {
 
-
-
-
             try
             {
 
@@ -167,6 +164,34 @@ namespace UniversityApiBackend.Helpers
                         Dob = registerStudent.Dob,
                         CreatedAt=DateTime.Now,
                     };
+                    _context.Add(student);
+                    await _context.SaveChangesAsync();
+                }
+
+                return rest;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+        }
+
+        public async Task<IdentityResult> RegisterUserAsync(Student student)
+        {
+
+            try
+            {
+                student.User.UserName = student.User.Email;
+                var password = student.User.Password;
+                student.User.Password = null;
+                var rest = await _userManager.CreateAsync(student.User,password);
+                if (rest.Succeeded)
+                {
+                
+                    await _context.SaveChangesAsync();
+                    await _userManager.AddClaimAsync(student.User, new Claim("role", "user"));
                     _context.Add(student);
                     await _context.SaveChangesAsync();
                 }

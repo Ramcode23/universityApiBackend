@@ -14,7 +14,7 @@ namespace UniversityApiBackend.Helpers
         Task<IdentityResult> RegisterUserAsync(RegisterUser registeruser);
         Task<IdentityResult> CreateAdminAsync(RegisterUser registeruser);
         Task<IdentityResult> RegisterUserAsync(RegisterStudent registerStudent);
-   
+        Task<IdentityResult> RegisterUserAsync(Student student);
         Task<SignInResult> PasswordSignInAsync(UserLogins credentials);
         Task<UserTokens> BuildTokenAsync(UserLogins credentials);
         Task<IdentityResult> ResetPasswordAsync(User user, string token, string password);

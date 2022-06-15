@@ -43,11 +43,7 @@ namespace UniversityApiBackend.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<StundentListDTO>>> GetStudent([FromQuery] int pageNumber, int resultsPage)
         {
-
-
             return  await Task.FromResult(_service.GetStudentsWithCoursesAsync(pageNumber, resultsPage).ToList());
-           
-
         }
 
 
@@ -65,14 +61,15 @@ namespace UniversityApiBackend.Controllers
         // GET: api/Students/5
         [HttpGet("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult<Student>> GetStudent(int id)
+        public async Task<ActionResult<StudentDetailDTO>> GetStudent(int id)
         {
 
             var student = await _service.GetById(id);
+            var studentDTO = _mapper.Map<StudentDetailDTO>(student);
             if (student == null)
                 return NotFound();
 
-            return student;
+            return studentDTO;
         }
 
 
@@ -104,19 +101,21 @@ namespace UniversityApiBackend.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> PutStudent(int id, RegisterStudent studentDTO)
+        public async Task<IActionResult> PutStudent(int id, StudentCreateDTO studentDTO)
         {
             if (id != studentDTO.Id)
             {
                 return BadRequest();
             }
 
-
             try
             {
 
              var updateBy = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
-              await  _service.Update(studentDTO, updateBy);
+                var student = _mapper.Map<Student>(studentDTO);
+                student.UpdatedBy = updateBy;
+                student.UpdatedAt = DateTime.Now;
+                await  _service.Update(student);
            
             }
             catch (DbUpdateConcurrencyException)
@@ -138,16 +137,21 @@ namespace UniversityApiBackend.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<ActionResult<Student>> PostStudent(StudentDTO studentDTO)
+        public async Task<ActionResult<Student>> PostStudent(StudentCreateDTO studentDTO)
         {
+                 
+            
             if (studentDTO == null)
-            {
                 return Problem("Entity set 'UniversityDbContext.Student'  is null.");
-            }
+            
+            var isEmailExit = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
+            if (isEmailExit!=null)
+                return Problem($"This  {isEmailExit.Email} exits.");
+
             var student = _mapper.Map<Student>(studentDTO);
+            student.User.UserName = student.User.Email;
             student.CreatedBy = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
-
-
+            student.CreatedAt=DateTime.Now;
             await _service.Add(student);
 
             return Ok(new
