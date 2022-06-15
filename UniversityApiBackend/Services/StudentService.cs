@@ -59,13 +59,6 @@ namespace UniversityApiBackend.Services
             return _context.SaveChangesAsync();
         }
 
-        public Task EnrollAsysnc(Student student)
-        {
-
-            _context.Students.Update(student);
-            return _context.SaveChangesAsync();
-        }
-
         public bool Exists(int Id)
         {
             return _context.Students.Any(e => e.Id == Id);
@@ -129,11 +122,13 @@ namespace UniversityApiBackend.Services
         public Task<Student?> GetById(int id)
         {
             return _context.Students
+                .Include(x=>x.Address)
+                .Include(x=>x.Courses)
+                .Include(x=>x.User)
             .Where(s => s.Id == id)
             .FirstOrDefaultAsync();
         }
-
-      
+ 
         public IQueryable<StundentListDTO> GetStudentsWithCoursesAsync(int pageNumber = 1, int resultsPage = 10)
         {
             var students = _context.Students.Where(x => x.IsDeleted == false || x.IsDeleted == null)
@@ -165,8 +160,6 @@ namespace UniversityApiBackend.Services
 
 
         }
-
-    
 
         public Task Update(Student entity)
         {

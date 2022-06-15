@@ -15,13 +15,8 @@ namespace UniversityApiBackend.Services
        // search by name categopry, range of students
         IQueryable<CourseDTO> SearchCourses(CourseFindDTO courseFindDTO);
         IQueryable<CourseDTO> GetAllCourseList(int pageNumber, int resultsPage);
-         Task AddCatetory(int courseId, int[] categoriesId);
-        Task RemoveCatetory( int[] categoriesId);
-        Task AddChapter(ChapterDTO chapterDTO);
-        Task RemoveChapter(int chaptersId);
-        Task AddLesson(int ChaperId, List<Lesson> lessons);
-        Task RemoveLesson(int lessonId);
-        Task EditLesson(int ChaperId, List<Lesson> lessons);
+       
+   
 
     }
 }

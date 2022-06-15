@@ -10,7 +10,6 @@ namespace UniversityApiBackend.Services
 
         IQueryable<StundentListDTO> FindStudentsAsync(StudentFindDTO studentFindDTO);
 
-        Task EnrollAsysnc(Student student);
 
   
     }

@@ -54,48 +54,6 @@ namespace UniversityApiBackend.Services
             return _context.SaveChangesAsync();
         }
 
-        public Task AddCatetory(int courseId, int[] categoriesId)
-        {
-            var course = _context.Courses.Find(courseId);
-            if (course == null)
-            {
-                throw new Exception("Course not found");
-            }
-            var categories = _context.Categories.Where(c => categoriesId.Contains(c.Id)).ToList();
-            if (categories.Count != categoriesId.Length)
-            {
-                throw new Exception("Category not found");
-            }
-            course.Categories = categories;
-            return _context.SaveChangesAsync();
-        }
-
-        public async Task AddChapter(ChapterDTO chapterDTO)
-        {
-            var course = await _context.Courses
-                 .Include(c => c.Chapter)
-                 .FirstOrDefaultAsync(c => c.Id == chapterDTO.CourseId);
-
-            var lessons = new List<Lesson>();
-            foreach (var lesson in chapterDTO.Lessons)
-            {
-                lessons.Add(new Lesson
-                {
-                    //Tittle = lesson.Tittle,
-                    //Chapter = course.Chapter
-                    Tittle = lesson.Tittle,
-                    ChapterId = course.Chapter.CourseId
-                }); ;
-            }
-
-
-            _context.Lessons.AddRange(lessons);
-            await _context.SaveChangesAsync();
-
-            course.Chapter.Lessons.ToList().AddRange(lessons.ToArray());
-            await _context.SaveChangesAsync();
-            return;
-        }
 
         public Task Delete(int id)
         {
@@ -143,7 +101,7 @@ namespace UniversityApiBackend.Services
         public IQueryable<Course> GetAll()
         {
 
-            return _context.Courses.OrderBy(c => c.Name).AsQueryable();
+            return _context.Courses.Where(c=>c.IsDeleted==false).OrderBy(c => c.Name).AsQueryable();
         }
 
         public Task<Course?> GetById(int id)
@@ -156,26 +114,7 @@ namespace UniversityApiBackend.Services
            .FirstOrDefaultAsync();
         }
 
-        public Task RemoveCatetory(int[] categoriesId)
-        {
-            var categories = _context.Categories.Where(c => categoriesId.Contains(c.Id)).ToList();
-            if (categories.Count != categoriesId.Length)
-            {
-                throw new Exception("Category not found");
-            }
-            foreach (var category in categories)
-            {
-                category.Courses.Clear();
-            }
-            return _context.SaveChangesAsync();
-        }
-
-        public Task RemoveChapter(int chaptersId)
-        {
-            _context.Chapters.Remove(_context.Chapters.Find(chaptersId));
-            return _context.SaveChangesAsync();
-        }
-        //TODO:Change Update service
+     
         public Task Update(Course entity)
         {
 
@@ -246,38 +185,7 @@ namespace UniversityApiBackend.Services
             }
         }
 
-        public Task AddLesson(int ChaperId, List<Lesson> lessons)
-        {
-            var chapter = _context.Chapters.Find(ChaperId);
-            if (chapter == null)
-            {
-                throw new Exception("Chapter not found");
-            }
-
-            return _context.SaveChangesAsync();
-        }
-
-        public Task RemoveLesson(int lessonId)
-        {
-            _context.Lessons.Remove(_context.Lessons.Find(lessonId));
-            return _context.SaveChangesAsync();
-        }
-
-        public Task EditLesson(int ChaperId, List<Lesson> lessons)
-        {
-            var chapter = _context.Chapters.Find(ChaperId);
-            if (chapter == null)
-            {
-                throw new Exception("Chapter not found");
-            }
-            foreach (var lesson in lessons)
-            {
-                //lesson.Chapter = chapter;
-                _context.Lessons.Update(lesson);
-            }
-            return _context.SaveChangesAsync();
-        }
-
+     
         public IQueryable<CourseDTO> GetAllCourseList(int pageNumber, int resultsPage)
         {
            var courses = _context.Courses

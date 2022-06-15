@@ -30,6 +30,10 @@ namespace UniversityApiBackend.Utilities
 
             CreateMap<Course, CourseDTO>().ReverseMap();
             CreateMap<Course, CourseDTO>();
+
+            CreateMap<Course, CourseListDTO>().ReverseMap();
+            CreateMap<Course, CourseListDTO>();
+
             // Map CourseCreateDTO to Course
             CreateMap<CourseCreateDTO, Course>().PreserveReferences();
             CreateMap<CourseCreateDTO, Course>().PreserveReferences().ReverseMap();

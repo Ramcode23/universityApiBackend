@@ -73,29 +73,7 @@ namespace UniversityApiBackend.Controllers
         }
 
 
-        // Enroll students in courses
-        [HttpPost("Enroll")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<ActionResult> EnrollStudent([FromBody] StudentEnrollDTO studentEnrollDTO)
-        {
-             
-            var student = await _service.GetById(studentEnrollDTO.StudentId);
-            if (student == null)
-                return NotFound( new { message = "Student not found" });    
-
-            var course= await _courseService.GetById(studentEnrollDTO.CourseId);
-            if (course == null)
-                return NotFound( new { message = "Course not found" });
-          
-            if (student.Courses.Any(c => c.Id == course.Id))
-                return BadRequest(new { message = "Student already enrolled in this course" });
-
- 
-            student.Courses.Add(course);
-            await _service.EnrollAsysnc(student);
-
-            return Ok(new { message = "Student enrolled" });
-        }
+  
 
         // PUT: api/Students/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

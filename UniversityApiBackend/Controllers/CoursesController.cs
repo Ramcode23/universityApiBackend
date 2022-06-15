@@ -47,6 +47,18 @@ namespace UniversityApiBackend.Controllers
             return await Task.FromResult(_service.GetAllCourseList(pageNumber, resultsPage).ToList());
 
         }
+
+        // GET: api/Courses
+        [HttpGet("CoursesList")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<IEnumerable<CourseListDTO>>> GetCoursesList()
+        {
+            var courses = await Task.FromResult(_service.GetAll());
+            return _mapper.Map<List<CourseListDTO>>(courses);
+           
+
+        }
+
         // GET: api/Courses
         [HttpGet("Search")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
@@ -129,32 +141,6 @@ namespace UniversityApiBackend.Controllers
         }
 
 
-        [HttpPost("AddCategoryToCourse")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<ActionResult<Course>> AddCatetory(int courseId, int[] categoriesId)
-        {
-            if (categoriesId == null)
-                return BadRequest();
-
-            await _service.AddCatetory(courseId, categoriesId);
-            return Ok();
-
-        }
-
-        [HttpPost("AddChapterToCourse")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<ActionResult<Course>> AddChapter(ChapterDTO chapterDTO)
-        {
-            if (!chapterDTO.Lessons.Any())
-                return BadRequest(new { message = "No lessons added" });
-            if( ! _service.Exists(chapterDTO.CourseId))
-                return BadRequest(new { message = "Course not exist" });
-
-            await _service.AddChapter(chapterDTO);
-            return Ok( new { message = "Lessons added successfully" });
-
-        }
-
 
         // DELETE: api/Courses/5
         [HttpDelete("{id}")]
@@ -170,30 +156,7 @@ namespace UniversityApiBackend.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Courses/5
-        [HttpDelete("DeleteCategoryFromCourse")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> RemoveCatetories(int[] categoriesId)
-        {
-            if (categoriesId == null)
-                return BadRequest();
-
-            await _service.RemoveCatetory(categoriesId);
-            return Ok();
-        }
-
-
-        // DELETE: api/Courses/5
-        [HttpDelete(" chapter/{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
-        public async Task<IActionResult> RemoveChapter(int id)
-        {
-            if (id == null)
-                return BadRequest();
-
-            await _service.RemoveChapter(id);
-            return Ok();
-        }
+     
 
 
         private bool CourseExists(int id)
