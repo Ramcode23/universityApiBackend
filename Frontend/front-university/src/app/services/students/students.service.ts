@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { RegisterStudent, StudentEnrollDto, StundentListDto } from '../api/models';
+import { RegisterStudent, StudentCreateDTO, StudentEnrollDto, StundentListDto } from '../api/models';
+import { StudentDetailDTO } from '../api/models/studentDetailDTO';
 
 
 @Injectable({
@@ -41,18 +42,18 @@ export class StudentsService {
   }
 
   getStudentById(id: number) {
-    return this.http.get(this.apiUrl + '/' + id);
+    return this.http.get<StudentDetailDTO>(this.apiUrl + '/' + id);
 
   }
-  apiStudentsEnrollPost(studentEnroll:StudentEnrollDto) {
-    return this.http.post(this.apiUrl+'/Enroll', studentEnroll);
+  createStudent(student: StudentCreateDTO) {
+    return this.http.post(this.apiUrl, student);
   }
 
   deleteStudent(id: number) {
     return this.http.delete(this.apiUrl + '/' + id);
   }
 
-  updateStudent(student: RegisterStudent) {
+  updateStudent(student: StudentCreateDTO) {
     return this.http.put(this.apiUrl + '/' + student.id, student);
   }
 }

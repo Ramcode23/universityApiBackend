@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: 'courses/new', component: CourseDetailPageComponent,canActivate:[PermissionGuard] },
       { path: 'students', component: StudentsPageComponent,canActivate:[PermissionGuard]},
       { path: 'students/:id', component: StudentDetailPageComponent,canActivate:[PermissionGuard]},
-      { path: 'students/new', component: StudentDetailPageComponent,canActivate:[PermissionGuard]},
+      { path: 'student', component: StudentDetailPageComponent,canActivate:[PermissionGuard]},
 
       { path: '**', redirectTo: '' }
     ]

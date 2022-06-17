@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { CourseCreateDto, CourseDetailDto, CourseDto } from '../api/models';
+import { CourseListDTO } from '../api/models/courseListDTO';
 
 
 @Injectable({
@@ -17,6 +18,9 @@ export class CoursesService {
       resultsPage?: number;
     }) {
     return this.http.get<CourseDto[]>(this.apiUrl + '/', { params });
+  }
+  getCoursesList(){
+    return this.http.get<CourseListDTO[]>(this.apiUrl + '/CoursesList');
   }
 
   searchCourse

@@ -69,7 +69,17 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="state" formControlName="state">
+            <mat-error *ngIf="studentForm.controls['state'].hasError('required')">
+              State is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
 
+        </div>
+      </div>
       <div class="row">
 
         <div class="col">
@@ -116,10 +126,8 @@
       </div>
 
       <ng-template #edit>
-
         <button *ngIf="studentForm.disable" [disabled]="studentForm.invalid" mat-raised-button color="primary"
           (click)="enableForm()">Edit</button>
-
       </ng-template>
 
       <button *ngIf="studentForm.disable" mat-raised-button color="primary" (click)="navigateBack()">Back </button>
@@ -131,10 +139,51 @@
   </mat-card>
 </form>
 
-<div *ngIf="errors">
+<!--  Courses List -->
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Courses
+      </mat-panel-title>
+      <mat-panel-description>
+        Index {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-container>
+      <div class="lesson-form-row">
+        <mat-list role="list" *ngIf="courseStudent">
+          <mat-list-item role="listitem" *ngFor="let course of courseStudent; let i = index">
+            <mat-icon mat-list-icon>book</mat-icon>
+            <h4 mat-line>{{course.name}}</h4>
+            <button mat-icon-button color="warn" aria-label="delete " (click)="deleteCourse(i)">
+              <mat-icon>delete_outline</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
 
+        <mat-form-field appearance="fill">
+          <mat-label>Favorite food</mat-label>
+          <mat-select [(ngModel)]="selectedValue">
+            <mat-option *ngFor="let course of courses" [value]="course.id">
+              {{course.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button mat-mini-fab (click)="addCourse()">
+          <mat-icon class="add-course-btn">add</mat-icon>
+        </button>
+      </div>
+    </ng-container>
+  </mat-expansion-panel>
+</mat-accordion>
+<!--  Courses List End -->
+
+<div *ngIf="errors">
+<p>{{errors|json}}</p>
   <mat-error *ngFor="let error of errors">
-    <strong>{{error}}</strong>
+    <strong>{{error.errors}}</strong>
   </mat-error>
 
 </div>

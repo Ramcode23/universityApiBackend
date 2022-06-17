@@ -205,5 +205,23 @@ namespace UniversityApiBackend.Helpers
             }
 
         }
+
+        public async Task<IdentityResult> UpdateUserAsync(Student student)
+        {
+
+            try
+            {
+
+
+                return await _userManager.UpdateAsync(student.User); 
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+        }
+
     }
 }

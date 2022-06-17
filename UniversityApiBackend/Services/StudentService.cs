@@ -179,7 +179,7 @@ namespace UniversityApiBackend.Services
             student.Address.Country = entity.Address.Country;
             student.Address.Comunity = entity.Address.Comunity;
            
-            _context.Students.Update(entity);
+            _context.Students.Update(student);
             return _context.SaveChangesAsync();
         }
     }

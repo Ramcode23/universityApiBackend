@@ -1,8 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CourseDto, RegisterStudent } from 'src/app/services/api/models';
-import { AuthService } from 'src/app/services/auth.service';
+import { Observable } from 'rxjs';
+import { StudentCourseDTO, StudentCreateDTO } from 'src/app/services/api/models';
+import { CourseListDTO } from 'src/app/services/api/models/courseListDTO';
+import { StudentDetailDTO } from 'src/app/services/api/models/studentDetailDTO';
+
+import { CoursesService } from 'src/app/services/courses/courses.service';
 import { StudentsService } from 'src/app/services/students/students.service';
 
 
@@ -12,51 +16,61 @@ import { StudentsService } from 'src/app/services/students/students.service';
   styleUrls: ['./student-form.component.css']
 })
 export class StudentFormComponent implements OnInit {
-  @Input() student: RegisterStudent | undefined;
+  @Input() studentId: number | undefined
+  student: StudentCreateDTO | undefined;
+  @Input() student$: Observable<StudentDetailDTO> | undefined;
+  studentFromDetails: StudentDetailDTO | undefined
+  courses: CourseListDTO[] = [];
+  coursesList: StudentCourseDTO[] = [];
+  courseStudent: CourseListDTO[] | undefined = [];
   studentForm = this.fb.group({});
+  selectedValue: number | undefined;
   panelOpenState = false;
   isEdit: boolean = false;
-  courses: Array<any> = [
-    { id: 1, name: 'Course 1' },
-    { id: 2, name: 'Course 2' },
-    { id: 3, name: 'Course 3' },
-    { id: 4, name: 'Course 4' },
-    { id: 5, name: 'Course 5' },
-    { id: 6, name: 'Course 6' },
-    { id: 7, name: 'Course 7' },
-    { id: 8, name: 'Course 8' },
-    { id: 9, name: 'Course 9' },
-  ];
+
 
   errors: any[] = [];
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private authService: AuthService,
     private StudentsService: StudentsService,
+    private coursesService: CoursesService,
 
-  ) {
-
-
-  }
+  ) { }
 
   ngOnInit(): void {
     this.studentForm = this.fb.group({
-      firstName: [this.student?.firstName || '', Validators.required],
-      lastName: [this.student?.lastName || '', Validators.required],
-      email: [this.student?.email || '', [Validators.required, Validators.email]],
-      password: ['Pass1234@', Validators.required],
-      dob: [this.student?.dob || '', Validators.required],
-      city: [this.student?.city || '', Validators.required],
-      street: [this.student?.state || '', Validators.required],
-      zipCode: [this.student?.zipCode || '', Validators.required],
-      country: [this.student?.country || '', Validators.required],
-      comunity: [this.student?.comunity || '', Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['Pass1234@', this.isEdit ? null : Validators.required],
+      dob: ['', Validators.required],
+      city: ['', Validators.required],
+      street: ['', Validators.required],
+      zipCode: ['', Validators.required],
+      country: ['', Validators.required],
+      comunity: ['', Validators.required],
+      state: ['', Validators.required],
 
     });
     this.getState();
-
+    this.getCourses();
+    if (this.isEdit) {
+      this.student$?.subscribe(student => {
+        this.loadData(student);
+      }
+      );
+    }
   }
+
+  getCourses() {
+    this.coursesService.getCoursesList()
+      .subscribe(courses => {
+        console.log(courses);
+        this.courses = courses
+      });
+  }
+
 
   enableForm(): void {
     this.studentForm.enable();
@@ -65,7 +79,7 @@ export class StudentFormComponent implements OnInit {
 
   onSubmit(): void {
     if (this.studentForm.valid) {
-      if (this.isEdit) {
+      if (!this.isEdit) {
         this.createStudent();
       } else {
         this.updateStudent();
@@ -82,8 +96,8 @@ export class StudentFormComponent implements OnInit {
     this.router.navigate(['/main/students']);
   }
   createStudent(): void {
-
-    this.authService.authRegisterUser(this.studentForm.value).subscribe(
+    const student = this.formtoStudent();
+    this.StudentsService.createStudent(student).subscribe(
       (response) => {
         console.log(response);
         this.navigateBack();
@@ -93,6 +107,7 @@ export class StudentFormComponent implements OnInit {
         // chekc if error is array or string
         if (error.error instanceof Array) {
           this.errors = error.error;
+          console.log(this.errors);
         }
         else {
           this.errors = [error.error];
@@ -104,7 +119,8 @@ export class StudentFormComponent implements OnInit {
   }
 
   updateStudent(): void {
-    this.StudentsService.updateStudent(this.studentForm.value).subscribe(
+    const student = this.formtoStudent();
+    this.StudentsService.updateStudent(student).subscribe(
       (response) => {
         console.log(response);
         this.navigateBack();
@@ -113,11 +129,103 @@ export class StudentFormComponent implements OnInit {
   }
 
   getState() {
-    if (this.student?.lastName != undefined && this.student?.lastName != null) {
+    if (this.studentId != undefined) {
       this.isEdit = true;
       return;
     }
     this.isEdit = false;
+  }
+
+  loadData(student?: StudentDetailDTO) {
+
+    this.studentForm.patchValue({
+      firstName: student?.user?.name,
+      lastName: student?.user?.lastName,
+      email: student?.user?.userName,
+      password: student?.user?.password,
+      dob: student?.dob,
+      city: student?.address?.city,
+      street: student?.address?.street,
+      zipCode: student?.address?.zipCode,
+      country: student?.address?.country,
+      comunity: student?.address?.comunity,
+      state: student?.address?.state,
+    });
+
+    this.studentFromDetails = student;
+
+    if (student!.courses!.length > 0) {
+      this.courseStudent = student?.courses;
+    } else {
+      this.student!.courses = [];
+    }
+
+
+  }
+
+  formtoStudent() {
+    const {
+      firstName,
+      lastName,
+      email,
+      password,
+      dob,
+      city,
+      street,
+      zipCode,
+      country,
+      comunity,
+      state } = this.studentForm.value;
+
+    const student: StudentCreateDTO = {
+      id: this.studentId||0,
+      user!: {
+        name: firstName,
+        lastName,
+        userName: email,
+        password,
+        email,
+      },
+      dob,
+      address: {
+        city,
+        street,
+        zipCode,
+        country,
+        comunity,
+        state
+
+      },
+      courses: this.courseStudent?.map(({ id }) => ({ id })),
+    };
+
+
+
+    return student;
+  }
+
+  deleteCourse(index: number) {
+    this.courseStudent = this.courseStudent!.filter((_, i) => i !== index);
+  }
+
+  addCourse() {
+    debugger;
+    if (this.selectedValue !== undefined) {
+      if (this.courseStudent!.filter(course => course.id == this.selectedValue).length == 0) {
+        const course = this.courses.filter(course => course.id == this.selectedValue)[0];
+        this.courseStudent!.push({ id: course.id, name: course.name } as CourseListDTO);
+      }
+    }
+
+  }
+
+  private _filter(name: string): CourseListDTO[] {
+    const filterValue = name.toLowerCase();
+    return this.courses.filter(option => option.name.toLowerCase().includes(filterValue));
+  }
+
+  displayFn(course: CourseListDTO): string {
+    return course && course.name ? course.name : '';
   }
 
 }

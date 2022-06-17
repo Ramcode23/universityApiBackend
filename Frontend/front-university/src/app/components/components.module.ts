@@ -5,7 +5,7 @@ import { MaterialModule } from '../modules/material/material.module';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { RegisterFormComponent } from './auth/register-form/register-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainRoutingModule } from '../pages/main/main-routing.module';
 import { StudentsTableComponent } from './students/students-table/students-table.component';
 import { CoursesTableComponent } from './courses/courses-table/courses-table.component';
@@ -68,6 +68,7 @@ import { EnrollCardComponent } from './enrollments/enroll-card/enroll-card.compo
     MatMenuModule,
     MatIconModule,
     LayoutModule,
+    FormsModule
   ],
   exports: [
     LoginFormComponent,

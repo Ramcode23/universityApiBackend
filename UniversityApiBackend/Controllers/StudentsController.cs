@@ -122,9 +122,9 @@ namespace UniversityApiBackend.Controllers
             if (studentDTO == null)
                 return Problem("Entity set 'UniversityDbContext.Student'  is null.");
             
-            var isEmailExit = await _userHelper.GetUserByEmailAsync(User.Identity.Name);
+            var isEmailExit = await _userHelper.GetUserByEmailAsync(studentDTO.User.UserName);
             if (isEmailExit!=null)
-                return Problem($"This  {isEmailExit.Email} exits.");
+                return Problem($"This  {studentDTO.User.UserName} exits.");
 
             var student = _mapper.Map<Student>(studentDTO);
             student.User.UserName = student.User.Email;

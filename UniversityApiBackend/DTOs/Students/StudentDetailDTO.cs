@@ -10,6 +10,6 @@ namespace UniversityApiBackend.DTOs.Students
         public UserDTO User { get; set; } = new UserDTO();
         public AddressDTO Address { get; set; } = new AddressDTO();
 
-        public List<CourseDTO> Courses { get; set; }
+        public List<CourseListDTO> Courses { get; set; }
     }
 }

@@ -19154,3 +19154,920 @@ UniversityApiBackend.DTOs.Students.StudentCourseDTO -> UniversityApiBackend.Mode
 2022-06-15 16:06:07.736 -07:00 [INF] Application started. Press Ctrl+C to shut down.
 2022-06-15 16:06:07.738 -07:00 [INF] Hosting environment: Development
 2022-06-15 16:06:07.739 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-15 21:52:11.206 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-15 21:52:11.234 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-15 21:52:11.242 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-15 21:52:11.244 -07:00 [INF] Hosting environment: Development
+2022-06-15 21:52:11.247 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-15 21:52:18.462 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 18.2267 ms
+2022-06-15 21:52:19.032 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 524.6704 ms
+2022-06-15 21:52:19.426 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.9616 ms
+2022-06-15 21:52:19.804 -07:00 [INF] HTTP GET /api/Students responded 200 in 367.9628 ms
+2022-06-15 21:52:22.186 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1718 ms
+2022-06-15 21:52:22.186 -07:00 [INF] HTTP OPTIONS /api/Students/13 responded 204 in 0.1768 ms
+2022-06-15 21:52:22.267 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 71.3106 ms
+2022-06-15 21:52:22.327 -07:00 [INF] HTTP GET /api/Students/13 responded 200 in 129.5311 ms
+2022-06-15 21:52:36.876 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0910 ms
+2022-06-15 21:52:36.894 -07:00 [INF] HTTP GET /api/Students responded 200 in 9.9436 ms
+2022-06-15 21:52:41.106 -07:00 [INF] HTTP OPTIONS /api/Students/7 responded 204 in 0.1467 ms
+2022-06-15 21:52:41.106 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1500 ms
+2022-06-15 21:52:41.120 -07:00 [INF] HTTP GET /api/Students/7 responded 200 in 7.7770 ms
+2022-06-15 21:52:41.137 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 22.5419 ms
+2022-06-15 21:52:53.035 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.1723 ms
+2022-06-15 21:52:53.051 -07:00 [INF] HTTP GET /api/Students responded 200 in 9.6500 ms
+2022-06-15 21:52:56.825 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.3818 ms
+2022-06-15 21:52:56.825 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.3655 ms
+2022-06-15 21:52:56.836 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.7299 ms
+2022-06-15 21:52:56.842 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 6.9149 ms
+2022-06-15 21:54:24.726 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.8201 ms
+2022-06-15 21:54:24.741 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.2569 ms
+2022-06-15 21:54:27.352 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1814 ms
+2022-06-15 21:54:27.353 -07:00 [INF] HTTP OPTIONS /api/Students/new responded 204 in 0.0620 ms
+2022-06-15 21:54:27.364 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.3949 ms
+2022-06-15 21:54:27.376 -07:00 [INF] HTTP GET /api/Students/new responded 400 in 13.7801 ms
+2022-06-15 21:54:39.516 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0528 ms
+2022-06-15 21:54:39.527 -07:00 [INF] HTTP GET /api/Students responded 200 in 4.9267 ms
+2022-06-15 21:54:44.713 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0622 ms
+2022-06-15 21:54:44.713 -07:00 [INF] HTTP OPTIONS /api/Students/new responded 204 in 0.0622 ms
+2022-06-15 21:54:44.724 -07:00 [INF] HTTP GET /api/Students/new responded 400 in 1.4549 ms
+2022-06-15 21:54:44.724 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.1888 ms
+2022-06-15 21:57:59.490 -07:00 [INF] HTTP OPTIONS /api/Students/new responded 204 in 0.1319 ms
+2022-06-15 21:57:59.490 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1317 ms
+2022-06-15 21:57:59.504 -07:00 [INF] HTTP GET /api/Students/new responded 400 in 2.3287 ms
+2022-06-15 21:57:59.511 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 7.1196 ms
+2022-06-15 21:58:01.439 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.1374 ms
+2022-06-15 21:58:01.450 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.7744 ms
+2022-06-15 21:58:32.075 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1402 ms
+2022-06-15 21:58:32.088 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.2302 ms
+2022-06-15 22:00:18.987 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0277 ms
+2022-06-15 22:00:19.009 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 7.6491 ms
+2022-06-15 22:00:33.458 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0332 ms
+2022-06-15 22:00:33.467 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.7500 ms
+2022-06-15 22:00:57.033 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0497 ms
+2022-06-15 22:00:57.048 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.8210 ms
+2022-06-15 22:01:19.188 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0518 ms
+2022-06-15 22:01:19.203 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.1736 ms
+2022-06-15 22:03:06.235 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0411 ms
+2022-06-15 22:03:06.257 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.7568 ms
+2022-06-17 07:13:33.271 -07:00 [ERR] An error occurred using the connection to database 'UniversityDB2' on server '127.0.0.1,1433'.
+2022-06-17 07:13:33.302 -07:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UniversityApiBackend.DataAccess.UniversityDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2022-06-17 07:19:13.623 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-17 07:19:13.652 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-17 07:19:13.661 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-17 07:19:13.664 -07:00 [INF] Hosting environment: Development
+2022-06-17 07:19:13.667 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-17 07:19:25.208 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 4.4305 ms
+2022-06-17 07:19:25.918 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 700.5174 ms
+2022-06-17 07:19:25.995 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.6068 ms
+2022-06-17 07:19:26.469 -07:00 [INF] HTTP GET /api/Students responded 200 in 467.1240 ms
+2022-06-17 07:19:28.711 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1802 ms
+2022-06-17 07:19:28.711 -07:00 [INF] HTTP OPTIONS /api/Students/13 responded 204 in 0.2751 ms
+2022-06-17 07:19:28.794 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 73.7919 ms
+2022-06-17 07:19:28.853 -07:00 [INF] HTTP GET /api/Students/13 responded 200 in 130.6244 ms
+2022-06-17 07:19:39.599 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.1764 ms
+2022-06-17 07:19:39.612 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.5039 ms
+2022-06-17 07:19:42.428 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.3245 ms
+2022-06-17 07:19:42.428 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0400 ms
+2022-06-17 07:19:42.446 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 10.6075 ms
+2022-06-17 07:19:42.458 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 19.0311 ms
+2022-06-17 07:28:06.248 -07:00 [INF] HTTP OPTIONS /api/Account/register responded 204 in 0.1130 ms
+2022-06-17 07:28:06.290 -07:00 [INF] HTTP POST /api/Account/register responded 400 in 32.9669 ms
+2022-06-17 07:28:20.679 -07:00 [INF] HTTP OPTIONS /api/Account/register responded 204 in 0.5341 ms
+2022-06-17 07:28:20.693 -07:00 [INF] HTTP POST /api/Account/register responded 400 in 5.8567 ms
+2022-06-17 07:28:22.956 -07:00 [INF] HTTP OPTIONS /api/Account/register responded 204 in 0.0946 ms
+2022-06-17 07:28:22.968 -07:00 [INF] HTTP POST /api/Account/register responded 400 in 5.1183 ms
+2022-06-17 07:28:23.559 -07:00 [INF] HTTP OPTIONS /api/Account/register responded 204 in 0.1557 ms
+2022-06-17 07:28:23.572 -07:00 [INF] HTTP POST /api/Account/register responded 400 in 7.4629 ms
+2022-06-17 07:28:27.074 -07:00 [INF] HTTP OPTIONS /api/Account/register responded 204 in 0.1580 ms
+2022-06-17 07:28:27.083 -07:00 [INF] HTTP POST /api/Account/register responded 400 in 4.0510 ms
+2022-06-17 08:24:09.229 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1599 ms
+2022-06-17 08:24:09.270 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 31.9352 ms
+2022-06-17 08:26:56.985 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0823 ms
+2022-06-17 08:26:57.004 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 12.3548 ms
+2022-06-17 08:40:43.980 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.1144 ms
+2022-06-17 08:40:43.980 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1430 ms
+2022-06-17 08:40:44.032 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 16.7850 ms
+2022-06-17 08:40:44.042 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 26.8718 ms
+2022-06-17 08:44:01.531 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.2451 ms
+2022-06-17 08:44:01.542 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.7713 ms
+2022-06-17 08:44:03.924 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0932 ms
+2022-06-17 08:44:03.938 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 5.6366 ms
+2022-06-17 08:44:35.431 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1861 ms
+2022-06-17 08:44:35.431 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0883 ms
+2022-06-17 08:44:35.443 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.3451 ms
+2022-06-17 08:44:35.447 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 9.4507 ms
+2022-06-17 08:46:53.558 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1730 ms
+2022-06-17 08:46:53.558 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0150 ms
+2022-06-17 08:46:53.569 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.5202 ms
+2022-06-17 08:46:53.569 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 3.8790 ms
+2022-06-17 08:49:42.941 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1819 ms
+2022-06-17 08:49:42.952 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.9975 ms
+2022-06-17 08:49:45.450 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0391 ms
+2022-06-17 08:49:45.461 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 5.5185 ms
+2022-06-17 08:50:14.075 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0509 ms
+2022-06-17 08:50:14.088 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.9525 ms
+2022-06-17 08:50:17.763 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0796 ms
+2022-06-17 08:50:17.773 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.4930 ms
+2022-06-17 08:51:54.957 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0608 ms
+2022-06-17 08:51:54.974 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 6.4225 ms
+2022-06-17 08:52:06.394 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0292 ms
+2022-06-17 08:52:06.405 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.8847 ms
+2022-06-17 08:52:07.648 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0491 ms
+2022-06-17 08:52:07.661 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 6.7543 ms
+2022-06-17 08:52:08.924 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0485 ms
+2022-06-17 08:52:08.935 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.7164 ms
+2022-06-17 08:52:34.033 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0687 ms
+2022-06-17 08:52:34.047 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.3713 ms
+2022-06-17 08:52:36.371 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.1350 ms
+2022-06-17 08:52:36.380 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.4461 ms
+2022-06-17 08:53:09.700 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0365 ms
+2022-06-17 08:53:09.712 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.2033 ms
+2022-06-17 08:53:11.639 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0378 ms
+2022-06-17 08:53:11.648 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 3.9952 ms
+2022-06-17 08:53:17.612 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0467 ms
+2022-06-17 08:53:17.624 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.2903 ms
+2022-06-17 08:53:20.878 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0943 ms
+2022-06-17 08:53:20.890 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 5.3575 ms
+2022-06-17 08:53:43.268 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0283 ms
+2022-06-17 08:53:43.281 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.1637 ms
+2022-06-17 08:53:45.325 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.1121 ms
+2022-06-17 08:53:45.335 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.5043 ms
+2022-06-17 08:54:29.545 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0349 ms
+2022-06-17 08:54:29.557 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.9462 ms
+2022-06-17 08:54:32.046 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0397 ms
+2022-06-17 08:54:32.055 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.0681 ms
+2022-06-17 08:55:52.149 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0383 ms
+2022-06-17 08:55:52.158 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.0041 ms
+2022-06-17 08:55:55.255 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0436 ms
+2022-06-17 08:55:55.267 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.4791 ms
+2022-06-17 08:56:33.940 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.3861 ms
+2022-06-17 08:56:33.953 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.8205 ms
+2022-06-17 08:56:36.406 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0382 ms
+2022-06-17 08:56:36.418 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.4821 ms
+2022-06-17 08:56:57.836 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0444 ms
+2022-06-17 08:56:57.851 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.1648 ms
+2022-06-17 08:56:59.688 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0978 ms
+2022-06-17 08:56:59.698 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 3.8569 ms
+2022-06-17 09:02:30.977 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0547 ms
+2022-06-17 09:02:31.006 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 21.6741 ms
+2022-06-17 09:19:45.809 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-17 09:19:45.839 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-17 09:19:45.848 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-17 09:19:45.851 -07:00 [INF] Hosting environment: Development
+2022-06-17 09:19:45.853 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-17 09:20:36.106 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 6.4329 ms
+2022-06-17 09:20:36.782 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 660.1978 ms
+2022-06-17 09:20:37.625 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.5065 ms
+2022-06-17 09:20:37.959 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 328.3428 ms
+2022-06-17 09:28:31.741 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1441 ms
+2022-06-17 09:28:31.775 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 25.9894 ms
+2022-06-17 09:28:33.511 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0684 ms
+2022-06-17 09:28:33.521 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.3837 ms
+2022-06-17 09:31:07.213 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0850 ms
+2022-06-17 09:31:07.229 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.2880 ms
+2022-06-17 09:31:09.756 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0761 ms
+2022-06-17 09:31:09.768 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 5.4106 ms
+2022-06-17 09:55:16.875 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0637 ms
+2022-06-17 09:55:16.897 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 14.2793 ms
+2022-06-17 09:55:23.199 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0594 ms
+2022-06-17 09:55:23.208 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.4526 ms
+2022-06-17 09:57:50.618 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0721 ms
+2022-06-17 09:57:50.628 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.7232 ms
+2022-06-17 09:57:53.988 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0585 ms
+2022-06-17 09:57:53.998 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.5686 ms
+2022-06-17 09:58:57.898 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0812 ms
+2022-06-17 09:58:57.912 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.6856 ms
+2022-06-17 09:59:02.381 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0860 ms
+2022-06-17 09:59:02.393 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.2493 ms
+2022-06-17 10:06:00.719 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0625 ms
+2022-06-17 10:06:00.745 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 16.4454 ms
+2022-06-17 10:06:04.888 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0689 ms
+2022-06-17 10:06:04.898 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.1110 ms
+2022-06-17 10:08:39.501 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0474 ms
+2022-06-17 10:08:39.513 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.5373 ms
+2022-06-17 10:08:43.778 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0683 ms
+2022-06-17 10:08:43.788 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.3394 ms
+2022-06-17 10:18:56.072 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0627 ms
+2022-06-17 10:18:56.098 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 18.2552 ms
+2022-06-17 10:34:23.290 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0782 ms
+2022-06-17 10:34:23.331 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 31.6258 ms
+2022-06-17 10:34:24.629 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0520 ms
+2022-06-17 10:34:24.639 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.9567 ms
+2022-06-17 10:34:25.374 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0668 ms
+2022-06-17 10:34:25.387 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 5.2628 ms
+2022-06-17 10:36:11.721 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0772 ms
+2022-06-17 10:36:11.737 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.7125 ms
+2022-06-17 10:36:15.465 -07:00 [INF] HTTP OPTIONS /api/Students/16 responded 204 in 0.0635 ms
+2022-06-17 10:36:15.474 -07:00 [INF] HTTP GET /api/Students/16 responded 200 in 4.4593 ms
+2022-06-17 10:39:43.742 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0605 ms
+2022-06-17 10:39:43.898 -07:00 [INF] HTTP GET /api/Students responded 200 in 144.4978 ms
+2022-06-17 10:39:44.809 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0611 ms
+2022-06-17 10:39:44.819 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.1581 ms
+2022-06-17 10:54:25.085 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0574 ms
+2022-06-17 10:54:25.104 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 12.9261 ms
+2022-06-17 10:57:35.931 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0826 ms
+2022-06-17 10:57:35.948 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 6.3327 ms
+2022-06-17 10:58:42.929 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0586 ms
+2022-06-17 10:58:42.941 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 4.0508 ms
+2022-06-17 11:16:56.274 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0760 ms
+2022-06-17 11:16:56.300 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 17.2408 ms
+2022-06-17 11:28:45.620 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0730 ms
+2022-06-17 11:28:45.644 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 16.7823 ms
+2022-06-17 11:40:08.502 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0962 ms
+2022-06-17 11:40:08.531 -07:00 [INF] HTTP GET /api/Students responded 200 in 18.9700 ms
+2022-06-17 11:40:10.492 -07:00 [INF] HTTP OPTIONS /api/Students/13 responded 204 in 0.1294 ms
+2022-06-17 11:40:10.492 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1339 ms
+2022-06-17 11:40:10.505 -07:00 [INF] HTTP GET /api/Students/13 responded 200 in 6.7911 ms
+2022-06-17 11:40:10.516 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 15.3117 ms
+2022-06-17 11:40:13.250 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0541 ms
+2022-06-17 11:40:13.261 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.3219 ms
+2022-06-17 11:40:14.988 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0815 ms
+2022-06-17 11:40:14.988 -07:00 [INF] HTTP OPTIONS /api/Students/15 responded 204 in 0.0619 ms
+2022-06-17 11:40:15.004 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.5082 ms
+2022-06-17 11:40:15.004 -07:00 [INF] HTTP GET /api/Students/15 responded 200 in 4.4081 ms
+2022-06-17 11:52:16.209 -07:00 [INF] HTTP OPTIONS /api/Students/15 responded 204 in 0.1353 ms
+2022-06-17 11:52:16.209 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0416 ms
+2022-06-17 11:52:16.233 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 15.9132 ms
+2022-06-17 11:52:16.244 -07:00 [INF] HTTP GET /api/Students/15 responded 200 in 26.2181 ms
+2022-06-17 11:57:01.703 -07:00 [INF] HTTP OPTIONS /api/Students/15 responded 204 in 0.2540 ms
+2022-06-17 11:57:01.703 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.2555 ms
+2022-06-17 11:57:01.718 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 7.2756 ms
+2022-06-17 11:57:01.718 -07:00 [INF] HTTP GET /api/Students/15 responded 200 in 7.2913 ms
+2022-06-17 11:59:58.169 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 0.0611 ms
+2022-06-17 11:59:58.353 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 178.7821 ms
+2022-06-17 11:59:58.454 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0542 ms
+2022-06-17 11:59:58.464 -07:00 [INF] HTTP GET /api/Students responded 200 in 4.6864 ms
+2022-06-17 12:00:01.371 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0880 ms
+2022-06-17 12:00:01.381 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.2133 ms
+2022-06-17 12:03:04.599 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0492 ms
+2022-06-17 12:03:04.609 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.6344 ms
+2022-06-17 12:06:09.237 -07:00 [INF] HTTP OPTIONS /api/Students/undefined responded 204 in 0.0684 ms
+2022-06-17 12:06:09.272 -07:00 [INF] HTTP PUT /api/Students/undefined responded 400 in 27.1648 ms
+2022-06-17 12:06:38.493 -07:00 [INF] HTTP OPTIONS /api/Students/undefined responded 204 in 0.0552 ms
+2022-06-17 12:06:38.503 -07:00 [INF] HTTP PUT /api/Students/undefined responded 400 in 1.6413 ms
+2022-06-17 12:07:33.960 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0699 ms
+2022-06-17 12:07:33.975 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.8699 ms
+2022-06-17 12:11:41.943 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0734 ms
+2022-06-17 12:11:41.973 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 22.6386 ms
+2022-06-17 12:13:52.532 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0619 ms
+2022-06-17 12:13:52.546 -07:00 [INF] HTTP POST /api/Students responded 400 in 9.2447 ms
+2022-06-17 12:14:45.566 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0662 ms
+2022-06-17 12:14:45.578 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.7372 ms
+2022-06-17 12:15:13.342 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0590 ms
+2022-06-17 12:15:13.350 -07:00 [INF] HTTP POST /api/Students responded 400 in 0.9901 ms
+2022-06-17 12:16:20.210 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0623 ms
+2022-06-17 12:16:20.219 -07:00 [INF] HTTP POST /api/Students responded 400 in 0.9473 ms
+2022-06-17 14:19:01.183 -07:00 [ERR] An error occurred using the connection to database 'UniversityDB2' on server '127.0.0.1,1433'.
+2022-06-17 14:19:01.222 -07:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UniversityApiBackend.DataAccess.UniversityDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+2022-06-17 14:19:39.129 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-17 14:19:39.151 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-17 14:19:39.157 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-17 14:19:39.159 -07:00 [INF] Hosting environment: Development
+2022-06-17 14:19:39.161 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-17 14:20:58.141 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 21.0602 ms
+2022-06-17 14:20:59.011 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 830.8769 ms
+2022-06-17 14:20:59.417 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.5677 ms
+2022-06-17 14:20:59.969 -07:00 [INF] HTTP GET /api/Students responded 200 in 547.2208 ms
+2022-06-17 14:21:04.790 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0608 ms
+2022-06-17 14:21:04.873 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 75.7366 ms
+2022-06-17 14:21:22.218 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0482 ms
+2022-06-17 14:21:22.231 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.0816 ms
+2022-06-17 14:22:49.792 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1966 ms
+2022-06-17 14:22:49.836 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 3.1163 ms
+2022-06-17 14:37:34.479 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0755 ms
+2022-06-17 14:37:34.517 -07:00 [INF] HTTP POST /api/Students responded 400 in 23.1764 ms
+2022-06-17 14:38:59.842 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.2375 ms
+2022-06-17 14:38:59.864 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.9138 ms
+2022-06-17 14:45:40.878 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0640 ms
+2022-06-17 14:45:44.860 -07:00 [ERR] HTTP POST /api/Students responded 500 in 3973.5574 ms
+2022-06-17 14:46:23.988 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0621 ms
+2022-06-17 14:46:48.190 -07:00 [ERR] HTTP POST /api/Students responded 500 in 24193.7727 ms
+2022-06-17 14:51:47.649 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-17 14:51:47.671 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-17 14:51:47.677 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-17 14:51:47.679 -07:00 [INF] Hosting environment: Development
+2022-06-17 14:51:47.681 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-17 14:53:48.531 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 3.5791 ms
+2022-06-17 14:53:49.105 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 564.4029 ms
+2022-06-17 15:00:59.932 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.7004 ms
+2022-06-17 15:01:00.029 -07:00 [ERR] HTTP POST /api/Students responded 500 in 91.4067 ms
+2022-06-17 15:02:25.761 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-17 15:02:25.786 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-17 15:02:25.793 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-17 15:02:25.796 -07:00 [INF] Hosting environment: Development
+2022-06-17 15:02:25.797 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-17 15:02:54.070 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 4.6260 ms
+2022-06-17 15:03:06.629 -07:00 [ERR] HTTP POST /api/Students responded 500 in 12545.4281 ms
+2022-06-17 15:03:22.929 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.6467 ms
+2022-06-17 15:03:51.783 -07:00 [INF] HTTP POST /api/Students responded 200 in 28847.7845 ms
+2022-06-17 15:03:51.908 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0610 ms
+2022-06-17 15:03:52.101 -07:00 [INF] HTTP GET /api/Students responded 200 in 188.2089 ms
+2022-06-17 15:04:34.590 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.1570 ms
+2022-06-17 15:04:34.590 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0430 ms
+2022-06-17 15:04:34.625 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 22.4737 ms
+2022-06-17 15:04:34.717 -07:00 [ERR] HTTP GET /api/Students/17 responded 500 in 117.1629 ms
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Type Map configuration:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Destination Member:
+Courses
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Type Map configuration:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Destination Member:
+Students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ICollection`1 -> Int32
+System.Collections.Generic.ICollection`1[[UniversityApiBackend.Models.DataModels.Student, UniversityApiBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Int32
+   at lambda_method696(Closure , ICollection`1 , Int32 , ResolutionContext )
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   at UniversityApiBackend.Controllers.StudentsController.GetStudent(Int32 id) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 68
+   at lambda_method669(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-06-17 15:04:34.810 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Type Map configuration:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Destination Member:
+Courses
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Type Map configuration:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Destination Member:
+Students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ICollection`1 -> Int32
+System.Collections.Generic.ICollection`1[[UniversityApiBackend.Models.DataModels.Student, UniversityApiBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Int32
+   at lambda_method696(Closure , ICollection`1 , Int32 , ResolutionContext )
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   at UniversityApiBackend.Controllers.StudentsController.GetStudent(Int32 id) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 68
+   at lambda_method669(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-17 15:05:42.536 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0800 ms
+2022-06-17 15:05:42.553 -07:00 [INF] HTTP GET /api/Students responded 200 in 8.8661 ms
+2022-06-17 15:05:53.346 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1462 ms
+2022-06-17 15:05:53.346 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0306 ms
+2022-06-17 15:05:53.364 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 10.3297 ms
+2022-06-17 15:05:53.396 -07:00 [ERR] HTTP GET /api/Students/17 responded 500 in 37.2719 ms
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Type Map configuration:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Destination Member:
+Courses
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Type Map configuration:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Destination Member:
+Students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ICollection`1 -> Int32
+System.Collections.Generic.ICollection`1[[UniversityApiBackend.Models.DataModels.Student, UniversityApiBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Int32
+   at lambda_method696(Closure , ICollection`1 , Int32 , ResolutionContext )
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   at UniversityApiBackend.Controllers.StudentsController.GetStudent(Int32 id) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 68
+   at lambda_method669(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-06-17 15:05:53.419 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Type Map configuration:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Destination Member:
+Courses
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Type Map configuration:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Destination Member:
+Students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ICollection`1 -> Int32
+System.Collections.Generic.ICollection`1[[UniversityApiBackend.Models.DataModels.Student, UniversityApiBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Int32
+   at lambda_method696(Closure , ICollection`1 , Int32 , ResolutionContext )
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   at UniversityApiBackend.Controllers.StudentsController.GetStudent(Int32 id) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 68
+   at lambda_method669(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-17 15:07:17.968 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 143.2291 ms
+2022-06-17 15:08:04.404 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0788 ms
+2022-06-17 15:08:04.418 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.2866 ms
+2022-06-17 15:08:16.706 -07:00 [ERR] HTTP GET /api/Students/17 responded 500 in 33.8773 ms
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Type Map configuration:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Destination Member:
+Courses
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Type Map configuration:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Destination Member:
+Students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ICollection`1 -> Int32
+System.Collections.Generic.ICollection`1[[UniversityApiBackend.Models.DataModels.Student, UniversityApiBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Int32
+   at lambda_method696(Closure , ICollection`1 , Int32 , ResolutionContext )
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   at UniversityApiBackend.Controllers.StudentsController.GetStudent(Int32 id) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 68
+   at lambda_method669(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-06-17 15:08:16.728 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Type Map configuration:
+Student -> StudentDetailDTO
+UniversityApiBackend.Models.DataModels.Student -> UniversityApiBackend.DTOs.Students.StudentDetailDTO
+
+Destination Member:
+Courses
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Type Map configuration:
+Course -> CourseDTO
+UniversityApiBackend.Models.DataModels.Course -> UniversityApiBackend.DTOs.Courses.CourseDTO
+
+Destination Member:
+Students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+ICollection`1 -> Int32
+System.Collections.Generic.ICollection`1[[UniversityApiBackend.Models.DataModels.Student, UniversityApiBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Int32
+   at lambda_method696(Closure , ICollection`1 , Int32 , ResolutionContext )
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method695(Closure , Object , StudentDetailDTO , ResolutionContext )
+   at UniversityApiBackend.Controllers.StudentsController.GetStudent(Int32 id) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 68
+   at lambda_method669(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-17 15:14:43.925 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-17 15:14:43.947 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-17 15:14:43.952 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-17 15:14:43.954 -07:00 [INF] Hosting environment: Development
+2022-06-17 15:14:43.956 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-17 15:15:22.146 -07:00 [INF] HTTP GET /api/Students/16 responded 401 in 67.9119 ms
+2022-06-17 15:15:54.477 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 2.9513 ms
+2022-06-17 15:15:54.477 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 15.7180 ms
+2022-06-17 15:15:54.982 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 494.6622 ms
+2022-06-17 15:15:55.136 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 649.1819 ms
+2022-06-17 15:18:39.978 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.9487 ms
+2022-06-17 15:18:39.981 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0908 ms
+2022-06-17 15:18:39.996 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 7.6761 ms
+2022-06-17 15:18:40.010 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 23.2423 ms
+2022-06-17 15:19:19.865 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0641 ms
+2022-06-17 15:19:19.869 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0525 ms
+2022-06-17 15:19:19.887 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 11.1750 ms
+2022-06-17 15:19:19.904 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 23.8683 ms
+2022-06-17 15:28:08.313 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-17 15:28:08.337 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-17 15:28:08.345 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-17 15:28:08.346 -07:00 [INF] Hosting environment: Development
+2022-06-17 15:28:08.348 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-17 15:28:25.324 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 3.9051 ms
+2022-06-17 15:28:26.028 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 691.2674 ms
+2022-06-17 15:29:03.256 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.8834 ms
+2022-06-17 15:29:03.324 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 58.7545 ms
+2022-06-17 15:29:09.359 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.1576 ms
+2022-06-17 15:29:09.359 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0248 ms
+2022-06-17 15:29:09.464 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 96.1372 ms
+2022-06-17 15:29:09.567 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 201.7590 ms
+2022-06-17 15:29:59.398 -07:00 [INF] HTTP OPTIONS /api/Students/undefined responded 204 in 0.0644 ms
+2022-06-17 15:29:59.432 -07:00 [INF] HTTP PUT /api/Students/undefined responded 400 in 25.9725 ms
+2022-06-17 15:32:10.627 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1447 ms
+2022-06-17 15:32:10.629 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0502 ms
+2022-06-17 15:32:10.648 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 7.0594 ms
+2022-06-17 15:32:10.663 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 22.7317 ms
+2022-06-17 15:32:24.266 -07:00 [INF] HTTP OPTIONS /api/Students/undefined responded 204 in 0.0582 ms
+2022-06-17 15:32:24.274 -07:00 [INF] HTTP PUT /api/Students/undefined responded 400 in 1.5160 ms
+2022-06-17 15:33:12.981 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.6717 ms
+2022-06-17 15:33:12.984 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0930 ms
+2022-06-17 15:33:13.001 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 8.3114 ms
+2022-06-17 15:33:13.008 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 13.2830 ms
+2022-06-17 15:33:22.318 -07:00 [INF] HTTP OPTIONS /api/Students/undefined responded 204 in 0.0480 ms
+2022-06-17 15:33:22.324 -07:00 [INF] HTTP PUT /api/Students/undefined responded 400 in 1.3154 ms
+2022-06-17 15:33:49.475 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0593 ms
+2022-06-17 15:33:49.523 -07:00 [INF] HTTP GET /api/Students responded 200 in 37.0922 ms
+2022-06-17 15:33:57.520 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0618 ms
+2022-06-17 15:33:57.521 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0480 ms
+2022-06-17 15:33:57.539 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 10.0253 ms
+2022-06-17 15:33:57.555 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 22.2911 ms
+2022-06-17 15:34:18.166 -07:00 [INF] HTTP OPTIONS /api/Students/undefined responded 204 in 0.0586 ms
+2022-06-17 15:34:18.173 -07:00 [INF] HTTP PUT /api/Students/undefined responded 400 in 1.5324 ms
+2022-06-17 15:36:48.582 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 1.5020 ms
+2022-06-17 15:36:48.584 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0632 ms
+2022-06-17 15:36:48.597 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 6.5145 ms
+2022-06-17 15:36:48.608 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 13.8613 ms
+2022-06-17 15:39:06.625 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0525 ms
+2022-06-17 15:39:06.796 -07:00 [ERR] HTTP PUT /api/Students/17 responded 500 in 163.1273 ms
+System.InvalidOperationException: The instance of entity type 'Student' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at UniversityApiBackend.Services.StudentService.Update(Student entity) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Services\StudentService.cs:line 182
+   at UniversityApiBackend.Controllers.StudentsController.PutStudent(Int32 id, StudentCreateDTO studentDTO) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 96
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-06-17 15:39:06.855 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The instance of entity type 'Student' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at UniversityApiBackend.Services.StudentService.Update(Student entity) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Services\StudentService.cs:line 182
+   at UniversityApiBackend.Controllers.StudentsController.PutStudent(Int32 id, StudentCreateDTO studentDTO) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 96
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-17 15:40:04.871 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0606 ms
+2022-06-17 15:40:40.903 -07:00 [ERR] HTTP PUT /api/Students/17 responded 500 in 36023.9331 ms
+System.InvalidOperationException: The instance of entity type 'Student' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at UniversityApiBackend.Services.StudentService.Update(Student entity) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Services\StudentService.cs:line 182
+   at UniversityApiBackend.Controllers.StudentsController.PutStudent(Int32 id, StudentCreateDTO studentDTO) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 96
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2022-06-17 15:40:40.920 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The instance of entity type 'Student' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at UniversityApiBackend.Services.StudentService.Update(Student entity) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Services\StudentService.cs:line 182
+   at UniversityApiBackend.Controllers.StudentsController.PutStudent(Int32 id, StudentCreateDTO studentDTO) in C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\Controllers\StudentsController.cs:line 96
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-06-17 15:41:40.834 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-17 15:41:40.862 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-17 15:41:40.869 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-17 15:41:40.872 -07:00 [INF] Hosting environment: Development
+2022-06-17 15:41:40.875 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-17 15:42:01.663 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 3.4587 ms
+2022-06-17 15:42:15.377 -07:00 [INF] HTTP PUT /api/Students/17 responded 204 in 13703.3106 ms
+2022-06-17 15:42:15.496 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.3743 ms
+2022-06-17 15:42:15.604 -07:00 [INF] HTTP GET /api/Students responded 200 in 102.0218 ms
+2022-06-17 15:53:55.966 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-17 15:53:55.990 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-17 15:53:55.996 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-17 15:53:55.997 -07:00 [INF] Hosting environment: Development
+2022-06-17 15:53:55.999 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-17 15:54:18.105 -07:00 [INF] HTTP OPTIONS /api/courses/Search responded 204 in 3.9363 ms
+2022-06-17 15:54:18.794 -07:00 [INF] HTTP GET /api/courses/Search responded 200 in 673.9615 ms
+2022-06-17 15:54:30.154 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.9519 ms
+2022-06-17 15:54:30.266 -07:00 [INF] HTTP GET /api/Students responded 200 in 103.7617 ms
+2022-06-17 15:54:39.310 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0564 ms
+2022-06-17 15:54:39.310 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0565 ms
+2022-06-17 15:54:39.394 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 75.7220 ms
+2022-06-17 15:54:39.488 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 167.4756 ms
+2022-06-17 15:55:17.452 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0602 ms
+2022-06-17 15:55:20.713 -07:00 [INF] HTTP PUT /api/Students/17 responded 204 in 3253.5298 ms
+2022-06-17 15:55:20.791 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0485 ms
+2022-06-17 15:55:20.802 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.9615 ms
+2022-06-17 15:55:30.559 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.3158 ms
+2022-06-17 15:55:30.559 -07:00 [INF] HTTP OPTIONS /api/Students/17 responded 204 in 0.0236 ms
+2022-06-17 15:55:30.573 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 6.1911 ms
+2022-06-17 15:55:30.581 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 7.3632 ms
+2022-06-17 16:01:33.490 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0628 ms
+2022-06-17 16:01:33.511 -07:00 [INF] HTTP GET /api/Students responded 200 in 13.7738 ms

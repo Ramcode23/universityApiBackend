@@ -1,3 +1,5 @@
+
+
 export { Address } from './models/address';
 export { AddressDto } from './models/address-dto';
 export { Category } from './models/category';
@@ -22,3 +24,5 @@ export { StudentEnrollDto } from './models/student-enroll-dto';
 export { StundentListDto } from './models/stundent-list-dto';
 export { User } from './models/user';
 export { UserLogins } from './models/user-logins';
+export { StudentCreateDTO } from './models/studentCreateDTO';
+export { StudentCourseDTO } from './models/studentCourseDTO';

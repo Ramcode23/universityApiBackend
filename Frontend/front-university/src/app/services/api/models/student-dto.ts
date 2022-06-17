@@ -7,4 +7,9 @@ export interface StudentDto {
   firstName?: null | string;
   id?: number;
   lastName?: null | string;
+  courses?:   StudentCourseDTO[];
+}
+
+export interface StudentCourseDTO {
+id: number;
 }
