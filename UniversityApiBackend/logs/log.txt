@@ -20071,3 +20071,510 @@ System.InvalidOperationException: The instance of entity type 'Student' cannot b
 2022-06-17 15:55:30.581 -07:00 [INF] HTTP GET /api/Students/17 responded 200 in 7.3632 ms
 2022-06-17 16:01:33.490 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0628 ms
 2022-06-17 16:01:33.511 -07:00 [INF] HTTP GET /api/Students responded 200 in 13.7738 ms
+2022-06-19 17:54:19.111 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-19 17:54:19.137 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-19 17:54:19.144 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-19 17:54:19.146 -07:00 [INF] Hosting environment: Development
+2022-06-19 17:54:19.148 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-19 17:54:23.018 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 5.4640 ms
+2022-06-19 17:54:23.871 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 838.6887 ms
+2022-06-19 17:54:23.943 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.7597 ms
+2022-06-19 17:54:24.483 -07:00 [INF] HTTP GET /api/Students responded 200 in 535.4051 ms
+2022-06-19 17:56:36.728 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0682 ms
+2022-06-19 17:56:36.730 -07:00 [INF] HTTP OPTIONS /api/Students/13 responded 204 in 0.0825 ms
+2022-06-19 17:56:36.840 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 80.5044 ms
+2022-06-19 17:56:36.909 -07:00 [INF] HTTP GET /api/Students/13 responded 200 in 150.8603 ms
+2022-06-19 17:57:20.597 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0511 ms
+2022-06-19 17:57:20.597 -07:00 [INF] HTTP OPTIONS /api/Students/13 responded 204 in 0.0512 ms
+2022-06-19 17:57:20.611 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 7.4038 ms
+2022-06-19 17:57:20.645 -07:00 [INF] HTTP GET /api/Students/13 responded 200 in 40.3914 ms
+2022-06-19 18:03:53.869 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0569 ms
+2022-06-19 18:03:53.896 -07:00 [INF] HTTP GET /api/Students responded 200 in 17.7185 ms
+2022-06-19 18:03:54.898 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0783 ms
+2022-06-19 18:03:54.924 -07:00 [INF] HTTP GET /api/Categories responded 200 in 20.2589 ms
+2022-06-19 18:04:01.258 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0467 ms
+2022-06-19 18:04:01.268 -07:00 [INF] HTTP GET /api/Students responded 200 in 4.5630 ms
+2022-06-19 18:04:03.328 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0524 ms
+2022-06-19 18:04:03.353 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 19.2499 ms
+2022-06-19 18:05:08.331 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0901 ms
+2022-06-19 18:05:08.347 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 7.6706 ms
+2022-06-19 18:05:10.267 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0613 ms
+2022-06-19 18:05:10.281 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.6892 ms
+2022-06-19 18:05:11.509 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0975 ms
+2022-06-19 18:05:11.522 -07:00 [INF] HTTP GET /api/Categories responded 200 in 5.8540 ms
+2022-06-19 18:05:12.856 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1683 ms
+2022-06-19 18:05:12.869 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 6.0024 ms
+2022-06-19 18:14:07.727 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0800 ms
+2022-06-19 18:14:07.758 -07:00 [INF] HTTP GET /api/Students responded 200 in 21.0009 ms
+2022-06-19 18:14:09.890 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1212 ms
+2022-06-19 18:14:09.890 -07:00 [INF] HTTP OPTIONS /api/Students/13 responded 204 in 0.1212 ms
+2022-06-19 18:14:09.910 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 12.8139 ms
+2022-06-19 18:14:09.926 -07:00 [INF] HTTP GET /api/Students/13 responded 200 in 21.8987 ms
+2022-06-19 18:14:14.184 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0501 ms
+2022-06-19 18:14:14.194 -07:00 [INF] HTTP GET /api/Categories responded 200 in 5.0891 ms
+2022-06-19 18:14:16.000 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1389 ms
+2022-06-19 18:14:16.009 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.0539 ms
+2022-06-19 18:14:17.275 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0513 ms
+2022-06-19 18:14:17.285 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.0408 ms
+2022-06-19 18:14:18.010 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0812 ms
+2022-06-19 18:14:18.023 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.8945 ms
+2022-06-19 18:14:18.501 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0711 ms
+2022-06-19 18:14:18.513 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.0458 ms
+2022-06-19 18:14:18.997 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0986 ms
+2022-06-19 18:14:19.006 -07:00 [INF] HTTP GET /api/Categories responded 200 in 3.5110 ms
+2022-06-19 18:18:55.250 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0634 ms
+2022-06-19 18:18:55.272 -07:00 [INF] HTTP GET /api/Students responded 200 in 10.6100 ms
+2022-06-19 18:18:56.692 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0976 ms
+2022-06-19 18:18:56.702 -07:00 [INF] HTTP GET /api/Categories responded 200 in 3.2062 ms
+2022-06-19 18:18:58.346 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0452 ms
+2022-06-19 18:18:58.358 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.5246 ms
+2022-06-19 18:19:00.933 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1063 ms
+2022-06-19 18:19:00.933 -07:00 [INF] HTTP OPTIONS /api/Students/13 responded 204 in 0.0303 ms
+2022-06-19 18:19:00.945 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 5.4993 ms
+2022-06-19 18:19:00.948 -07:00 [INF] HTTP GET /api/Students/13 responded 200 in 5.3557 ms
+2022-06-19 18:19:07.830 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0659 ms
+2022-06-19 18:19:07.843 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.1164 ms
+2022-06-19 18:19:56.671 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0720 ms
+2022-06-19 18:19:56.688 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.5740 ms
+2022-06-19 18:21:54.763 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.0705 ms
+2022-06-19 18:21:54.763 -07:00 [INF] HTTP OPTIONS /api/Students/13 responded 204 in 0.0454 ms
+2022-06-19 18:21:54.784 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 10.7595 ms
+2022-06-19 18:21:54.801 -07:00 [INF] HTTP GET /api/Students/13 responded 200 in 26.9990 ms
+2022-06-19 18:24:42.155 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0516 ms
+2022-06-19 18:24:42.165 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.2845 ms
+2022-06-19 18:24:43.170 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0637 ms
+2022-06-19 18:24:43.182 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.9820 ms
+2022-06-19 18:24:44.013 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0804 ms
+2022-06-19 18:24:44.023 -07:00 [INF] HTTP GET /api/Categories responded 200 in 4.0517 ms
+2022-06-19 19:01:52.585 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-19 19:01:52.609 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-19 19:01:52.616 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-19 19:01:52.618 -07:00 [INF] Hosting environment: Development
+2022-06-19 19:01:52.620 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-19 19:01:56.503 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 3.5566 ms
+2022-06-19 19:01:56.947 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 433.4437 ms
+2022-06-19 19:01:57.023 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.3869 ms
+2022-06-19 19:01:57.462 -07:00 [INF] HTTP GET /api/Students responded 200 in 433.6251 ms
+2022-06-19 19:01:59.499 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0579 ms
+2022-06-19 19:01:59.530 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 25.8167 ms
+2022-06-19 19:02:34.456 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.3568 ms
+2022-06-19 19:02:34.482 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 8.3685 ms
+2022-06-19 19:02:36.187 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0780 ms
+2022-06-19 19:02:36.268 -07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-06-19 19:02:36.396 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 200.1457 ms
+2022-06-19 19:02:39.385 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1012 ms
+2022-06-19 19:02:39.397 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.2340 ms
+2022-06-19 19:02:45.714 -07:00 [INF] HTTP OPTIONS /api/courses/7 responded 204 in 0.0500 ms
+2022-06-19 19:02:45.724 -07:00 [INF] HTTP GET /api/courses/7 responded 200 in 4.6886 ms
+2022-06-19 19:02:48.404 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1708 ms
+2022-06-19 19:02:48.417 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.0623 ms
+2022-06-20 08:21:56.644 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 08:21:56.668 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 08:21:56.674 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 08:21:56.676 -07:00 [INF] Hosting environment: Development
+2022-06-20 08:21:56.677 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 08:22:21.872 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 4.2891 ms
+2022-06-20 08:22:22.684 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 800.2566 ms
+2022-06-20 08:22:22.769 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.6755 ms
+2022-06-20 08:22:23.334 -07:00 [INF] HTTP GET /api/Students responded 200 in 559.6827 ms
+2022-06-20 08:46:24.671 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.5344 ms
+2022-06-20 08:46:24.733 -07:00 [INF] HTTP GET /api/Students responded 200 in 54.4472 ms
+2022-06-20 10:13:01.723 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 10:13:01.753 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 10:13:01.759 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 10:13:01.760 -07:00 [INF] Hosting environment: Development
+2022-06-20 10:13:01.762 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 10:14:00.727 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 10:14:00.751 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 10:14:00.757 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 10:14:00.758 -07:00 [INF] Hosting environment: Development
+2022-06-20 10:14:00.760 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 10:14:15.811 -07:00 [INF] HTTP GET /api/Students responded 401 in 85.2264 ms
+2022-06-20 10:15:35.321 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 10:15:35.343 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 10:15:35.349 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 10:15:35.350 -07:00 [INF] Hosting environment: Development
+2022-06-20 10:15:35.352 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 10:30:06.415 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 10:30:06.438 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 10:30:06.444 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 10:30:06.445 -07:00 [INF] Hosting environment: Development
+2022-06-20 10:30:06.447 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 10:30:19.958 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 3.3910 ms
+2022-06-20 10:30:24.745 -07:00 [INF] HTTP GET /api/Students responded 200 in 4775.6292 ms
+2022-06-20 10:32:41.069 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 10:32:41.095 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 10:32:41.102 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 10:32:41.104 -07:00 [INF] Hosting environment: Development
+2022-06-20 10:32:41.105 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 10:32:42.262 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 5.0516 ms
+2022-06-20 10:32:42.493 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.4397 ms
+2022-06-20 10:33:16.698 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0797 ms
+2022-06-20 10:33:16.726 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.1273 ms
+2022-06-20 10:33:19.132 -07:00 [INF] HTTP GET /api/Students responded 200 in 2415.2496 ms
+2022-06-20 10:33:19.132 -07:00 [INF] HTTP GET /api/Students responded 200 in 2413.6025 ms
+2022-06-20 10:33:19.139 -07:00 [INF] HTTP GET /api/Students responded 200 in 36852.3731 ms
+2022-06-20 10:33:19.139 -07:00 [INF] HTTP GET /api/Students responded 200 in 2440.4262 ms
+2022-06-20 10:33:19.146 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 2412.5706 ms
+2022-06-20 10:35:35.449 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 10:35:35.473 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 10:35:35.480 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 10:35:35.482 -07:00 [INF] Hosting environment: Development
+2022-06-20 10:35:35.484 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 10:35:47.141 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 5.9463 ms
+2022-06-20 10:35:47.253 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.2215 ms
+2022-06-20 10:35:50.256 -07:00 [INF] HTTP GET /api/Students responded 200 in 3101.5852 ms
+2022-06-20 10:35:51.914 -07:00 [INF] HTTP GET /api/Students responded 200 in 1657.4162 ms
+2022-06-20 12:25:35.926 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 12:25:35.947 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 12:25:35.952 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 12:25:35.954 -07:00 [INF] Hosting environment: Development
+2022-06-20 12:25:35.956 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 12:25:43.434 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 3.6258 ms
+2022-06-20 12:25:48.257 -07:00 [INF] HTTP GET /api/Students responded 200 in 4813.0368 ms
+2022-06-20 12:30:35.861 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.5609 ms
+2022-06-20 12:30:39.025 -07:00 [INF] HTTP GET /api/Students responded 200 in 3155.4672 ms
+2022-06-20 12:32:01.639 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0445 ms
+2022-06-20 12:32:03.683 -07:00 [INF] HTTP GET /api/Students responded 200 in 2036.6993 ms
+2022-06-20 12:34:42.476 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0467 ms
+2022-06-20 12:34:44.279 -07:00 [INF] HTTP GET /api/Students responded 200 in 1795.9675 ms
+2022-06-20 12:34:58.716 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0637 ms
+2022-06-20 12:35:05.095 -07:00 [INF] HTTP GET /api/Students responded 200 in 6370.1071 ms
+2022-06-20 12:35:16.170 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0634 ms
+2022-06-20 12:35:18.409 -07:00 [INF] HTTP GET /api/Students responded 200 in 2232.4703 ms
+2022-06-20 12:35:25.923 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0538 ms
+2022-06-20 12:35:28.118 -07:00 [INF] HTTP GET /api/Students responded 200 in 2189.6027 ms
+2022-06-20 12:35:35.764 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0451 ms
+2022-06-20 12:35:55.534 -07:00 [INF] HTTP GET /api/Students responded 200 in 19763.4693 ms
+2022-06-20 12:36:20.900 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0689 ms
+2022-06-20 12:36:53.247 -07:00 [INF] HTTP GET /api/Students responded 200 in 32337.3394 ms
+2022-06-20 12:37:00.041 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0632 ms
+2022-06-20 12:37:06.626 -07:00 [INF] HTTP GET /api/Students responded 200 in 6579.8393 ms
+2022-06-20 12:37:12.354 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0568 ms
+2022-06-20 12:37:15.039 -07:00 [INF] HTTP GET /api/Students responded 200 in 2676.5655 ms
+2022-06-20 12:37:36.624 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0685 ms
+2022-06-20 12:37:46.099 -07:00 [INF] HTTP GET /api/Students responded 200 in 9466.7605 ms
+2022-06-20 12:38:59.304 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0753 ms
+2022-06-20 12:39:07.063 -07:00 [INF] HTTP GET /api/Students responded 200 in 7747.1240 ms
+2022-06-20 12:39:15.249 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0531 ms
+2022-06-20 12:39:17.286 -07:00 [INF] HTTP GET /api/Students responded 200 in 2031.8957 ms
+2022-06-20 12:39:22.899 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0606 ms
+2022-06-20 12:39:26.192 -07:00 [INF] HTTP GET /api/Students responded 200 in 3288.1286 ms
+2022-06-20 12:40:42.797 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0606 ms
+2022-06-20 12:40:45.196 -07:00 [INF] HTTP GET /api/Students responded 200 in 2391.4707 ms
+2022-06-20 12:40:55.575 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0663 ms
+2022-06-20 12:41:04.180 -07:00 [INF] HTTP GET /api/Students responded 200 in 8598.9448 ms
+2022-06-20 12:42:21.412 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0554 ms
+2022-06-20 12:42:25.014 -07:00 [INF] HTTP GET /api/Students responded 200 in 3596.8031 ms
+2022-06-20 12:42:36.091 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0731 ms
+2022-06-20 12:42:38.757 -07:00 [INF] HTTP GET /api/Students responded 200 in 2661.3867 ms
+2022-06-20 12:44:15.163 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0817 ms
+2022-06-20 12:44:17.412 -07:00 [INF] HTTP GET /api/Students responded 200 in 2239.2596 ms
+2022-06-20 12:47:10.776 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0574 ms
+2022-06-20 12:47:12.906 -07:00 [INF] HTTP GET /api/Students responded 200 in 2120.5193 ms
+2022-06-20 12:47:24.548 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0577 ms
+2022-06-20 12:47:30.063 -07:00 [INF] HTTP GET /api/Students responded 200 in 5508.8051 ms
+2022-06-20 12:48:29.425 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0668 ms
+2022-06-20 12:48:37.634 -07:00 [INF] HTTP GET /api/Students responded 200 in 8200.9572 ms
+2022-06-20 12:51:04.262 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0594 ms
+2022-06-20 12:51:22.955 -07:00 [INF] HTTP GET /api/Students responded 200 in 18683.0733 ms
+2022-06-20 12:51:33.815 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0696 ms
+2022-06-20 12:52:02.585 -07:00 [INF] HTTP GET /api/Students responded 200 in 28761.3829 ms
+2022-06-20 12:52:02.602 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 1.8177 ms
+2022-06-20 12:52:02.612 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0611 ms
+2022-06-20 12:52:02.618 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0542 ms
+2022-06-20 12:52:02.624 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0626 ms
+2022-06-20 12:52:02.621 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0286 ms
+2022-06-20 12:52:02.621 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0192 ms
+2022-06-20 12:52:03.214 -07:00 [INF] HTTP GET /api/Students responded 200 in 596.2815 ms
+2022-06-20 12:52:10.987 -07:00 [INF] HTTP GET /api/Students responded 200 in 7773.0054 ms
+2022-06-20 12:52:10.993 -07:00 [INF] HTTP GET /api/Students responded 200 in 7775.9546 ms
+2022-06-20 12:52:13.242 -07:00 [INF] HTTP GET /api/Students responded 200 in 9033.5584 ms
+2022-06-20 12:56:26.851 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0750 ms
+2022-06-20 12:56:26.872 -07:00 [INF] HTTP GET /api/Students responded 200 in 10.2756 ms
+2022-06-20 12:56:44.887 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0572 ms
+2022-06-20 12:56:44.900 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.4589 ms
+2022-06-20 12:56:47.859 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.1086 ms
+2022-06-20 12:56:47.873 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.3324 ms
+2022-06-20 12:56:49.664 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0635 ms
+2022-06-20 12:56:49.674 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.8865 ms
+2022-06-20 12:56:53.882 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0623 ms
+2022-06-20 12:56:53.893 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.8698 ms
+2022-06-20 14:39:07.577 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 14:39:07.602 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 14:39:07.608 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 14:39:07.610 -07:00 [INF] Hosting environment: Development
+2022-06-20 14:39:07.612 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 14:39:26.955 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 4.1406 ms
+2022-06-20 14:39:27.720 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 751.2673 ms
+2022-06-20 14:39:27.799 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.3753 ms
+2022-06-20 14:39:28.321 -07:00 [INF] HTTP GET /api/Students responded 200 in 516.4997 ms
+2022-06-20 14:39:40.223 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.1640 ms
+2022-06-20 14:39:40.276 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 47.8064 ms
+2022-06-20 14:39:44.261 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0563 ms
+2022-06-20 14:39:44.285 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 17.4859 ms
+2022-06-20 14:40:10.234 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0900 ms
+2022-06-20 14:40:10.250 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 6.9639 ms
+2022-06-20 14:40:46.457 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0881 ms
+2022-06-20 14:40:59.850 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 13384.2220 ms
+2022-06-20 14:41:18.630 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0460 ms
+2022-06-20 14:41:18.650 -07:00 [INF] HTTP GET /api/Students responded 200 in 8.2781 ms
+2022-06-20 14:41:48.738 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0514 ms
+2022-06-20 14:41:53.921 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 5174.7366 ms
+2022-06-20 14:42:20.241 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0523 ms
+2022-06-20 14:42:20.267 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.9977 ms
+2022-06-20 14:42:31.298 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0510 ms
+2022-06-20 14:42:31.315 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 10.1092 ms
+2022-06-20 14:42:59.757 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0693 ms
+2022-06-20 14:42:59.775 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 11.5582 ms
+2022-06-20 14:43:01.211 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0623 ms
+2022-06-20 14:43:01.226 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 10.7737 ms
+2022-06-20 14:43:01.946 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0484 ms
+2022-06-20 14:43:01.962 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 10.3117 ms
+2022-06-20 14:43:02.766 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.1410 ms
+2022-06-20 14:43:02.780 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 8.6267 ms
+2022-06-20 14:43:03.340 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0497 ms
+2022-06-20 14:43:03.355 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 8.5234 ms
+2022-06-20 14:43:04.740 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0542 ms
+2022-06-20 14:43:04.753 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 8.3047 ms
+2022-06-20 14:43:05.212 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0658 ms
+2022-06-20 14:43:05.226 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 8.5861 ms
+2022-06-20 14:43:05.718 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0622 ms
+2022-06-20 14:43:05.731 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 7.8288 ms
+2022-06-20 14:43:06.207 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0614 ms
+2022-06-20 14:43:06.225 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 11.2471 ms
+2022-06-20 14:43:06.536 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0505 ms
+2022-06-20 14:43:06.554 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 10.9653 ms
+2022-06-20 14:43:07.046 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0593 ms
+2022-06-20 14:43:07.063 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 10.0719 ms
+2022-06-20 14:43:07.421 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0947 ms
+2022-06-20 14:43:07.440 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 9.1145 ms
+2022-06-20 14:43:07.679 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0720 ms
+2022-06-20 14:43:07.696 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 10.8770 ms
+2022-06-20 14:43:08.094 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.1124 ms
+2022-06-20 14:43:08.113 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 9.4116 ms
+2022-06-20 14:43:08.454 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0744 ms
+2022-06-20 14:43:08.475 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 12.8475 ms
+2022-06-20 14:43:10.632 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0602 ms
+2022-06-20 14:43:10.645 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 7.5438 ms
+2022-06-20 14:43:11.176 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.1013 ms
+2022-06-20 14:43:11.197 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 12.8891 ms
+2022-06-20 14:43:11.783 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0493 ms
+2022-06-20 14:43:11.799 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 8.9281 ms
+2022-06-20 14:43:12.165 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0493 ms
+2022-06-20 14:43:12.180 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 8.9267 ms
+2022-06-20 14:43:12.629 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0558 ms
+2022-06-20 14:43:12.645 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 9.8523 ms
+2022-06-20 14:43:12.832 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0509 ms
+2022-06-20 14:43:12.850 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 10.6187 ms
+2022-06-20 14:45:44.203 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-20 14:45:44.231 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-20 14:45:44.239 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-20 14:45:44.241 -07:00 [INF] Hosting environment: Development
+2022-06-20 14:45:44.243 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-20 14:48:30.955 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 5.6370 ms
+2022-06-20 14:48:31.431 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 457.8393 ms
+2022-06-20 14:48:31.820 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.3761 ms
+2022-06-20 14:48:32.247 -07:00 [INF] HTTP GET /api/Students responded 200 in 422.5320 ms
+2022-06-20 14:48:36.398 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0566 ms
+2022-06-20 14:48:36.447 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 42.5400 ms
+2022-06-20 14:50:55.379 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.3422 ms
+2022-06-20 14:50:58.176 -07:00 [INF] HTTP GET /api/Students responded 200 in 2788.0015 ms
+2022-06-20 14:51:13.603 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0522 ms
+2022-06-20 14:51:13.626 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 14.3110 ms
+2022-06-20 14:52:31.302 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0659 ms
+2022-06-20 14:52:31.323 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 6.1435 ms
+2022-06-20 14:52:43.116 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.0599 ms
+2022-06-20 14:52:43.143 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 21.4746 ms
+2022-06-20 14:52:52.544 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0463 ms
+2022-06-20 14:52:54.559 -07:00 [INF] HTTP GET /api/Students responded 200 in 2009.5715 ms
+2022-06-21 07:54:16.022 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-21 07:54:16.047 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-21 07:54:16.054 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-21 07:54:16.056 -07:00 [INF] Hosting environment: Development
+2022-06-21 07:54:16.059 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-21 07:54:58.329 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 3.4304 ms
+2022-06-21 07:54:59.155 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 814.6485 ms
+2022-06-21 07:54:59.229 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.7436 ms
+2022-06-21 07:54:59.780 -07:00 [INF] HTTP GET /api/Students responded 200 in 546.3620 ms
+2022-06-21 07:59:37.459 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0703 ms
+2022-06-21 07:59:37.511 -07:00 [INF] HTTP GET /api/Students responded 200 in 41.1192 ms
+2022-06-21 08:00:44.115 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0685 ms
+2022-06-21 08:00:44.158 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 29.5552 ms
+2022-06-21 08:00:45.388 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0489 ms
+2022-06-21 08:00:45.398 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.9205 ms
+2022-06-21 08:00:46.055 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0484 ms
+2022-06-21 08:00:46.069 -07:00 [INF] HTTP GET /api/Students responded 200 in 8.4345 ms
+2022-06-21 08:01:02.126 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 0.2119 ms
+2022-06-21 08:01:02.190 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 55.6682 ms
+2022-06-21 08:01:12.056 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0576 ms
+2022-06-21 08:01:12.065 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.6515 ms
+2022-06-21 08:11:38.591 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.7037 ms
+2022-06-21 08:11:38.629 -07:00 [INF] HTTP GET /api/Students responded 200 in 18.8277 ms
+2022-06-21 08:11:45.395 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0546 ms
+2022-06-21 08:11:45.407 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.3259 ms
+2022-06-21 08:11:47.216 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0481 ms
+2022-06-21 08:11:47.230 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.1392 ms
+2022-06-21 08:11:50.685 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0519 ms
+2022-06-21 08:11:50.697 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.2297 ms
+2022-06-21 08:12:07.443 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0468 ms
+2022-06-21 08:12:07.459 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.1039 ms
+2022-06-21 08:12:10.456 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0622 ms
+2022-06-21 08:12:10.468 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.6145 ms
+2022-06-21 08:12:11.855 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0536 ms
+2022-06-21 08:12:11.869 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.8024 ms
+2022-06-21 08:17:37.836 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0628 ms
+2022-06-21 08:17:37.848 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.9820 ms
+2022-06-21 08:17:57.661 -07:00 [INF] HTTP OPTIONS /api/Students/13 responded 204 in 0.0712 ms
+2022-06-21 08:17:57.663 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 0.1070 ms
+2022-06-21 08:17:57.743 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 67.9196 ms
+2022-06-21 08:17:57.830 -07:00 [INF] HTTP GET /api/Students/13 responded 200 in 158.9513 ms
+2022-06-21 08:18:00.256 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0501 ms
+2022-06-21 08:18:00.267 -07:00 [INF] HTTP GET /api/Students responded 200 in 5.6946 ms
+2022-06-21 09:02:32.351 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1458 ms
+2022-06-21 09:02:32.390 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 31.5943 ms
+2022-06-21 09:02:34.139 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0642 ms
+2022-06-21 09:02:34.155 -07:00 [INF] HTTP GET /api/Students responded 200 in 10.4559 ms
+2022-06-21 09:02:35.301 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0629 ms
+2022-06-21 09:02:35.328 -07:00 [INF] HTTP GET /api/Categories responded 200 in 21.7967 ms
+2022-06-21 09:02:37.907 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0832 ms
+2022-06-21 09:02:37.918 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.3332 ms
+2022-06-21 09:02:39.100 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0859 ms
+2022-06-21 09:02:39.111 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.9153 ms
+2022-06-21 09:02:39.710 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0465 ms
+2022-06-21 09:02:39.724 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.7831 ms
+2022-06-21 09:02:40.416 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0794 ms
+2022-06-21 09:02:40.427 -07:00 [INF] HTTP GET /api/Categories responded 200 in 4.1000 ms
+2022-06-21 09:02:42.159 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0843 ms
+2022-06-21 09:02:42.170 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.0379 ms
+2022-06-21 09:02:42.936 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0809 ms
+2022-06-21 09:02:42.947 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.6912 ms
+2022-06-21 09:02:45.096 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1343 ms
+2022-06-21 09:02:45.105 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.3025 ms
+2022-06-21 09:02:47.158 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0775 ms
+2022-06-21 09:02:47.170 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.7281 ms
+2022-06-21 09:02:48.207 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0724 ms
+2022-06-21 09:02:48.218 -07:00 [INF] HTTP GET /api/Categories responded 200 in 5.5521 ms
+2022-06-21 09:02:54.312 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0597 ms
+2022-06-21 09:02:54.323 -07:00 [INF] HTTP GET /api/Categories responded 200 in 3.6730 ms
+2022-06-21 09:02:57.781 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0648 ms
+2022-06-21 09:02:57.793 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 6.2545 ms
+2022-06-21 09:02:58.677 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0694 ms
+2022-06-21 09:02:58.690 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.4159 ms
+2022-06-21 09:02:59.625 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0709 ms
+2022-06-21 09:02:59.635 -07:00 [INF] HTTP GET /api/Categories responded 200 in 3.9857 ms
+2022-06-21 09:03:15.660 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1320 ms
+2022-06-21 09:03:15.669 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 3.4727 ms
+2022-06-21 09:03:16.618 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.1411 ms
+2022-06-21 09:03:16.629 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.0769 ms
+2022-06-21 09:03:23.229 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0458 ms
+2022-06-21 09:03:23.242 -07:00 [INF] HTTP GET /api/Students responded 200 in 6.9718 ms
+2022-06-21 09:04:37.262 -07:00 [INF] HTTP OPTIONS /api/courses/CoursesList responded 204 in 1.6789 ms
+2022-06-21 09:04:37.270 -07:00 [INF] HTTP OPTIONS /api/Students/14 responded 204 in 0.0791 ms
+2022-06-21 09:04:37.288 -07:00 [INF] HTTP GET /api/courses/CoursesList responded 200 in 6.3569 ms
+2022-06-21 09:04:37.301 -07:00 [INF] HTTP GET /api/Students/14 responded 200 in 19.2065 ms
+2022-06-21 09:04:43.535 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0724 ms
+2022-06-21 09:04:43.552 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.9817 ms
+2022-06-21 09:05:18.633 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0622 ms
+2022-06-21 09:05:18.649 -07:00 [INF] HTTP GET /api/Categories responded 200 in 4.4425 ms
+2022-06-21 10:27:26.734 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-21 10:27:26.758 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-21 10:27:26.765 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-21 10:27:26.767 -07:00 [INF] Hosting environment: Development
+2022-06-21 10:27:26.769 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-21 10:27:35.313 -07:00 [INF] HTTP OPTIONS /api/Students/Search responded 204 in 3.3197 ms
+2022-06-21 10:27:36.013 -07:00 [INF] HTTP GET /api/Students/Search responded 200 in 688.5249 ms
+2022-06-21 11:14:34.533 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-21 11:14:34.557 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-21 11:14:34.563 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-21 11:14:34.566 -07:00 [INF] Hosting environment: Development
+2022-06-21 11:14:34.567 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-21 11:14:43.730 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 3.4664 ms
+2022-06-21 11:14:44.504 -07:00 [INF] HTTP GET /api/Students responded 200 in 762.2305 ms
+2022-06-21 11:15:01.369 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.8472 ms
+2022-06-21 11:15:01.418 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 38.1911 ms
+2022-06-21 11:16:18.383 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0837 ms
+2022-06-21 11:16:45.199 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 26802.3086 ms
+2022-06-21 11:21:38.072 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1398 ms
+2022-06-21 11:21:40.903 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 2823.4161 ms
+2022-06-21 11:21:46.252 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0556 ms
+2022-06-21 11:21:49.159 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 2901.6894 ms
+2022-06-21 11:25:41.196 -07:00 [INF] HTTP OPTIONS /api/Categories/List responded 204 in 0.1046 ms
+2022-06-21 11:25:41.200 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0570 ms
+2022-06-21 11:25:41.299 -07:00 [INF] HTTP GET /api/Categories/List responded 200 in 94.1117 ms
+2022-06-21 11:25:41.303 -07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-06-21 11:25:41.430 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 222.8130 ms
+2022-06-21 11:25:46.355 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0604 ms
+2022-06-21 11:25:48.307 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 1945.4987 ms
+2022-06-21 12:06:37.019 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0561 ms
+2022-06-21 12:06:39.269 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 2242.2582 ms
+2022-06-21 12:06:51.899 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0870 ms
+2022-06-21 12:06:53.959 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 2053.3289 ms
+2022-06-21 12:07:09.231 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0978 ms
+2022-06-21 12:07:11.291 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 2049.7015 ms
+2022-06-21 12:07:47.786 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0553 ms
+2022-06-21 12:07:47.799 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 7.0874 ms
+2022-06-21 12:07:54.064 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0587 ms
+2022-06-21 12:07:54.064 -07:00 [INF] HTTP OPTIONS /api/Categories/List responded 204 in 0.0587 ms
+2022-06-21 12:07:54.089 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 17.9482 ms
+2022-06-21 12:07:54.097 -07:00 [INF] HTTP GET /api/Categories/List responded 200 in 22.4755 ms
+2022-06-21 12:23:03.064 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 0.0591 ms
+2022-06-21 12:23:03.276 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 201.4833 ms
+2022-06-21 12:23:03.355 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.0564 ms
+2022-06-21 12:23:03.367 -07:00 [INF] HTTP GET /api/Students responded 200 in 7.5643 ms
+2022-06-21 12:23:06.359 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0713 ms
+2022-06-21 12:23:06.369 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.7239 ms
+2022-06-21 12:25:00.650 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0504 ms
+2022-06-21 12:25:00.661 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 4.2658 ms
+2022-06-21 12:25:10.774 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0442 ms
+2022-06-21 12:25:10.784 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.4953 ms
+2022-06-21 12:25:17.408 -07:00 [INF] HTTP OPTIONS /api/Categories/List responded 204 in 0.0723 ms
+2022-06-21 12:25:17.409 -07:00 [INF] HTTP OPTIONS /api/courses/1 responded 204 in 0.0412 ms
+2022-06-21 12:25:17.424 -07:00 [INF] HTTP GET /api/Categories/List responded 200 in 7.8319 ms
+2022-06-21 12:25:17.447 -07:00 [INF] HTTP GET /api/courses/1 responded 200 in 28.1828 ms
+2022-06-21 12:25:18.631 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1302 ms
+2022-06-21 12:25:18.653 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 8.0672 ms
+2022-06-21 12:25:22.289 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0729 ms
+2022-06-21 12:25:22.317 -07:00 [INF] HTTP GET /api/Categories responded 200 in 22.3401 ms
+2022-06-21 12:25:26.311 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.1702 ms
+2022-06-21 12:25:26.323 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 5.5681 ms
+2022-06-21 12:35:48.771 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0849 ms
+2022-06-21 12:35:48.792 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 13.5908 ms
+2022-06-21 12:36:24.173 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0643 ms
+2022-06-21 12:36:24.189 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 8.1345 ms
+2022-06-21 12:37:01.063 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0940 ms
+2022-06-21 12:37:01.079 -07:00 [INF] HTTP GET /api/Categories responded 200 in 8.4706 ms
+2022-06-21 12:40:57.057 -07:00 [INF] HTTP OPTIONS /api/courses/ responded 204 in 0.0740 ms
+2022-06-21 12:40:57.082 -07:00 [INF] HTTP GET /api/courses/ responded 200 in 17.4098 ms
+2022-06-21 12:41:02.511 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0480 ms
+2022-06-21 12:41:02.525 -07:00 [INF] HTTP GET /api/Categories responded 200 in 6.9284 ms
+2022-06-21 12:49:03.458 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0679 ms
+2022-06-21 12:49:03.480 -07:00 [INF] HTTP GET /api/Categories responded 200 in 14.4610 ms
+2022-06-21 13:00:31.656 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-21 13:00:31.681 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-21 13:00:31.689 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-21 13:00:31.715 -07:00 [INF] Hosting environment: Development
+2022-06-21 13:00:31.718 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-21 13:00:31.968 -07:00 [INF] HTTP OPTIONS /api/Account/login responded 204 in 3.5889 ms
+2022-06-21 13:00:32.545 -07:00 [INF] HTTP POST /api/Account/login responded 200 in 543.9213 ms
+2022-06-21 13:00:32.647 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 0.5471 ms
+2022-06-21 13:00:33.138 -07:00 [INF] HTTP GET /api/Students responded 200 in 484.1299 ms
+2022-06-21 13:00:36.424 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0787 ms
+2022-06-21 13:00:36.460 -07:00 [INF] HTTP GET /api/Categories responded 200 in 29.7634 ms
+2022-06-21 13:02:11.418 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.1449 ms
+2022-06-21 13:02:11.434 -07:00 [INF] HTTP GET /api/Categories responded 200 in 8.2557 ms
+2022-06-21 13:05:35.543 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0875 ms
+2022-06-21 13:05:35.560 -07:00 [INF] HTTP GET /api/Categories responded 200 in 8.2068 ms
+2022-06-21 13:06:48.136 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.0708 ms
+2022-06-21 13:06:48.161 -07:00 [INF] HTTP GET /api/Categories responded 200 in 10.2142 ms
+2022-06-21 13:08:31.057 -07:00 [INF] Now listening on: https://localhost:7108
+2022-06-21 13:08:31.079 -07:00 [INF] Now listening on: http://localhost:5108
+2022-06-21 13:08:31.084 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-21 13:08:31.085 -07:00 [INF] Hosting environment: Development
+2022-06-21 13:08:31.087 -07:00 [INF] Content root path: C:\Users\ramc2\OneDrive\Escritorio\Courses\Bootcamp\C#\Universtiy-Project\universityApiBackend\UniversityApiBackend\
+2022-06-21 13:08:42.050 -07:00 [INF] HTTP OPTIONS /api/Students responded 204 in 3.3072 ms
+2022-06-21 13:08:42.725 -07:00 [INF] HTTP GET /api/Students responded 200 in 664.1366 ms
+2022-06-21 13:08:52.657 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.5914 ms
+2022-06-21 13:08:52.691 -07:00 [INF] HTTP GET /api/Categories responded 200 in 27.2182 ms
+2022-06-21 13:09:38.845 -07:00 [INF] HTTP OPTIONS /api/Categories responded 204 in 0.2929 ms
+2022-06-21 13:09:38.897 -07:00 [INF] HTTP GET /api/Categories responded 200 in 43.0470 ms

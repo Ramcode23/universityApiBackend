@@ -39,11 +39,18 @@ namespace UniversityApiBackend.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<CategoryDTO>>> GetCategories([FromQuery] int pageNumber, int resultsPage)
         {
+
+
+            var total = _service.GetAll().Count();
             var categories=  await Task.FromResult(_service.GetAllCategories(pageNumber, resultsPage).ToList());
       
-            if (categories.Any())
-                return categories;
-            return new List<CategoryDTO>();
+            
+            return Ok(new
+            {
+                TotalRecords = total,
+                 Categories = categories,
+            });
+          
         }
 
         // GET: api/CategoriesList
@@ -63,9 +70,12 @@ namespace UniversityApiBackend.Controllers
         public async Task<ActionResult<IEnumerable<CategoryDTO>>> SearchCategory([FromQuery] string Name, [FromQuery] int[] rangeCourse)
         {
             var categories = await Task.FromResult(_service.SearchCategory(Name, rangeCourse).ToList());
-            if (categories.Any())
-                return categories;
-            return new List<CategoryDTO>();
+
+            return Ok(new
+            {
+                TotalRecords = categories.Count(),
+                Categories = categories,
+            });
         }
        
         // GET: api/Categories/5

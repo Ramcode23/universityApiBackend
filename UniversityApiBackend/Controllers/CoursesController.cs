@@ -43,8 +43,16 @@ namespace UniversityApiBackend.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<CourseDTO>>> GetCourses([FromQuery] int pageNumber, int resultsPage)
         {
-           
-            return await Task.FromResult(_service.GetAllCourseList(pageNumber, resultsPage).ToList());
+
+            var total = _service.GetAll().Count();
+          var courses= await Task.FromResult(_service.GetAllCourseList(pageNumber, resultsPage).ToList());
+            
+
+            return Ok(new
+            {
+                TotalRecords = total,
+                courses = courses,
+            });
 
         }
 
@@ -65,7 +73,12 @@ namespace UniversityApiBackend.Controllers
         public async Task<ActionResult<IEnumerable<CourseDTO>>> FindCourses([FromQuery] CourseFindDTO courseFindDTO)
         {
             var courses = await Task.FromResult(_service.SearchCourses(courseFindDTO).ToList());
-            return _mapper.Map<List<CourseDTO>>(courses);
+
+            return Ok(new
+            {
+                TotalRecords = courses.Count,
+                courses = courses,
+            });
 
         }
 
